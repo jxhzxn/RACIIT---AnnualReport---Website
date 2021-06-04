@@ -3,27 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="keywords" content="htmlcss bootstrap menu, scroll detect, show on scrolling page, navbar, menu CSS examples" />
-<meta name="description" content="Auto hide navbar or header on scroll down. Page examples, Bootstrap 5" />  
 
-<title>Demo - Bootstrap 5 navbar hide on scroll down, show on scroll up. Code example</title>
+<title>Annual Report</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
 
+
 <link href="./css/index.css" rel="stylesheet">
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-<style type="text/css">
 
-</style>
 <script type="text/javascript">
 	document.addEventListener("DOMContentLoaded", function(){
 		
@@ -31,7 +27,7 @@
 		
 		// add padding-top to bady (if necessary)
 		navbar_height = document.querySelector('.navbar').offsetHeight;
-		document.body.style.paddingTop = navbar_height + 'px';
+		document.body.style.paddingTop = navbar_height+ 100000 + 'px';
 
 		if(el_autohide){
 			
@@ -61,16 +57,20 @@
 </script>
 
 </head>
-<body>
+<body style="padding-top: 0px;">
+
+
+
+
+
+<div class="container">
 
 <!-- ============= COMPONENT ============== -->
 <nav class="autohide navbar navbar-expand-lg navbar-dark bg-primary">
  <div class="container-fluid">
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+ 	
   <div class="collapse navbar-collapse" id="main_nav">
-
+	
     <div class="logo-container">
         <img class="logo" src="./assets/logo-white.png">
     </div>
@@ -231,83 +231,29 @@
 
 
 
+    
+   
+	
 
   </div> <!-- navbar-collapse.// -->
  </div> <!-- container-fluid.// -->
 </nav>
+
 <!-- ============= COMPONENT END// ============== -->
 
 
 
-<div class="below-container" id="particle">
 
-<div class="head-container">
-    <p class="head-desc">Welcome to the </p> 
-	<p class="head-text">ROTARACT CLUB OF IIT </p> 
-    <p class="moto">PERSEVERANCE WITH INTEGRITY</p> 
-</div> <!-- section-header.// -->
+</div><!-- container //  -->
 
-<!-- <div class="vision-box">
-    <div class="vision-box-text-container">
-        <p class="vision-text">OUR VISION </p> 
-        <p class="vision-desc">The Rotaract Club of IIT vision is to continually be a diverse group of individuals committed to making our local and global community a better place and enriching the lives of our members and those around and creating a positive impact through service, fellowship and integrity. </p> 
+<div class="second">
+    <div class="box">
+        
     </div>
-</div> -->
-
-
-
-
 </div>
 
-<div class="third-container">
 
-    <div class="vision-container">
-        <div class="left-vision">
-            <p class="vision-text">OUR VISION</p> 
-            <p class="vision-desc">The Rotaract Club of IIT vision is to continually be a diverse group of individuals committed to making our local and global community a better place and enriching the lives of our members and those around and creating a positive impact through service, fellowship and integrity. </p> 
-        </div>
-        <div class="right-vision">
-            <div class="photo-box">
-                <!-- <p class="message">Message from the President</p> -->
-                <img class="img-asset malkine-photo" src="assets/malkine.png">
-            </div>
-            <div class="photo-box">
-                <!-- <p class="message">Message from the Secretary</p> -->
-                <img class="img-asset" src="assets/ameshaa.png">
-            </div>
-        </div>
-        
-        <!-- <p class="head-text">ROTARACT CLUB OF IIT </p>  -->
-        <!-- <p class="moto">What is R</p>  -->
-    </div> <!-- section-header.// -->
-    
-    <!-- <div class="vision-box">
-        <div class="vision-box-text-container">
-            <p class="vision-text">OUR VISION </p> 
-            <p class="vision-desc">The Rotaract Club of IIT vision is to continually be a diverse group of individuals committed to making our local and global community a better place and enriching the lives of our members and those around and creating a positive impact through service, fellowship and integrity. </p> 
-        </div>
-    </div> -->
-    
-    
-    
-    
-    </div>
 
-<script>
-    VANTA.NET({
-  el: "#particle",
-//   mouseControls: true,
-//   touchControls: true,
-  gyroControls: false,
-//   minHeight: 900.00,
-  minWidth: 200.00,
-  maxDistance: 15.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x3F3D56,
-  backgroundColor: 0xf1f1f1
-})
-  </script>
 
 </body>
 </html>
