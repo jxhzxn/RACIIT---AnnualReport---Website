@@ -271,9 +271,9 @@ body{
 
 .photo-box{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 20px;
     /* border-style: solid;
     border-color: red; */
     flex-direction: column;
@@ -283,13 +283,12 @@ body{
 
 .img-asset{
     width: 250px;
-    margin-top: -100px;
+    /* margin-top: -100px; */
 }
 
 .malkine-photo{
     width: 350px;
-    margin-top: -70px;
-
+    /* margin-top: -110px; */
 }
 
 .message{
