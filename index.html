@@ -3,16 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="keywords" content="htmlcss bootstrap, multi level menu, submenu, treeview nav menu examples" />
-<meta name="description" content="Bootstrap 5 navbar multilevel treeview examples for any type of project, Bootstrap 5" />  
 
-<title>Demo - Bootstrap 5 multilevel dropdown submenu sample</title>
+<title>Annual Report</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
 
 
 <link href="./css/index.css" rel="stylesheet">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script type="text/javascript">
 //	window.addEventListener("resize", function() {
@@ -85,6 +89,9 @@
  	
   <div class="collapse navbar-collapse" id="main_nav">
 	
+    <div class="logo-container">
+        <img class="logo" src="./assets/logo-white.png">
+    </div>
 
 	<ul class="navbar-nav">
 		<!-- <li class="nav-item"><a class="nav-link" href="#"> About </a></li> -->
@@ -104,7 +111,7 @@
 		</li>
 
         <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  STRATEGIC PLAN AND <br/> PROGRESSIVE DEVELOPMENT </a>
+			<a class="nav-link dropdown-toggle test" href="#" data-bs-toggle="dropdown">  STRATEGIC PLAN AND <br/> PROGRESSIVE DEVELOPMENT </a>
 		    <ul class="dropdown-menu">
 			  <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
 			  <li><a class="dropdown-item" href="#"> Year plan </a></li>
@@ -209,7 +216,7 @@
 
 
         <li class="nav-item dropdown">
-			<a class="nav-link" href="#">  PUBLIC RELATIONS EFFORTS </a>
+			<a class="nav-link" href="#">  PR EFFORTS </a>
 		</li>
 
 
@@ -238,26 +245,10 @@
 
 	</ul>
 
-	<!-- <ul class="navbar-nav ms-auto">
-		<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-		<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-		<li class="nav-item dropdown">
-			<a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Dropdown right </a>
-		    <ul class="dropdown-menu dropdown-menu-right">
-			  <li><a class="dropdown-item" href="#"> Dropdown item 1</a></li>
-			  <li><a class="dropdown-item" href="#"> Dropdown item 2 </a></li>
-			  <li><a class="dropdown-item" href="#"> Dropdown item 3 &raquo; </a>
-			  	 <ul class="submenu submenu-left dropdown-menu">
-				    <li><a class="dropdown-item" href="">Submenu item 1</a></li>
-				    <li><a class="dropdown-item" href="">Submenu item 2</a></li>
-				    <li><a class="dropdown-item" href="">Submenu item 3</a></li>
-				    <li><a class="dropdown-item" href="">Submenu item 4</a></li>
-				 </ul>
-			  </li>
-			  <li><a class="dropdown-item" href="#"> Dropdown item 4 </a></li>
-		    </ul>
-		</li>
-	</ul> -->
+
+
+   
+	
 
   </div> <!-- navbar-collapse.// -->
  </div> <!-- container-fluid.// -->
@@ -267,7 +258,33 @@
 
 
 
+
+
 </div><!-- container //  -->
+
+<div class="testing">
+    <div id="partcle">
+
+    </div>
+</div>
+
+
+
+<script>
+    VANTA.NET({
+    el: "#particle",
+    //   mouseControls: true,
+    //   touchControls: true,
+    gyroControls: false,
+    //   minHeight: 900.00,
+    minWidth: 1000.00,
+    maxDistance: 1.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x3F3D56,
+    backgroundColor: 0xf1f1f1
+    })
+</script>
 
 </body>
 </html>
