@@ -162,6 +162,8 @@ body{
     flex-direction: column;
 }
 
+
+
 .head-text{
     font-size: 100px;
     font-weight: 700;
@@ -238,6 +240,7 @@ body{
     /* border-style: solid;
     border-color: black; */
     background-color: white;
+    /* background-color: #f1f1f1; */
     display: flex;
     justify-content: flex-end;
     /* align-items: flex-start; */
@@ -336,8 +339,53 @@ body{
 .fourth-container{
     width: 100%;
     height: 500px;
+    padding-top: 100px;
     background-color: #f1f1f1;
 }
+
+.projects-stat-section{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+.projects-stats-head{
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.avenue-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.avenue{
+    width: 150px;
+    height: 150px;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.644);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    margin: 1px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.proj-count{
+    font-size: 50px;
+    font-weight: 900;
+}
+
 
 
 
