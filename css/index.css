@@ -501,14 +501,14 @@ body{
 }
 
 .avenue-logo{
-    /* width: 60px; */
+    width: 150px;
     /* border-style: solid;
     border-color: red; */
 }
 
 .logo-box{
-    width: 150px;
-    height: 150px;
+    /* width: 150px;
+    height: 150px; */
 
      /* border-style: solid;
     border-color: black;
