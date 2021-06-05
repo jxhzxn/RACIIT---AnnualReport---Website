@@ -1,6 +1,7 @@
 // DOM Element's
 const counters = document.querySelectorAll('.counter-up');
 const counters2 = document.querySelectorAll('.counter-up-proj');
+const counters3 = document.querySelectorAll('.socio-count');
 
 /*** Using forEach() ***/
 
@@ -55,6 +56,27 @@ function test2(){
             const target = + n.getAttribute('data-target');
             const count = + n.innerText;
             const speed = 100000000000000;
+            
+            const inc = target / speed; 
+    
+            if(count < target) {
+                n.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+            } else {
+                n.innerText = target;
+            }
+        }
+    
+        updateCount();
+    }
+}
+
+function test3(){
+    for(let n of counters3) {
+        const updateCount = () => {
+            const target = + n.getAttribute('data-target');
+            const count = + n.innerText;
+            const speed = 1000;
             
             const inc = target / speed; 
     
