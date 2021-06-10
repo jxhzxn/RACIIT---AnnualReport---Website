@@ -189,8 +189,8 @@
 }
 
 .photo-box:hover .img-asset{
-    filter: blur(2px);
-  -webkit-filter: blur(2px);
+    filter: blur(1px);
+  -webkit-filter: blur(1px);
 }
 
 .fourth-container{
@@ -250,6 +250,7 @@
 
 .avenue{
     width: 150px;
+    width: 241px;
     height: 250px;
     flex-direction: column;
     /* background-color: rgba(0, 0, 0, 0.644); */
