@@ -15,11 +15,16 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
-<link href="../../css/club-admin/club-history.css" rel="stylesheet">
+<link href="../../css/club-admin/club-membership.css" rel="stylesheet">
 <link href="../../css/navbar.css" rel="stylesheet">
+<link href="../../css/footer.css" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+
+<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+<link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -73,370 +78,292 @@
 
 <!-- ============= COMPONENT ============== -->
 <nav class="autohide navbar navbar-expand-lg navbar-dark bg-primary">
- <div class="container-fluid">
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  <div class="collapse navbar-collapse" id="main_nav">
-
-    <div class="logo-container">
-        <a href="../index.html"><img class="logo" src="../../assets/logo-white.png"></a>
-    </div>
-
-	<ul class="navbar-nav">
-		<!-- <li class="nav-item"><a class="nav-link" href="#"> About </a></li> -->
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  CLUB ADMIN </a>
-		    <ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="#"> Introduction to the Club </a></li>
-			  <li><a class="dropdown-item" href="#"> Club overview </a></li>
-			  <li><a class="dropdown-item" href="#"> History </a></li>
-			  <li><a class="dropdown-item" href="#"> List of past Presidents </a>
-
-              <li><a class="dropdown-item" href="#"> Details of the Executive Committee and Board of Directors </a></li>
-			  <li><a class="dropdown-item" href="#"> Details of the Club membership </a></li>
-			  <li><a class="dropdown-item" href="#"> Details of Management Officials </a></li>
-			  <li><a class="dropdown-item" href="#"> Meetings </a>
-		    </ul>
-		</li>
-
-        <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle test" href="#" data-bs-toggle="dropdown">  STRATEGIC PLAN AND <br/> PROGRESSIVE DEVELOPMENT </a>
-		    <ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
-			  <li><a class="dropdown-item" href="#"> Year plan </a></li>
-			  <li><a class="dropdown-item" href="#"> Amended year plan </a></li>
-		    </ul>
-		</li>
-
-
-
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  CLUB MEMBERSHIP  </a>
-		    <ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="#"> Membership strategy for the year </a></li>
-			  <li><a class="dropdown-item" href="#"> Inductions &raquo; </a>
-			  	 <ul class="submenu dropdown-menu">
-				    <li><a class="dropdown-item" href="#">Induction process</a></li>
-				    <li><a class="dropdown-item" href="#">List of new inductions within the year</a></li>
-				    <li><a class="dropdown-item" href="#">Interactors who joined within the year</a></li>
-				 </ul>
-			  </li>
-			  <li><a class="dropdown-item" href="#"> Terminations &raquo; </a>
-			  	 <ul class="submenu dropdown-menu">
-				    <li><a class="dropdown-item" href="#">Termination process</a></li>
-				    <li><a class="dropdown-item" href="#">List of terminations within the year</a></li>
-				 </ul>
-			  </li>
-			  <li><a class="dropdown-item" href="#">Inbound transfers</a></li>
-			  <li><a class="dropdown-item" href="#"> Outbound transfers </a></li>
-		    </ul>
-		</li>
-
-
-        <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  PROJECT OVERVIEW  </a>
-		    <ul class="dropdown-menu">
-
-			  <li><a class="dropdown-item" href="#"> Club Service &raquo; </a>
-			  	 <ul class="submenu dropdown-menu">
-				    <li><a class="dropdown-item" href="../pages/projects/club-service-projects/pfl.html">PFL</a></li>
-				    <li><a class="dropdown-item" href="../pages/projects/club-service-projects/pfl.html">Project 2</a></li>
-                    <li><a class="dropdown-item" href="../pages/projects/club-service-projects/pfl.html">Project 3</a></li>
-				 </ul>
-			  </li>
-
-              <li><a class="dropdown-item" href="./com-service-projects.html"> Community Service &raquo; </a>
-                <ul class="submenu dropdown-menu">
-                 <li><a class="dropdown-item" href="../pages/projects/club-service-projects/pfl.html">Project 1</a></li>
-                 <li><a class="dropdown-item" href="../pages/projects/club-service-projects/pfl.html">Project 2</a></li>
-                 <li><a class="dropdown-item" href="../pages/projects/club-service-projects/pfl.html">Project 3</a></li>
-              </ul>
+    <div class="container-fluid">
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     <div class="collapse navbar-collapse" id="main_nav">
+   
+       <div class="logo-container">
+           <img class="logo" src="../../assets/logo-white.png">
+       </div>
+   
+       <ul class="navbar-nav">
+           <!-- <li class="nav-item"><a class="nav-link" href="#"> About </a></li> -->
+           <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  CLUB ADMIN </a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="./club-overview.html"> Club Overview </a></li>
+                 <li><a class="dropdown-item" href="./club-history.html"> Club History </a></li>
+                 <li><a class="dropdown-item" href="./meet-the-team.html"> Meet the Team </a></li>
+                 <li><a class="dropdown-item" href="./membership-details.html"> Details of the Club membership </a></li>
+                 <li><a class="dropdown-item" href="./meetings.html"> Meetings </a>
+               </ul>
            </li>
-
-           <li><a class="dropdown-item" href="./is-projects.html"> International Service &raquo; </a>
-            <ul class="submenu dropdown-menu">
-             <li><a class="dropdown-item" href="#">Project 1</a></li>
-             <li><a class="dropdown-item" href="#">Project 2</a></li>
-             <li><a class="dropdown-item" href="#">Project 3</a></li>
-          </ul>
-       </li>
-
-       <li><a class="dropdown-item" href="./pd-projects.html"> Professional Development &raquo; </a>
-        <ul class="submenu dropdown-menu">
-         <li><a class="dropdown-item" href="#">Project 1</a></li>
-         <li><a class="dropdown-item" href="#">Project 2</a></li>
-         <li><a class="dropdown-item" href="#">Project 3</a></li>
-      </ul>
+   
+           <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle test" href="#" data-bs-toggle="dropdown">  STRATEGIC PLAN AND <br/> PROGRESSIVE DEVELOPMENT </a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
+                 <li><a class="dropdown-item" href="#"> Year plan </a></li>
+                 <li><a class="dropdown-item" href="#"> Amended year plan </a></li>
+               </ul>
+           </li>
+   
+   
+   
+           <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  CLUB MEMBERSHIP  </a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#"> Membership strategy for the year </a></li>
+                 <li><a class="dropdown-item" href="#"> Inductions &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                       <li><a class="dropdown-item" href="#">Induction process</a></li>
+                       <li><a class="dropdown-item" href="#">List of new inductions within the year</a></li>
+                       <li><a class="dropdown-item" href="#">Interactors who joined within the year</a></li>
+                    </ul>
+                 </li>
+                 <li><a class="dropdown-item" href="#"> Terminations &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                       <li><a class="dropdown-item" href="#">Termination process</a></li>
+                       <li><a class="dropdown-item" href="#">List of terminations within the year</a></li>
+                    </ul>
+                 </li>
+                 <li><a class="dropdown-item" href="#">Inbound transfers</a></li>
+                 <li><a class="dropdown-item" href="#"> Outbound transfers </a></li>
+               </ul>
+           </li>
+   
+   
+           <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  PROJECT OVERVIEW  </a>
+               <ul class="dropdown-menu">
+   
+                 <li><a class="dropdown-item" href="./pages/club-service-projects.html"> Club Service &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                       <li><a class="dropdown-item" href="#">Turfline </a></li>
+                       <li><a class="dropdown-item" href="#">Mindfizz</a></li>
+                       <li><a class="dropdown-item" href="#">Truth or Dare </a></li>
+                       <li><a class="dropdown-item" href="#">Truth or Dare 2.0 </a></li>
+                       <li><a class="dropdown-item" href="#">Installation of RACIIT </a></li>
+                       <li><a class="dropdown-item" href="#">Hot Pockets</a></li>
+                       <li><a class="dropdown-item" href="#">Skribble.io</a></li>
+                       <li><a class="dropdown-item" href="#">The pledge</a></li>
+                       <li><a class="dropdown-item" href="#">Valentines</a></li>
+                       <li><a class="dropdown-item" href="#">IGF</a></li>
+                       <li><a class="dropdown-item" href="#">PFL</a></li>
+                       <li><a class="dropdown-item" href="#">Hari Bn Ela</a></li>
+                       <li><a class="dropdown-item" href="#">Challenge:Connect</a></li>
+                       <li><a class="dropdown-item" href="#">E-buddy </a></li>
+                       <li><a class="dropdown-item" href="#">Pubg Mobile 2020</a></li>
+                       <li><a class="dropdown-item" href="#">S-Quiz</a></li>
+                       <li><a class="dropdown-item" href="#">Mistletoe & Win</a></li>
+                       <li><a class="dropdown-item" href="#">DCM - May</a></li>
+                       <li><a class="dropdown-item" href="#">Ludo Champs 2.0</a></li>
+                       <li><a class="dropdown-item" href="#">Krunker</a></li>
+                       <li><a class="dropdown-item" href="#">So think you can Rotaract?</a></li>
+                       <li><a class="dropdown-item" href="#">Board Outing</a></li>
+                       <li><a class="dropdown-item" href="#">Board Christmas Party</a> </li>
+                       <li><a class="dropdown-item" href="#">The newbies introduction</a> </li>
+                       <li><a class="dropdown-item" href="#">Interboard Futsal</a> </li>
+                       <li><a class="dropdown-item" href="#">Mid Year Review</a></li>
+                       <li><a class="dropdown-item" href="#">Movie Night</a></li>
+                       <li><a class="dropdown-item" href="#">Ifthaar</a></li>
+                       <li><a class="dropdown-item" href="#">Interboard pool tournament</a></li>
+                       <li><a class="dropdown-item" href="#">Friendly Cricket Match - RAC ICBT& RACIIT</a> </li>
+                       <li><a class="dropdown-item" href="#">RACIITIAN's of the month</a></li>
+                       <li><a class="dropdown-item" href="#">Introduction to RACIIT </a></li>
+                       <li><a class="dropdown-item" href="#">Survive</a></li>
+                       <li><a class="dropdown-item" href="#">Call of Duty MP League</a></li>
+                       <li><a class="dropdown-item" href="#">RACIITIAN's Dodge ball Match </a></li>
+                       <li><a class="dropdown-item" href="#">Friendly futsal encounter with Midtown</a> </li>
+                       <li><a class="dropdown-item" href="#">Friendly Cricket match - RAC Kelaniya& RACIIT</a></li>
+                       <li><a class="dropdown-item" href="#">Friendly Futsal Match - RAC Wellawatte & RACIIT</a></li>
+                       <li><a class="dropdown-item" href="#">Friendly Futsal Match - RAC Pearl Island &RACIIT</a></li>
+                       
+                    </ul>
+                 </li>
+   
+                 <li><a class="dropdown-item" href="#"> Professional Development &raquo; </a>
+                   <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Wevolve</a></li>
+                    <li><a class="dropdown-item" href="#">TechMeOut</a></li>
+                    <li><a class="dropdown-item" href="#">Hare and Hound</a></li>
+                    <li><a class="dropdown-item" href="#">Vroom Vroom</a></li>
+                    <li><a class="dropdown-item" href="#">Board IQ and EQ</a></li>
+                    <li><a class="dropdown-item" href="#">Fierce 3.0</a></li>
+                    <li><a class="dropdown-item" href="#">Point of Order</a></li>
+                    <li><a class="dropdown-item" href="#">Re-imagine</a></li>
+                    <li><a class="dropdown-item" href="#">World Play</a></li>
+                    <li><a class="dropdown-item" href="#">Esperenza</a></li>
+                    <li><a class="dropdown-item" href="#">Creatik</a></li>
+                    <li><a class="dropdown-item" href="#">Forage</a></li>
+                    <li><a class="dropdown-item" href="#">Change and Evolve</a></li>
+                    <li><a class="dropdown-item" href="#">Resuminar</a></li>
+                    <li><a class="dropdown-item" href="#">Animateur</a></li>
+                    <li><a class="dropdown-item" href="#">Ignite</a></li>
+                    <li><a class="dropdown-item" href="#">Lit</a></li>
+                    <li><a class="dropdown-item" href="#">React Native Tips and Tricks</a></li>
+                    <li><a class="dropdown-item" href="#">S.O.S</a></li>
+                    <li><a class="dropdown-item" href="#">Startup Ace</a></li>
+                    <li><a class="dropdown-item" href="#">Do It Right</a></li>
+                    <li><a class="dropdown-item" href="#">AI & Neural Networks Webinar</a></li>
+                    <li><a class="dropdown-item" href="#">Trailbazers</a></li>
+                    <li><a class="dropdown-item" href="#">HaXmas 2021</a></li>
+                    <li><a class="dropdown-item" href="#">Avenue Ranking</a></li>
+                 </ul>
+              </li>
+   
+   
+                 <li><a class="dropdown-item" href="./pages/com-service-projects.html"> Community Service &raquo; </a>
+                   <ul class="submenu dropdown-menu">
+                    <li><a class="dropdown-item" href="#">E-mithudama</a></li>
+                    <li><a class="dropdown-item" href="#">I Cancervive</a></li>
+                    <li><a class="dropdown-item" href="#">Athurumithuru</a></li>
+                    <li><a class="dropdown-item" href="#">We Plant </a></li>
+                    <li><a class="dropdown-item" href="#">Miracle </a></li>
+                    <li><a class="dropdown-item" href="#">We can </a></li>
+                    <li><a class="dropdown-item" href="#">Employ Me </a></li>
+                    <li><a class="dropdown-item" href="#">Stop Social Stigma </a></li>
+                    <li><a class="dropdown-item" href="#">Defend the Ocean</a></li>
+                    <li><a class="dropdown-item" href="#">Break the Chain </a></li>
+                    <li><a class="dropdown-item" href="#">Namakaga Naam</a></li>
+                    <li><a class="dropdown-item" href="#">Clean Up Challenge </a></li>
+                    <li><a class="dropdown-item" href="#">Engal Sri Lanka</a></li>
+                    <li><a class="dropdown-item" href="#">Aftermath </a></li>
+                    <li><a class="dropdown-item" href="#">Epitome of Covid-19</a></li>
+                 </ul>
+              </li>
+   
+      
+   
+              <li><a class="dropdown-item" href="#"> Public Image &raquo; </a>
+               <ul class="submenu dropdown-menu">
+                <li><a class="dropdown-item" href="#">RACIIT Vlogs</a></li>
+                <li><a class="dropdown-item" href="#">Memory Lane</a></li>
+                <li><a class="dropdown-item" href="#">Katahanda</a></li>
+                <li><a class="dropdown-item" href="#">Talentangle</a></li>
+                <li><a class="dropdown-item" href="#">This is RACIIT</a></li>
+                <li><a class="dropdown-item" href="#">People of Action</a></li>
+                <li><a class="dropdown-item" href="#">Shutter Up_SL</a></li>
+                <li><a class="dropdown-item" href="#">Never Have I Ever</a></li>
+                <li><a class="dropdown-item" href="#">Callix </a></li>
+             </ul>
+           </li>
+   
+              <li><a class="dropdown-item" href="./pages/intl-service-projects.html"> International Service &raquo; </a>
+               <ul class="submenu dropdown-menu">
+                <li><a class="dropdown-item" href="#">pandemic 2020</a></li>
+                <li><a class="dropdown-item" href="#">Voice for the Voiceless</a></li>
+                <li><a class="dropdown-item" href="#">Euphony</a></li>
+                <li><a class="dropdown-item" href="#">Dansala</a></li>
+                <li><a class="dropdown-item" href="#">Safe And Sober</a></li>
+                <li><a class="dropdown-item" href="#">Medicap</a></li>
+                <li><a class="dropdown-item" href="#">Vastra</a></li>
+                <li><a class="dropdown-item" href="#">Women WIth wings</a></li>
+                <li><a class="dropdown-item" href="#">The Reign of Blue inks</a></li>
+                <li><a class="dropdown-item" href="#">Oovooru Oril Oru Nal- A Day in Town</a></li>
+                <li><a class="dropdown-item" href="#">World in a Plate</a></li>
+                <li><a class="dropdown-item" href="#">Gracious Givers</a></li>
+                <li><a class="dropdown-item" href="#">Festive Together</a></li>
+                <li><a class="dropdown-item" href="#">Twinning Day - Bhaktapur</a></li>
+                <li><a class="dropdown-item" href="#">Twinning Day - RAC Pune Mid East</a></li>
+                <li><a class="dropdown-item" href="#">Twinning Day - Rotaract Club of GSSJain College of women, India</a></li>
+             </ul>
+          </li>
+   
+     
+   
+   
+   
+      <li><a class="dropdown-item" href="#"> All Projects</a></li>
+   
+   <!-- <li><a class="dropdown-item" href="#"> Sports &raquo; </a>
+       <ul class="submenu dropdown-menu">
+        <li><a class="dropdown-item" href="#">Project 1</a></li>
+        <li><a class="dropdown-item" href="#">Project 2</a></li>
+        <li><a class="dropdown-item" href="#">Project 3</a></li>
+     </ul>
    </li>
-
-   <li><a class="dropdown-item" href="./pr-projects.html"> Public Relations &raquo; </a>
-    <ul class="submenu dropdown-menu">
-     <li><a class="dropdown-item" href="#">Project 1</a></li>
-     <li><a class="dropdown-item" href="#">Project 2</a></li>
-     <li><a class="dropdown-item" href="#">Project 3</a></li>
-  </ul>
-</li>
-
-<li><a class="dropdown-item" href="./all-projects.html"> All &raquo; </a>
-    <ul class="submenu dropdown-menu">
-     <li><a class="dropdown-item" href="#">Project 1</a></li>
-     <li><a class="dropdown-item" href="#">Project 2</a></li>
-     <li><a class="dropdown-item" href="#">Project 3</a></li>
-  </ul>
-</li>
-
-<!-- <li><a class="dropdown-item" href="#"> Sports &raquo; </a>
-    <ul class="submenu dropdown-menu">
-     <li><a class="dropdown-item" href="#">Project 1</a></li>
-     <li><a class="dropdown-item" href="#">Project 2</a></li>
-     <li><a class="dropdown-item" href="#">Project 3</a></li>
-  </ul>
-</li>
-
-<li><a class="dropdown-item" href="#"> Information Technology &raquo; </a>
-    <ul class="submenu dropdown-menu">
-     <li><a class="dropdown-item" href="#">Project 1</a></li>
-     <li><a class="dropdown-item" href="#">Project 2</a></li>
-     <li><a class="dropdown-item" href="#">Project 3</a></li>
-  </ul>
-</li>
-
-<li><a class="dropdown-item" href="#"> Finance &raquo; </a>
-    <ul class="submenu dropdown-menu">
-     <li><a class="dropdown-item" href="#">Project 1</a></li>
-     <li><a class="dropdown-item" href="#">Project 2</a></li>
-     <li><a class="dropdown-item" href="#">Project 3</a></li>
-  </ul>
-</li> -->
-		    </ul>
-		</li>
-
-        <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> FINANCE </a>
-		    <ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
-			  <li><a class="dropdown-item" href="#"> Year plan </a></li>
-			  <li><a class="dropdown-item" href="#"> Amended year plan </a></li>
-		    </ul>
-		</li>
-
-
-       
-
-
-        <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  ROTARY FAMILY COORDINATION </a>
-		    <ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
-			  <li><a class="dropdown-item" href="#"> Year plan </a></li>
-			  <li><a class="dropdown-item" href="#"> Amended year plan </a></li>
-		    </ul>
-		</li>
-
-        
-
-        <li class="nav-item dropdown">
-			<a class="nav-link" href="#">  PR EFFORTS </a>
-		</li>
-
-
-
-
-	</ul>
-
-
-
-
-  </div> <!-- navbar-collapse.// -->
- </div> <!-- container-fluid.// -->
-</nav>
+   
+   <li><a class="dropdown-item" href="#"> Information Technology &raquo; </a>
+       <ul class="submenu dropdown-menu">
+        <li><a class="dropdown-item" href="#">Project 1</a></li>
+        <li><a class="dropdown-item" href="#">Project 2</a></li>
+        <li><a class="dropdown-item" href="#">Project 3</a></li>
+     </ul>
+   </li>
+   
+   <li><a class="dropdown-item" href="#"> Finance &raquo; </a>
+       <ul class="submenu dropdown-menu">
+        <li><a class="dropdown-item" href="#">Project 1</a></li>
+        <li><a class="dropdown-item" href="#">Project 2</a></li>
+        <li><a class="dropdown-item" href="#">Project 3</a></li>
+     </ul>
+   </li> -->
+               </ul>
+           </li>
+   
+           <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> FINANCE </a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
+                 <li><a class="dropdown-item" href="#"> Year plan </a></li>
+                 <li><a class="dropdown-item" href="#"> Amended year plan </a></li>
+               </ul>
+           </li>
+   
+   
+          
+   
+   
+           <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  ROTARY FAMILY COORDINATION </a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
+                 <li><a class="dropdown-item" href="#"> Year plan </a></li>
+                 <li><a class="dropdown-item" href="#"> Amended year plan </a></li>
+               </ul>
+           </li>
+   
+           
+   
+           <li class="nav-item dropdown">
+               <a class="nav-link" href="#">  PR EFFORTS </a>
+           </li>
+   
+   
+   
+   
+       </ul>
+   
+   
+   
+   
+     </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+   </nav>
 <!-- ============= COMPONENT END// ============== -->
 
 
 
-<div class="below-container" id="particle">
+<!-- <div class="below-container" id="particle"> -->
 
-<div class="head-container">
-    <p class="head-desc">CLUB HISTORY</p> 
-	<!-- <p class="head-text">ROTARACT CLUB OF IIT </p>  -->
-    <!-- <p class="moto">Projects</p>  -->
-</div> <!-- section-header.// -->
-
-<!-- <div class="vision-box">
-    <div class="vision-box-text-container">
-        <p class="vision-text">OUR VISION </p> 
-        <p class="vision-desc">The Rotaract Club of IIT vision is to continually be a diverse group of individuals committed to making our local and global community a better place and enriching the lives of our members and those around and creating a positive impact through service, fellowship and integrity. </p> 
-    </div>
+<!-- <div class="head-container">
+    <p class="head-desc">CLUB Membership</p> 
+</div> 
 </div> -->
-
-
-
-
-</div>
 
 <div class="third-container">
 
     <div class="head-container year-review">
-        <p class="head-text">Club History</p> 
+        <p class="head-text">Club Members</p> 
     </div>
 
   <div class="cards-container">
 
 
-    <div class="jahzan">
-
-        <div class="timeline-left">
-            <!-- <button onclick="test()"  id="myBtn"></button> -->
-            <div class="text1" data-aos="fade-right" id="myBtn">
-                <div class="text-wrap">
-                    <div class="president-info">
-                        <p class="timeline-head-text">2010-11</p>
-                        <p class="timeline-desc-text">Rtr. Tanya Senaratne</p>
-                    </div>
-                    <!-- <div class="underline"></div> -->
-                </div>
-            </div>
-
-            <div class="text1"></div>
-
-            <div class="text1" data-aos="fade-right"  id="myBtn1">
-                <div class="text-wrap">
-                    <div class="president-info">
-                        <p class="timeline-head-text">2012-13</p>
-                        <p class="timeline-desc-text">Rtr. Jehan De Silva</p>
-                    </div>
-                    <!-- <p class="timeline-desc-text">17th June 2020</p> -->
-                    <!-- <div class="underline"></div> -->
-                </div>
-            </div>
-
-            <div class="text1"></div>
-
-            <div class="text1" data-aos="fade-right">
-                <div class="text-wrap">
-                    <div class="president-info">
-                        <p class="timeline-head-text">2014-15</p>
-                        <p class="timeline-desc-text">Rtr. Punith Gunasekara</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text1"></div>
-
-            <div class="text1" data-aos="fade-right">
-                <div class="text-wrap">
-                    <div class="president-info">
-                        <p class="timeline-head-text">2016-17</p>
-                        <p class="timeline-desc-text">Rtr. Rumesh Thiruchchelvan</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text1"></div>
-
-            <div class="text1" data-aos="fade-right">
-                <div class="text-wrap">
-                    <div class="president-info">
-                        <p class="timeline-head-text">2018-19</p>
-                        <p class="timeline-desc-text">Rtr. Vimukthi Gunaratna</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </div>
-
-
-        <div class="timeline-container">
-            <!-- <div class="line"></div> -->
-            <div class="dot"></div>
-            <div class="line"></div>
-            <!-- <div class="dot"></div> -->
-            <div class="line"></div>
-            <!-- <div class="dot"></div> -->
-            <div class="line"></div>
-            <!-- <div class="dot"></div> -->
-            <div class="line"></div>
-            <!-- <div class="dot"></div> -->
-            <div class="line"></div>
-            <!-- <div class="dot"></div> -->
-            <div class="line"></div>
-            <!-- <div class="dot"></div> -->
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="dot"></div>
-           
-           
-            <!-- <div class="dot"></div> -->
-        </div>
-        <div class="timeline-right">
-            <div class="text2"></div>
-
-            <div class="text2"  data-aos="fade-left">
-                <div class="text-wrap">
-                    <div class="president-info">
-                        <p class="timeline-head-text">2011-12</p>
-                        <p class="timeline-desc-text">Rtr. Wishwa Perera</p>
-                    </div>
-
-                    <!-- <p class="timeline-desc-text">12th June 2020</p> -->
-                    <!-- <div class="underline"></div> -->
-                </div>
-            </div>
-
-            <div class="text2"></div>
-
-            <div class="text2"  data-aos="fade-left">
-                <div class="text-wrap">
-                    <div class="president-info">
-                        <p class="timeline-head-text">2013-14</p>
-                        <p class="timeline-desc-text">Rtr. Dilshan Kottegoda</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text2"></div>
-
-            <div class="text2"  data-aos="fade-left">
-                <div class="text-wrap">
-                    <div class="president-info">
-                        <p class="timeline-head-text">2015-16</p>
-                        <p class="timeline-desc-text">Rtr. Shenal Mendis</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text2"></div>
-
-            <div class="text2"  data-aos="fade-left">
-                <div class="text-wrap">
-                    <div class="president-info">
-                        <p class="timeline-head-text">2017-18</p>
-                        <p class="timeline-desc-text">Rtr. Thareef Bin Ubaid</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text2"></div>
-
-            <div class="text2"  data-aos="fade-left">
-                <div class="text-wrap">
-                    <div class="president-info">
-                        <p class="timeline-head-text">2019-20</p>
-                        <p class="timeline-desc-text">Rtr. Pasan Ganewatte</p>
-                    </div>
-                </div>
-            </div>
-
-            
-        </div>
-        
-    </div>
+  <div class='wrapper' id='wrapper'></div>
 
 
 
@@ -459,79 +386,335 @@
     
 </div>
 
-<div id="myModal" class="modal">
+<script>
+    new gridjs.Grid({
+      columns: ["Full Name", "Designation", "Date of Birth", "Date Joined (year/month)"],
+      pagination: true,
+      data: [
 
-    <!-- Modal content -->
-    <span class="close">&times;</span>
-    <div class="modal-content">
 
-        <div class="other-container">
-            <div class="top-container">
-                <p class="info-head">2010/11 - Rtr. Tanya Senaratne</p>
-                <!-- <p class="info-price">sample text...sample text...</p> -->
-            </div>
-            <div class="modal-inside-container">
-                <div class="modal-in-left">
-                    <div class="head-box">
-                        <p class="info-head">Highlights</p>
-                    </div>
-                    
-                    <div class="highlights-in">
-                        <p class="highlights">Charted in the Year 2010.</p>
-                    </div>
-                </div>
-                <div class="modal-in-right">
-                    <div class="head-box">
-                        <p class="info-head">Awards</p>
-                    </div>
-                    <div class="awards-in">
-                        <p class="highlights">Best Charter Club award.</p>
-                        <p class="highlights">Silver Award for Hosting Rotaractors. (IS Project).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- ============================== -->
+["Lokuge Don Pulitha Malkine", "President", "1998-09-22", "2019/07"],
+["Pasan Indula Ganewatte", "Immediate Past President", "1997-09-01", "2019/07"],
+["Roshan Oscar    Subramaniam", "Vice President", "1998-05-15", "2019/07"],
+["Amesha   Pawani", "Secretary", "1998-07-18", "2019/07"],
+["Mohammed  Arshad Hannan", "Treasurer", "1999-02-23", "2019/07"],
+["Dulitha  Disal  Iddawela", "Sergeant At Arms", "1999-02-19", "2019/07"],
+["Wishva  Peiris Ravindu", "Editor", "1998-12-03", "2019/07"],
+["Avisha   De Mel", "Club Service", "1999-07-31", "2019/07"],
+["Ishfaaq Siddek", "Club Service", "2000-01-26", "2018/09"],
+["Subhasingha Kankanamge Wishva Jayanath Subhasingha", "Community Service", "2000-10-10", "2019/07"],
 
-<div id="myModal1" class="modal">
+["Prathlosh Paramasivam", "Community Service", "2001-06-28", "2019/09"],
+["Ansal  Halaldeen Fathima  Shahadha", "Professional Development", "1999-04-20", "2019/07"],
+["Induwara  Mapalagama", "Professional Development", "2000-03-20", "2020/06"],
+["Dinuri Vitharana", "International Service", "2002-10-03", "2019/09"],
+["Lumini Levhara Gunawardena", "International Service", "2000-10-14", "2020/06"],
+["Fathima  Thahani Faraaz  Mohamed", "Public Relations", "2001-05-04", "2019/07"],
+["Amresh Jayakumar", "Public Relations", "2002-07-06", "2019/09"],
+["Mohommad Shadim Sadiq", "Public Relations", "2000-05-03", "2019/09"],
+["Hakeem Fazli", "Sports", "2000-03-10", "2019/09"],
+["Umeshaa Sivakumar", "Finance", "2001-09-28", "2019/09"],
 
-    <!-- Modal content -->
-    <span class="close">&times;</span>
-    <div class="modal-content">
+["Jahzan Ahamed", "Digital Communications", "1999-09-09", "2020/06"],
+["Aravindhan Sathiyanathan", "General Member", "1996-12-24", "2019/07"],
+["Kaluthanthrige Asiru Ushan Perera", "General Member", "1996-03-17", "2019/07"],
+["Isuru Mandu Weeraddana", "General Member", "1996-12-01", "2019/07"],
+["Jayaweera Muhuppu Arachchige Shashika Malshan Perera", "General Member", "1999-05-03", "2019/07"],
+["Sujitha Buddhima Wijewantha", "General Member", "1999-03-12", "2019/07"],
+["Dilan Ganeshan", "General Member", "1995-09-20", "2019/07"],
+["G.A.Isurika Kaushani", "General Member", "2000-07-28", "2019/07"],
+["Vinusha Induwara Jayasinghe", "General Member", "1999-04-19", "2019/07"],
+["Gevin Senal Batuwangala", "General Member", "1996-07-03", "2019/07"],
+["Mohamed Nasif Nuha", "General Member", "1999-11-14", "2019/07"],
+["Sameemdeen Mohamed Arshad", "General Member", "1997-03-08", "2019/07"],
+["Hedellage Damsara Perera", "General Member", "1999-02-07", "2019/07"],
+["Thavanirupan Hariharan", "General Member", "2000-01-21", "2019/07"],
+["Habaragamuralalage Sahani Chamathka Peiris", "General Member", "2017-11-18", "2019/07"],
+["Thanushi Ganegoda Haputhanthri", "General Member", "2000-01-23", "2019/07"],
+["Mohomed Aflaan Haleem", "General Member", "1997-09-20", "2019/07"],
+["Vinuki Onethra Marian Subasinghe", "General Member", "2001-10-07", "2019/07"],
+["Janith Mindula Weva Vidanagamage", "General Member", "1998-04-20", "2019/07"],
+["Pethmi Ruwanya Perera", "General Member", "1999-11-07", "2019/07"],
 
-        <div class="other-container">
-            <div class="top-container">
-                <p class="info-head">2012/13 - Rtr. Jehan De Silva</p>
-                <!-- <p class="info-price">sample text...sample text...</p> -->
-            </div>
-            <div class="modal-inside-container">
-                <div class="modal-in-left">
-                    <p class="info-head">Highlights</p>
-                    <div class="highlights-in">
-                        <div class="info-content">
-                            <p class="highlights">Charted in the Year 2010.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-in-right">
-                    <p class="info-head">Awards</p>
-                    <div class="awards-in">
-                        <div class="info-content">
-                            <p class="highlights">Best Charter Club award.</p>
-                        </div>
-                        <div class="info-content">
-                            <p class="highlights">Silver Award for Hosting Rotaractors. (IS Project).</p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+["Mohamed Umar Iqbal", "General Member", "1999-12-17", "2019/07"],
+["Hellassege Rachitha Vidumina Caldera", "General Member", "1998-05-14", "2019/07"],
+["Methmi Ishanka Kumarasiri", "General Member", "1997-04-18", "2019/07"],
+["Ruquayyah Jamaldeen", "General Member", "1997-03-10", "2019/07"],
+["Nazar Ahmed Amjad", "General Member", "1997-03-15", "2019/07"],
+["Mathumitha Saravanabavan", "General Member", "1999-10-27", "2019/07"],
+["Kumarapelli Arachige Pubudu Chamuditha Kumarasinghe", "General Member", "1998-04-10", "2019/07"],
+["Hewa Pattinige Nanath Dakshika Jayawickrama", "General Member", "2000-10-16", "2019/07"],
+["Vasudevan Niveth Goutham", "General Member", "1997-06-19", "2019/07"],
+["Bastian Koralalage Nimuthu Mirasha Rodrigo", "General Member", "1998-10-19", "2019/07"],
+["Roshith Eshanka Ruhunuhewa", "General Member", "1994-11-12", "2019/07"],
+["Mohammed Ansaf Mohammed Safwan", "General Member", "1997-07-28", "2019/07"],
+["Minul Venaka Wimalagunaratne", "General Member", "1997-04-17", "2019/07"],
+["Pradeetha Yasadrajith Waragoda", "General Member", "1998-12-27", "2019/07"],
+["Thuraiananthan  Sinthurjan", "General Member", "1998-08-14", "2019/07"],
+["Mahen  Prageeth  Dunusinghe", "General Member", "2000-06-16", "2019/07"],
+["Duran  Joash  Hardy", "General Member", "1997-06-08", "2019/07"],
+["Sathurshan   Ramachandran", "General Member", "1997-08-21", "2019/07"],
+["Malinda  Sineth  Pathirana", "General Member", "1998-11-03", "2019/07"],
+["Sachith  Senadikara Senawirath Mudalige Sandeep  Suraweera", "General Member", "1997-04-16", "2019/07"],
+
+["Harkim  Thameem", "General Member", "1998-11-21", "2019/07"],
+["Mohamed  Iyas  Mohamed Maaiz", "General Member", "1999-11-06", "2019/07"],
+["Mohamed  Mursheed Fathima  Zuha", "General Member", "1999-01-16", "2019/07"],
+["Maria   Tashiya Kannangara", "General Member", "1999-11-25", "2019/07"],
+["Wella Kankanamge Chetha Minsari De Silva", "General Member", "1999-02-21", "2019/07"],
+["Thelge Manjitha  Diyath  Peiris", "General Member", "1998-12-28", "2019/07"],
+["Paickeer  Moahaidein Shimar  Ahamed", "General Member", "1999-07-21", "2019/07"],
+["Ruzaik   Ahamed Seyyed Ramzan", "General Member", "1998-04-03", "2019/07"],
+["Kankanamge  Thimod  Prabasha", "General Member", "1999-08-19", "2019/07"],
+["Thiran  Malinda  Hettiarachchi", "General Member", "1998-06-19", "2019/07"],
+["Dimagi  Ediriweera Jayasekara Kurundu Patabandige Tharushi  Sandupama", "General Member", "1997-03-20", "2019/07"],
+["Disney  Samarawickrama Kodikarage Pramodaney  Dinuwanthika", "General Member", "1997-03-20", "2019/07"],
+["Ziyam  Santhosh Sothilingam", "General Member", "1998-05-22", "2019/07"],
+["Gayan  Sasanka  Dissanayake", "General Member", "1998-11-26", "2019/07"],
+["Dinali Gallage Dona Uththama  Kumarasiri", "General Member", "1997-08-03", "2019/07"],
+["Manivannan   Shangarshanan", "General Member", "1999-08-30", "2019/07"],
+["Abilash  Sriranjan", "General Member", "1999-05-28", "2019/07"],
+["Lakshan Anthony Ragitha  Abeysinghe", "General Member", "1997-05-14", "2019/07"],
+["Watuthanthrige Janindu Bomira  Alwis", "General Member", "1999-10-18", "2019/07"],
+["Venura Kithmal Kumara   Pallawela", "General Member", "2001-08-15", "2019/07"],
+
+["K.d. Dihan   Pamuditha", "General Member", "1999-10-04", "2019/07"],
+["Sarah Maithree   Hausotter", "General Member", "2002-01-23", "2019/07"],
+["Navamee Nethmini   Maduwage", "General Member", "1997-04-25", "2019/07"],
+["Dedigamage Anjalika Madushani   Fernando", "General Member", "2001-05-25", "2019/07"],
+["Mohomed Shehan   Mohomed Saleem", "General Member", "1999-01-29", "2019/07"],
+["Kalaru Nandasena", "General Member", "2000-09-21", "2019/09"],
+["Kandaiah Steevanraj", "General Member", "2000-03-09", "2019/09"],
+["Premkumar Pranaval", "General Member", "1999-08-02", "2019/09"],
+["Lahiru Rajapakshe", "General Member", "2001-01-16", "2019/09"],
+["Rumeth Randombage", "General Member", "2003-01-31", "2019/09"],
+["Senesh Sirimanne", "General Member", "2000-10-02", "2019/09"],
+["Marakkala Sajanaka", "General Member", "2000-10-16", "2019/09"],
+["Manoharan Arushan", "General Member", "1999-09-11", "2019/09"],
+["Ahmed Ashker", "General Member", "2001-01-22", "2019/09"],
+["Goluwegedara Chamod Jayatissa", "General Member", "2002-12-05", "2019/09"],
+["Kandasamy Keerthiresh", "General Member", "2002-01-16", "2019/09"],
+["Lucia Lucas", "General Member", "1998-11-04", "2019/09"],
+["Hamza Ziyard", "General Member", "2001-07-20", "2019/09"],
+["Ashfaaq Ahmed Hilal", "General Member", "2000-08-17", "2019/09"],
+["Galle Hettiarachchige Gayali Kanchana Hettiarachchi", "General Member", "2000-05-25", "2019/09"],
+
+["Ravindu didulantha", "General Member", "1999-05-26", "2019/09"],
+["Aqib Famiz", "General Member", "2000-03-29", "2019/09"],
+["Pasindu.P", "General Member", "1995-08-18", "2019/09"],
+["Senura Weerasinghe", "General Member", "1998-12-13", "2019/09"],
+["Viduth Ishara", "General Member", "1999-03-04", "2019/09"],
+["Thahir  Rizvan", "General Member", "2001-07-27", "2019/08"],
+["Nishanka Mendis", "General Member", "1999-05-28", "2019/08"],
+["Lochana Nilaweera", "General Member", "2001-05-14", "2019/09"],
+["Shanil De Silva", "General Member", "1993-10-07", "2018/08"],
+["Sajani Rathnayake", "General Member", "1998-07-17", "2019/01"],
+["Shehan Katukurunda", "General Member", "2001-08-10", "2019/08"],
+["Sandanidu De Silva", "General Member", "1997-09-01", "2019/09"],
+["Adithya Kalhara", "General Member", "1998-03-31", "2019/08"],
+["Mike Francis", "General Member", "1996-09-11", "2019/08"],
+["Fazna Fouseen", "General Member", "2001-05-19", "2019/08"],
+["Hiruni Malsha Perera", "General Member", "1999-12-29", "2019/01"],
+["Tiffani Perera", "General Member", "1999-12-07", "2019/09"],
+["Vibudha Ramanayake", "General Member", "1999-06-12", "2019/09"],
+["Hasini Wijemanne", "General Member", "2001-01-10", "2019/09"],
+["Nuwin Godakanda Arachchi", "General Member", "2001-12-13", "2019/09"],
+["Minuli  Rodrigo", "General Member", "2004-09-02", "2019/09"],
+["Nimnaka Swaris", "General Member", "2002-07-10", "2019/09"],
+["Thimali Kannangara", "General Member", "2000-12-12", "2019/09"],
+["Nethmi Weedagama", "General Member", "1999-12-08", "2019/09"],
+["Sachithya Rivisara", "General Member", "2000-01-11", "2019/09"],
+["Yasitha Gamage", "General Member", "2000-10-09", "2019/09"],
+["Pasansi Wickramanayake", "General Member", "1999-07-18", "2019/09"],
+["Shiranga Wijetunga", "General Member", "2000-12-29", "2019/09"],
+["Sanjali Guruge", "General Member", "2000-06-09", "2019/09"],
+["Digatha Perera", "General Member", "1999-06-22", "2019/09"],
+
+["Mihin Ratnayke", "General Member", "2000-02-19", "2019/09"],
+["Rishini Hettiarachchi", "General Member", "1999-05-05", "2019/09"],
+["Anudi Wijetunga", "General Member", "1999-12-20", "2019/09"],
+["Sanjula Samarasekara", "General Member", "1998-10-31", "2019/09"],
+["Dinuvi Munasinghe", "General Member", "2002-05-09", "2019/09"],
+["Niesha Muthugala", "General Member", "2001-08-22", "2019/09"],
+["Methma Peiris", "General Member", "1999-03-02", "2019/09"],
+["Ginura Weliwatta", "General Member", "2000-04-28", "2019/09"],
+["Ravan Perera", "General Member", "2002-02-18", "2019/09"],
+["Rumeth Kumudana Randombage", "General Member", "2002-09-02", "2019/09"],
+["Sandunika  Diyamini", "General Member", "2000-08-20", "2019/09"],
+["Arkam Rizwan", "General Member", "1999-03-15", "2018/09"],
+["Prasheen Jonathan", "General Member", "1999-10-15", "2018/01"],
+["Upekha Ilangaratne", "General Member", "2000-02-18", "2019/09"],
+["M.H.C.P.Waas", "General Member", "0000-00-00", "2019/07"],
+["Isanka Dissanayake", "General Member", "0000-00-00", "2019/09"],
+["Chamath Chandira Peiris", "General Member", "1999-10-09", "2019/09"],
+["K.A.Thamadie Dulsandi Gunawardena", "General Member", "1999-11-16", "2019/09"],
+["L.A.N Senevirathna", "General Member", "1998-09-06", "2019/09"],
+["Maggonage Oshada Fernando", "General Member", "2000-11-26", "2019/09"],
+["Kavyavarshaa Chandramohan", "General Member", "1999-10-02", "2019/09"],
+["Faique Irshad", "General Member", "1999-09-04", "2019/09"],
+["Vivek Subendran", "General Member", "1999-07-17", "2019/09"],
+["Arvind Rajendran", "General Member", "1995-05-18", "2020/06"],
+["Chamikara Kariyapperuma", "General Member", "1999-06-25", "2020/06"],
+["Chyrus Ramesh", "General Member", "1999-07-31", "2020/06"],
+["Geethika Suharshani", "General Member", "1999-08-26", "2020/06"],
+["Imsar Ahamed", "General Member", "2019-05-22", "2020/06"],
+["Janeth Dissanayake", "General Member", "1999-07-28", "2020/06"],
+["Mario Perera", "General Member", "2000-03-04", "2020/06"],
+
+
+["Nabeel Shanaz", "General Member", "1999-08-14", "2020/06"],
+["Nimna Fernando", "General Member", "1998-07-06", "2020/06"],
+["Afreen Rumie", "General Member", "1999-06-01", "2020/06"],
+["Brian Fernando", "General Member", "1999-07-07", "2020/06"],
+["Harindi Wanigaratne", "General Member", "2000-04-28", "2020/06"],
+["Methmi Mahagamage", "General Member", "2000-10-16", "2020/06"],
+["Midurshanan Sarawanamuttu", "General Member", "1999-12-27", "2020/06"],
+["Santhusha Mallawatantri", "General Member", "2001-04-25", "2020/06"],
+["Shakir Ahamed", "General Member", "2000-05-19", "2020/06"],
+["Yasara Perera", "General Member", "2000-10-04", "2020/06"],
+["Sashmitha Ramasinghe", "General Member", "2000-01-14", "2020/06"],
+["Deuni Chandraratne", "General Member", "2000-06-26", "2020/06"],
+["Disuri Gunasekera", "General Member", "2000-12-15", "2020/06"],
+["Asindu Dilsara", "General Member", "2002-05-26", "2020/06"],
+["Raneesh Fernando", "General Member", "1999-10-01", "2020/06"],
+["Senura Battage", "General Member", "1999-08-12", "2020/06"],
+["Dumindu Hewarachchi", "General Member", "2000-07-17", "2020/06"],
+["Adeeb Gazzali", "General Member", "2000-03-14", "2020/06"],
+["Hashini De Silva", "General Member", "2000-03-08", "2020/06"],
+["Imalsha Deshan", "General Member", "1999-06-08", "2020/06"],
+["Chamodya Uthpala", "General Member", "1999-12-31", "2020/06"],
+["Hashara Ranawaka", "General Member", "1999-04-24", "2020/06"],
+["Rizny Yoosuff Mohammed Rimaz", "General Member", "2000-02-02", "2020/06"],
+["Sabesh Chandru Sathiyanadan", "General Member", "2000-12-07", "2020/06"],
+["Rizny Yoosuff Mohammed Rimaz", "General Member", "2000-02-02", "2020/06"],
+["Rasula Yadithya", "General Member", "2000-02-22", "2020/06"],
+["Osandi Udalamatta", "General Member", "2000-05-06", "2020/06"],
+["Chehan Lakvindu", "General Member", "2000-03-09", "2020/06"],
+["Shanuka Peiris", "General Member", "2000-09-15", "2020/06"],
+["Shanuka Fernando", "General Member", "1997-08-12", "2020/06"],
+["Sheran Buckman", "General Member", "2002-04-03", "2020/06"],
+["Shevin Weerakone", "General Member", "2002-02-28", "2020/06"],
+["Tharushi Jithmini", "General Member", "1999-06-17", "2020/06"],
+["Hiruni Hettiarachchi", "General Member", "1998-12-02", "2020/06"],
+["Ramanan Anabhayan", "General Member", "2003-01-01", "2020/06"],
+["Ashen Sandakelum Senarathne", "General Member", "1999-07-30", "2020/06"],
+["Ammaar Bin Liyak", "General Member", "1999-11-02", "2020/06"],
+["Devan Andradi", "General Member", "2000-06-21", "2020/06"],
+["Chandira Gunatilleke", "General Member", "2020-07-18", "2020/06"],
+["Dulana Sandes", "General Member", "2000-08-18", "2020/06"],
+["Hansani Gunasekara", "General Member", "2000-10-14", "2020/06"],
+["Hasini Dissanayake", "General Member", "1999-10-30", "2020/06"],
+["Isurangi Thilakshana", "General Member", "2000-04-27", "2020/06"],
+["Kavindu Hettiarachchi", "General Member", "1999-08-31", "2020/06"],
+["Maleesha Lionel", "General Member", "2000-12-30", "2020/06"],
+["Nenuka Fernando", "General Member", "2000-09-11", "2020/06"],
+["Nithya Bandara", "General Member", "1999-11-30", "2020/06"],
+["Pasindu Madhuranga", "General Member", "1999-05-22", "2020/06"],
+["Sachini Pieris", "General Member", "2000-06-11", "2020/06"],
+["Shane Pramod", "General Member", "2000-09-02", "2020/06"],
+["Supun Randika", "General Member", "1997-05-29", "2020/06"],
+["Abdul Lathiff Abdul Karim", "General Member", "2000-01-29", "2020/06"],
+["WIkum Chamith", "General Member", "2020-05-26", "2020/06"],
+["Yasiru Rashan", "General Member", "1999-03-10", "2020/06"],
+["Shuhaib Ahamed", "General Member", "2000-03-23", "2020/06"],
+["Fahd Fazal", "General Member", "2000-09-16", "2020/06"],
+["Timothy Samuel", "General Member", "1998-06-18", "2020/06"],
+["Hashini  Kodithuwakku", "General Member", "1999-05-19", "2020/06"],
+["Abdul Razzak Saadh Ibnu Jawwadh", "General Member", "1999-01-08", "2020/09"],
+["Aarany   Sivanathan", "General Member", "2000-03-21", "2020/09"],
+["Yogeshwari  Kannan", "General Member", "1999-03-24", "2020/09"],
+["Fathima  Amshika Shehrin Shahul Hameed", "General Member", "2000-10-09", "2020/09"],
+["Nadil   Padmaperuma", "General Member", "2000-09-28", "2020/09"],
+["Piruthuvi   Baskaran", "General Member", "2000-10-05", "2020/09"],
+["Sasvin Mineth Jeewandara", "General Member", "2000-10-14", "2020/09"],
+["Abbas   Aliakber", "General Member", "2002-01-20", "2020/09"],
+["Ammar  Nawaz", "General Member", "2002-07-05", "2020/09"],
+["Thinayani   Supunsara", "General Member", "2000-03-24", "2020/09"],
+["Laashan  Moganaraj", "General Member", "2000-09-17", "2020/09"],
+["Sandesh  De Mel", "General Member", "2000-02-21", "2020/12"],
+["Rusini   Gunarathne", "General Member", "2000-10-27", "2020/12"],
+["Koushika   Umesh", "General Member", "2000-10-09", "2020/12"],
+["Jeeona Jeeona Heltica Andrew Bran Christie Andrew", "General Member", "2000-07-10", "2020/12"],
+["Nandun   Perera", "General Member", "1998-12-17", "2020/12"],
+["Maleesha   Perera", "General Member", "1990-07-05", "2020/12"],
+["Samithu  Hettiarachchi", "General Member", "2003-01-13", "2020/12"],
+["Eshini Nabadawa Vithanage Eshini Imasha Vithanage  Vithanage", "General Member", "1998-04-03", "2020/12"],
+["Senuri  Nandasiri", "General Member", "2001-11-01", "2020/12"],
+["Ifaza  Fasy", "General Member", "1999-12-16", "2020/12"],
+["Haraendralal  Maharajah", "General Member", "0000-00-00", "2020/12"],
+["Jaiyramanan Jaiyramanan Vijayaalayan Vijayaalayan", "General Member", "2003-05-12", "2020/12"],
+["Shamana  Nadesapillai", "General Member", "2001-07-16", "2020/12"],
+["Ahmed  Hazmi", "General Member", "2002-08-22", "2020/12"],
+["Thakesha  Jayaratne", "General Member", "1998-10-15", "2020/12"],
+["Nithila  Ariyapperuma", "General Member", "2003-03-01", "2020/12"],
+["Lashaan  Lashaan Rajendran  Rajendran", "General Member", "2003-04-05", "2020/12"],
+["Viveka  Balanadaraj Iyer", "General Member", "2000-12-10", "2020/12"],
+["Gimhan  Seneviratne", "General Member", "2001-05-15", "2020/12"],
+["Bojith  Baduge Bojith Sanjiwa Sanjiwa", "General Member", "2003-02-28", "2020/12"],
+["Nisal  Kothalawala", "General Member", "2000-12-11", "2020/12"],
+["Devin  Fernando", "General Member", "2001-12-15", "2020/12"],
+["Viraji Viraji Kavitha Ratubabarandage  Ratubabarandage", "General Member", "2002-12-20", "2020/12"],
+["Shakeel  Rizvi", "General Member", "2002-06-12", "2020/12"],
+["Ravindu  Perera", "General Member", "2001-01-11", "2019/09"],
+["Kirthika Kirthika Senathiraja Senathiraja", "General Member", "2001-10-27", "2020/12"],
+["Ratheshan  Sathiyamoorthy", "General Member", "2000-12-19", "2020/12"],
+["Al Arfith  Ahamed", "General Member", "1997-09-15", "2020/12"],
+["Claudia  Claudia Amalshi Warnakulaarachchi  Warnakulaarachchi", "General Member", "2000-07-19", "2020/12"],
+["Malitha  Randeniya", "General Member", "2003-08-02", "2020/12"],
+["Neluka  Fernando", "General Member", "2002-04-14", "2020/12"],
+["Chamika   Wijeratne", "General Member", "2000-03-29", "2020/12"],
+["Nisal Nisal Dulwin Heenatigala Heenatigala", "General Member", "2004-04-09", "2020/12"],
+["Mohammed   Amjad", "General Member", "0000-00-00", "2020/12"],
+["Shuaib  Salman", "General Member", "2002-03-31", "2020/12"],
+["Fahad   Zaman", "General Member", "0000-00-00", "2020/12"],
+["Gihan  Athulathmudali", "General Member", "1998-07-16", "2020/12"],
+["Chindumi  Chindumi Minsandhi Karunaarachchi  Karunaarachchi", "General Member", "2002-05-11", "2020/12"],
+["Pasath  Bandara", "General Member", "1999-01-16", "2020/12"],
+["Immam  Ashfaq", "General Member", "2002-01-14", "2020/12"],
+["Franz Franz Leo Leo", "General Member", "2001-01-01", "2020/12"],
+["Devin  Rajapakse", "General Member", "2003-12-05", "2020/12"],
+["Imandi  Karunaratne", "General Member", "2002-09-29", "2020/12"],
+["Evin   Rajapakse", "General Member", "2003-12-04", "2020/12"],
+["Irushi   Perera", "General Member", "2003-08-29", "2020/12"],
+["Nirusan  Hariharan", "General Member", "2003-10-10", "2020/12"],
+["Lashan  Mendis", "General Member", "2000-05-07", "2021/02"],
+["Vinu Ransika Pathirana", "General Member", "2000-05-07", "2021/02"],
+["Anujan R Radeesha", "General Member", "2003-08-05", "2021/03"],
+["Akarshani Chethana Ramanayake", "General Member", "2000-08-20", "2021/04"],
+["Kevin  Mitchel Subalakshan Niruban", "General Member", "1999-04-10", "2021/04"],
+["Sandun S De Silva", "General Member", "2001-08-07", "2021/04"]
+
+
+
+      ],
+        style: {
+        table: {
+        //   border: '3px solid #ccc'
+        'box-shadow': '0px 0px 10px rgba(0, 1, 0, 0.5)',
+          'background-color': 'rgba(187,187,187,0.5)',
+          border: 'none'
+        },
+        th: {
+        //   'background-color': 'rgba(0, 0, 0, 0.1)',
+        //   color: '#000',
+        //   'border-bottom': '3px solid #ccc',
+        //   'text-align': 'center',
+        'font-size': '25px',
+        'color': 'rgb(0, 0, 0)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+          'font-family': 'Poppins, sans-serif'
+        },
+        td: {
+        //   'text-align': 'center',
+        'font-size': '16px',
+        'color': 'rgb(75, 75, 75)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+        'font-family': 'Poppins, sans-serif'
+        }
+      },
+    }).render(document.getElementById("wrapper"));
+    </script>
 
 
 <script>
