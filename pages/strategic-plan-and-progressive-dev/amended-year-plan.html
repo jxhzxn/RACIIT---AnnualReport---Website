@@ -14,12 +14,8 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-<script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
 
-
-
-<link href="../../css/club-admin/team.css" rel="stylesheet">
+<link href="../../css/club-admin/club-membership.css" rel="stylesheet">
 <link href="../../css/navbar.css" rel="stylesheet">
 <link href="../../css/footer.css" rel="stylesheet">
 
@@ -28,6 +24,10 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+
+<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+<link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -76,10 +76,6 @@
 
 </script>
 
-<script>
-  const tilt = $('.js-tilt').tilt();
-</script>
-
 </head>
 <body>
 
@@ -102,11 +98,11 @@
          <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  CLUB ADMIN </a>
              <ul class="dropdown-menu">
-               <li><a class="dropdown-item" href="./club-overview.html"> Club Overview </a></li>
-               <li><a class="dropdown-item" href="./club-history.html"> Club History </a></li>
-               <li><a class="dropdown-item" href="./meet-the-team.html"> Meet the Team </a></li>
-               <li><a class="dropdown-item" href="./membership-details.html"> Details of the Club Membership </a></li>
-               <li><a class="dropdown-item" href="./meetings.html"> Meetings </a>
+               <li><a class="dropdown-item" href="../club-admin/club-overview.html"> Club Overview </a></li>
+               <li><a class="dropdown-item" href="../club-admin/club-history.html"> Club History </a></li>
+               <li><a class="dropdown-item" href="../club-admin/meet-the-team.html"> Meet the Team </a></li>
+               <li><a class="dropdown-item" href="../club-admin/membership-details.html"> Details of the Club Membership </a></li>
+               <li><a class="dropdown-item" href="../club-admin/meetings.html"> Meetings </a>
              </ul>
          </li>
  
@@ -281,30 +277,7 @@
  
  
     <li><a class="dropdown-item" href="../avenues/all-projects.html"> All Projects</a></li>
- 
- <!-- <li><a class="dropdown-item" href="#"> Sports &raquo; </a>
-     <ul class="submenu dropdown-menu">
-      <li><a class="dropdown-item" href="#">Project 1</a></li>
-      <li><a class="dropdown-item" href="#">Project 2</a></li>
-      <li><a class="dropdown-item" href="#">Project 3</a></li>
-   </ul>
- </li>
- 
- <li><a class="dropdown-item" href="#"> Information Technology &raquo; </a>
-     <ul class="submenu dropdown-menu">
-      <li><a class="dropdown-item" href="#">Project 1</a></li>
-      <li><a class="dropdown-item" href="#">Project 2</a></li>
-      <li><a class="dropdown-item" href="#">Project 3</a></li>
-   </ul>
- </li>
- 
- <li><a class="dropdown-item" href="#"> Finance &raquo; </a>
-     <ul class="submenu dropdown-menu">
-      <li><a class="dropdown-item" href="#">Project 1</a></li>
-      <li><a class="dropdown-item" href="#">Project 2</a></li>
-      <li><a class="dropdown-item" href="#">Project 3</a></li>
-   </ul>
- </li> -->
+
              </ul>
          </li>
  
@@ -319,9 +292,9 @@
          <li class="nav-item dropdown">
              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  ROTARY FAMILY COORDINATION </a>
              <ul class="dropdown-menu">
-               <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
-               <li><a class="dropdown-item" href="#"> Year plan </a></li>
-               <li><a class="dropdown-item" href="#"> Amended year plan </a></li>
+               <li><a class="dropdown-item" href="./long-term-strategic-plan.html"> Long term strategic plan</a></li>
+               <li><a class="dropdown-item" href="./year-plan.html"> Year plan </a></li>
+               <li><a class="dropdown-item" href="./amended-year-plan.html"> Amended year plan </a></li>
              </ul>
          </li>
  
@@ -346,233 +319,23 @@
 
 
 
-<!-- <div class="below-container" id="particle">
+<!-- <div class="below-container" id="particle"> -->
 
-<div class="head-container">
-    <p class="head-desc">CLUB HISTORY</p> 
-</div>  -->
-
-
-
-
-
-
-</div>
+<!-- <div class="head-container">
+    <p class="head-desc">CLUB Membership</p> 
+</div> 
+</div> -->
 
 <div class="third-container">
 
     <div class="head-container year-review">
-        <p class="head-text">Meet the Team</p> 
+        <p class="head-text">Amended Year Plan</p> 
     </div>
 
   <div class="cards-container">
 
-    <div class="top-people">
 
-      <div class="top-people-card">
-        <div class="top-people-head"><p>Teacher in Charge</p></div>
-        <div class="people-image-container  js-tilt"><img class="people-image" src="../../assets/images/main-people/gayashini.jpg"></div>
-        <div class="top-people-name"><p>Miss. Gayashini</p></div>
-      </div>
-
-      <div class="top-people-card">
-        <div class="top-people-head"><p>Guide Club Cordinator</p></div>
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/ranga aiya.png"></div>
-        <div class="top-people-name"><p>Ranga Samarakoon</p></div>
-      </div>
-
-      <div class="top-people-card">
-        <div class="top-people-head"><p>Immediate Past President</p></div>
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/pasan.png"></div>
-        <div class="top-people-name"><p>Pasan Ganewatte</p></div>
-      </div>
-
-    </div>
-
-    <div class="head-container">
-      <p class="head-text people-heading">Executive Committee</p> 
-  </div>
-
-    <div class="middle-poeple">
-
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/malkine.png"></div>
-        <div class="top-people-head"><p>President</p></div>
-        <div class="middle-people-name"><p>Malkine Lokuge</p></div>
-      </div>
-
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/amesha.png"></div>
-        <div class="top-people-head"><p>Secratary</p></div>
-        <div class="middle-people-name"><p>Amesha Vithanage</p></div>
-      </div>
-
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/oscar.png"></div>
-        <div class="top-people-head"><p>Vice President</p></div>
-        <div class="middle-people-name"><p>Oscar Subramaniam</p></div>
-      </div>
-
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/hannan.png"></div>
-        <div class="top-people-head"><p>Treasurer</p></div>
-        <div class="middle-people-name"><p>Arshad Hannan</p></div>
-      </div>
-
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/wishwa.png"></div>
-        <div class="top-people-head"><p>Editor</p></div>
-        <div class="middle-people-name"><p>Wishva Peiris</p></div>
-      </div>
-
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/dulitha.png"></div>
-        <div class="top-people-head"><p>Sergeant At Arm</p></div>
-        <div class="middle-people-name"><p>Dulitha Iddawela</p></div>
-      </div>
-
-    
-
-    </div>
-
-    <div class="head-container">
-      <p class="head-text people-heading">Director Board</p> 
-  </div>
-  
-  <div class="below-poeple">
-
-    <!-- <div class="section"> -->
-
-      <div class="top-people-card">
-      
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/ishfaaq.png"></div>
-        <div class="top-people-head"><p>Joint Club Service<br/> Director</p></div>
-        <div class="middle-people-name"><p>Ishfaaq Siddeek </p></div>
-      </div>
-  
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/avisha.png"></div>
-        <div class="top-people-head"><p>Joint Club Service<br/> Director</p></div>
-        <div class="middle-people-name"><p>Avisha de Mel</p></div>
-      </div>
-
-    <!-- </div> -->
-
-    <!-- <div class="section"> -->
-      <div class="top-people-card">
-      
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/wishwa s.png"></div>
-        <div class="top-people-head"><p>Joint Community Service Director</p></div>
-        <div class="middle-people-name"><p>Wishwa Kankanamge</p></div>
-      </div>
-  
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/prathlosh.png"></div>
-        <div class="top-people-head"><p>Joint Community Service Director</p></div>
-        <div class="middle-people-name"><p>Prathlosh Paramasivam</p></div>
-      </div>
-    <!-- </div> -->
-
-    <!-- <div class="section"> -->
-      <div class="top-people-card">
-      
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/induwara.png"></div>
-        <div class="top-people-head"><p>Joint Professional<br/> Development Director</p></div>
-        <div class="middle-people-name"><p>Induwara Mapalagama</p></div>
-      </div>
-  
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/shahadha.png"></div>
-        <div class="top-people-head"><p>Joint Professional<br/> Development Director</p></div>
-        <div class="middle-people-name"><p>Shahadha Halaldeen</p></div>
-      </div>
-    <!-- </div> -->
-
-    <!-- <div class="section"> -->
-      <div class="top-people-card">
-      
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/amresh.png"></div>
-        <div class="top-people-head"><p>Joint Public<br/> Relations Director</p></div>
-        <div class="middle-people-name"><p>Amresh Jayakumar</p></div>
-      </div>
-  
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/shadim.png"></div>
-        <div class="top-people-head"><p>Joint Public<br/> Relations Director</p></div>
-        <div class="middle-people-name"><p>Shadim Abooubaidha</p></div>
-      </div>
-  
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/thahani.png"></div>
-        <div class="top-people-head"><p>Joint Public <br/>Relations Director</p></div>
-        <div class="middle-people-name"><p>Thahani Mohamed</p></div>
-      </div>
-    <!-- </div> -->
-
-    <!-- <div class="section"> -->
-      <div class="top-people-card">
-      
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/dinuri.png"></div>
-        <div class="top-people-head"><p>Joint International <br/>Service Director</p></div>
-        <div class="middle-people-name"><p>Dinuri Vitharana </p></div>
-      </div>
-  
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/levhara.png"></div>
-        <div class="top-people-head"><p>Joint International <br/>Service Director</p></div>
-        <div class="middle-people-name"><p>Levhara Gunawardena </p></div>
-      </div>
-    <!-- </div> -->
-
-    <!-- <div class="section"> -->
-      <div class="top-people-card">
-      
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/jahzan.png"></div>
-        <div class="top-people-head"><p>Information Technology<br/> Director</p></div>
-        <div class="middle-people-name"><p>Jahzan Ahamed</p></div>
-      </div>
-  
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/umeshaa.png"></div>
-        <div class="top-people-head"><p>Finance Director</p></div>
-        <div class="middle-people-name"><p>Umeshaa Sivakumar </p></div>
-      </div>
-  
-      <div class="top-people-card">
-        
-        <div class="people-image-container"><img class="people-image" src="../../assets/images/main-people/hakeem.png"></div>
-        <div class="top-people-head"><p>Sports Director</p></div>
-        <div class="middle-people-name"><p>Hakeem Fazli </p></div>
-      </div>
-    <!-- </div> -->
- 
-
-
-
-    
-
-
-
-
-  
-
-
-  
-
-  </div>
+  <div class='wrapper' id='wrapper'></div>
 
 
 
@@ -594,81 +357,6 @@
     
     
 </div>
-
-<div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <span class="close">&times;</span>
-    <div class="modal-content">
-
-        <div class="other-container">
-            <div class="top-container">
-                <p class="info-head">2010/11 - Rtr. Tanya Senaratne</p>
-                <!-- <p class="info-price">sample text...sample text...</p> -->
-            </div>
-            <div class="modal-inside-container">
-                <div class="modal-in-left">
-                    <div class="head-box">
-                        <p class="info-head">Highlights</p>
-                    </div>
-                    
-                    <div class="highlights-in">
-                        <p class="highlights">Charted in the Year 2010.</p>
-                    </div>
-                </div>
-                <div class="modal-in-right">
-                    <div class="head-box">
-                        <p class="info-head">Awards</p>
-                    </div>
-                    <div class="awards-in">
-                        <p class="highlights">Best Charter Club award.</p>
-                        <p class="highlights">Silver Award for Hosting Rotaractors. (IS Project).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ============================== -->
-
-<div id="myModal1" class="modal">
-
-    <!-- Modal content -->
-    <span class="close">&times;</span>
-    <div class="modal-content">
-
-        <div class="other-container">
-            <div class="top-container">
-                <p class="info-head">2012/13 - Rtr. Jehan De Silva</p>
-                <!-- <p class="info-price">sample text...sample text...</p> -->
-            </div>
-            <div class="modal-inside-container">
-                <div class="modal-in-left">
-                    <p class="info-head">Highlights</p>
-                    <div class="highlights-in">
-                        <div class="info-content">
-                            <p class="highlights">Charted in the Year 2010.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-in-right">
-                    <p class="info-head">Awards</p>
-                    <div class="awards-in">
-                        <div class="info-content">
-                            <p class="highlights">Best Charter Club award.</p>
-                        </div>
-                        <div class="info-content">
-                            <p class="highlights">Silver Award for Hosting Rotaractors. (IS Project).</p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <div class="footer">
 
@@ -700,6 +388,151 @@
 
 </div>
 
+<script>
+    new gridjs.Grid({
+      columns: ["Month", "Avenue", "Projects"],
+      pagination: true,
+      data: [
+
+
+
+["July", "Club Service", "Truth or Dare"],
+["July", "Club Service", "Inter Board Futsal"],
+["July", "Club Service", "Pubg Mobile 2020"],
+["July", "International Services", "Pandemic 2020"],
+["August", "Club Service", "Movie Night"],
+["August", "Club Service", "Iftar"],
+["August", "Club Service", "Call-Duty MP league"],
+["August", "Professional Development", "Wevolve"],
+["September", "Club Service", "Mind Fizz."],
+["September", "Club Service", "11th Installation Ceremony Of RACIIT."],
+["September", "Club Service", "Hot Pockets"],
+["September", "Club Service", "Inter Board Pool tournament"],
+["September", "Community Service", "Epitome of Covid -19"],
+["September", "Professional Development", "Board IQ and EQ"],
+["October", "Club Service", "The Newbies Introduction"],
+["October", "Club Service", "Board Outing"],
+["October", "Club Service", "S-Quiz"],
+["October", "Community Service", "Athuru Mithuru"],
+["October", "Professional Developmen", "Fierce 3.0"],
+["October", "Professional Developmen", "Point of order"],
+["October", "Professional Developmen", "Word Play"],
+["October", "Professional Developmen", "Esperenza"],
+["October", "Public Relations", "Re-Imagine"],
+["October", "International Services", "Euphony"],
+["November", "Club Service", "Truth or Dare 2.0"],
+["November", "Club Service", "Introduction to RACIIT"],
+["November", "Club Service", "The Pledge"],
+["November", "Club Service", "Skribbl.IO"],
+["November", "Professional Development", "Resuminar"],
+["November", "Professional Development", "Animateur"],
+["November", "Public Relations", "Katahanda"],
+["December", "Club Service", "Mistletoe & Win"],
+["December", "Club Service", "Turfline"],
+["December", "Professional Development", "Lit"],
+["December", "Public Relations", "Talentangle"],
+["January", "Club Service", "Hare and Hound"],
+["January", "Club Service", "Mid Year Review"],
+["January", "Club Service", "Board Christmas Party"],
+["January", "Club Service", "Friendly Cricket Match -RACICBT & RACIIT "],
+["January", "Club Service", "Friendly Futsal Match RACMidtown"],
+["January", "Professional Development", "Forage"],
+["January", "Public Relations", "Creatik"],
+["February", "Club Service", "Hari Bn Ela"],
+["February", "Club Service", "RACIITians' Dodge Ball Match"],
+["February", "Club Service", "Project Valentines"],
+["February", "Club Service", "Krunker"],
+["February", "Professional Development", "Change and Evolve"],
+["February", "Professional Development", "S.O.S"],
+["February", "Professional Development", "Start up Ace"],
+["February", "Professional Development", "React Native Tips and Tricks"],
+["March", "Club Service", "Pro Futsal League"],
+["March", "Club Service", "So you think you can Rotaract?"],
+["March", "Club Service", "Friendly Futsal Match -RACWellawatte & RACIIT"],
+["March", "Community Service", "Defend the Ocean"],
+["March", "Professional Development", "Ignite"],
+["March", "Professional Development", "Do It right"],
+["March", "Professional Development", "AI & Neural Networks Webinar"],
+["March", "International Services", "Women With Wings"],
+["April", "Club Service", "Friendly Futsal Match - RAC Pearl Island and RAC IIT"],
+["April", "Professional Development", "Vroom Vroom"],
+["April", "Professional Development", "Haxmas 2021"],
+["April", "International Services", "Safe and Sober"],
+["April", "International Services", "Medicap"],
+["April", "International Services", "The Reign of Blue Inks"],
+["April", "International Services", "Oovooru Ooril Oru Nal - A day in town"],
+["April", "International Services", "World in a Plate"],
+["April", "International Services", "Gracious Givers"],
+["May", "Club Service", "RACIITians of the month"],
+["May", "Club Service", "Challenge:Connect "],
+["May", "Club Service", "E-Buddy"],
+["May", "Club Service", "IGF"],
+["May", "Club Service", "Ludo Champs 2.0"],
+["May", "Club Service", "District Council Meeting - May"],
+["May", "Community Service", "Break the chain"],
+["May", "Community Service", "Epitome of COvid-19"],
+["May", "Community Service", "ICanCervive"],
+["May", "Community Service", "Miracle"],
+["May", "Community Service", "Namakaga Naam"],
+["May", "Community Service", "E-Mithudama"],
+["May", "Community Service", "Employme"],
+["May", "Community Service", "Engal Sri lanka"],
+["May", "Community Service", "We can"],
+["May", "Community Service", "We Plant"],
+["May", "Community Service", "Clean up challenge"],
+["May", "Community Service", "Stop Social Stigma "],
+["May", "Community Service", "Aftermath"],
+["May", "Professional Development", "Trailblazers"],
+["May", "Professional Development", "Locked learn"],
+["May", "Professional Development", "Avenue Rankings"],
+["May", "Professional Development", "Podcast"],
+["May", "Public Relations", "Memory Lane"],
+["May", "Public Relations", "Never have i ever"],
+["May", "Public Relations", "People of action"],
+["May", "Public Relations", " RACIIT V-logs"],
+["May", "Public Relations", "This is RACIIT"],
+["May", "Public Relations", "Callix"],
+["May", "Public Relations", "Festive Together"],
+["May", "Public Relations", "Shutter up SL"],
+["May", "International Services", "Festive Together"],
+["May", "International Services", "Dansala"],
+["May", "International Services", "Voice For the Voiceless"],
+["May", "International Services", "Vastra"],
+["May", "International Services", "Twinning Day - Bhaktapur"],
+["May", "International Services", "Twinning Day - Rotaract Club of GSS Jain College for Women,India"]
+
+
+
+
+
+      ],
+        style: {
+        table: {
+        //   border: '3px solid #ccc'
+        'box-shadow': '0px 0px 10px rgba(0, 1, 0, 0.5)',
+          'background-color': 'rgba(187,187,187,0.5)',
+          border: 'none'
+        },
+        th: {
+        //   'background-color': 'rgba(0, 0, 0, 0.1)',
+        //   color: '#000',
+        //   'border-bottom': '3px solid #ccc',
+        //   'text-align': 'center',
+        'font-size': '25px',
+        'color': 'rgb(0, 0, 0)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+          'font-family': 'Poppins, sans-serif'
+        },
+        td: {
+        //   'text-align': 'center',
+        'font-size': '16px',
+        'color': 'rgb(75, 75, 75)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+        'font-family': 'Poppins, sans-serif'
+        }
+      },
+    }).render(document.getElementById("wrapper"));
+    </script>
 
 
 <script>
