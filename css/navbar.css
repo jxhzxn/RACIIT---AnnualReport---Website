@@ -45,7 +45,10 @@ body{
   
   
   .navbar{
-      background-color: red;
+      background-color: #05A3B5;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      color: black;
       width: 100%;
      
   }
@@ -143,4 +146,12 @@ body{
       margin-top: 1000px;
   }
   
- 
+ .nav-item{
+     color: black;
+     text-align: center;
+     margin-left: 20px;
+     margin-right: 20px;
+     font-weight: 400;
+     padding-bottom: 10px;
+     padding-top: 10px;
+ }
