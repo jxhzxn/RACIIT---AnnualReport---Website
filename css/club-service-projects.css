@@ -317,16 +317,17 @@
     text-align: center;
     /* border-style: solid; */
     /* border-color: black; */
-    width: 250px;
+    width: 270px;
     height: 300px;
     margin-top: 30px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 42px;
+    font-size: 38px;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
+    line-height: 45px;
     
 }
 
