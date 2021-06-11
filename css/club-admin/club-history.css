@@ -21,9 +21,10 @@
 
   .top-container{
       
-      border-color: black;
-      border-style: solid;
+      /* border-color: black;
+      border-style: solid; */
       width: 100%;
+      margin-top: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -33,8 +34,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       font-family: 'Poppins', sans-serif;
       width: 100%;
+      margin-top: 30px;
   }
 
   .modal-in-left{
@@ -60,28 +63,32 @@
 .highlights-in{
     /* border-color: red;
     border-style: solid; */
-    width: 100%;
-    height: 300px;
+    width: 80%;
+    /* height: 300px; */
     /* padding: 40px; */
 }
 
 .highlights{
     font-weight: 500;
-    font-size: 20px;
-     border-color: black;
-    border-style: solid;
+    font-size: 16px;
+     /* border-color: black;
+    border-style: solid; */
     padding: 10px;
     display: flex;
     justify-content: center;
     margin-bottom: 0px;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    line-height: 30px;
+    letter-spacing: 1px;
 }
 
 .awards-in{
     /* border-color: red;
     border-style: solid; */
-    width: 100%;
-    height: 300px;
+    width: 60%;
+    padding-bottom: 50px;
+    /* height: 300px; */
     /* padding: 40px; */
 }
 
@@ -350,6 +357,7 @@
   .modal-content {
     background-color: white;
     margin: auto;
+    border: none;
     /* padding: 20px; */
     margin-top: 100px;
     /* border: 5px solid rgb(255, 255, 255); */
@@ -361,6 +369,7 @@
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 5px;
+    overflow-y: scroll;
 
     /* justify-content: center;
     align-items: center; */
@@ -409,7 +418,7 @@
     font-family: 'Poppins', sans-serif;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 
@@ -453,7 +462,7 @@
 .timeline-left{
     /* border-style: solid;
     border-color: black; */
-    width: 300px;
+    width: 350px;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     color: white;
@@ -473,8 +482,9 @@
     align-items: center;
     /* margin-top: 10px; */
     color: #0D6EFD;
+    color: white;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     font-size: 26px;
 }
 
@@ -483,7 +493,7 @@
     font-size: 18px;
     font-weight: 600;
     color: white;
-    width: 300px;
+    width: 350px;
     /* border-style: solid;
     border-color: black; */
 }
@@ -524,7 +534,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(112, 112, 112);
-    background-color: rgb(161, 161, 161);
+    /* background-color: rgb(161, 161, 161); */
     border-radius: 30px;
     box-shadow: 0px 0px 10px rgba(0, 1, 0, 0.1);
     cursor: default;
@@ -672,6 +682,7 @@
 .timeline-desc-text{
     font-size: 18px;
     margin-top: -10px;
+    /* letter-spacing: 1px; */
 }
 
 .president-info{
