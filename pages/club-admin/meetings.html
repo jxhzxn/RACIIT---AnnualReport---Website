@@ -15,11 +15,14 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
-<link href="../../css/club-admin/club-history.css" rel="stylesheet">
+<link href="../../css/club-admin/meetings.css" rel="stylesheet">
 <link href="../../css/navbar.css" rel="stylesheet">
 <link href="../../css/footer.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+<link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
@@ -366,9 +369,21 @@
 
   <div class="cards-container">
 
+    <div class="section-head-container">
+      <p>Board Meetings</p>
+      <div class="underline"></div>
+    </div>
+
 
    
+    <div class='wrapper' id='wrapper'></div>
 
+    <div class="section-head-container upper">
+      <p>General Meetings</p>
+      <div class="underline"></div>
+    </div>
+
+    <div class='wrapper' id='wrapper1'></div>
 
 
   </div>
@@ -425,6 +440,178 @@
     </div>
   
   </div>
+
+  <script>
+    new gridjs.Grid({
+      columns: ["Month", "Date", "Venue", "No of Participants"],
+      pagination: true,
+      data: [
+
+
+
+["July", "07/07/2020", "Google Meet", "20"],
+["July", "14/07/2020", "Google Meet", "20"],
+["July", "16/07/2020", "Google Meet", "20"],
+["July", "22/07/2020", "Google Meet", "20"],
+["July", "29/07/2020", "Google Meet", "20"],
+
+["August", "06/08/2020", "Google Meet", "20"],
+["August", "12/08/2020", "Google Meet", "20"],
+["August", "20/08/2020", "Thahani's place", "20"],
+["August", "29/08/2020", "Umeshaa's place", "20"],
+
+["September", "06/09/2020", "Thahani's place and Google Meet", "20"],
+["September", "16/09/2020", "Malkine's place", "20"],
+["September", "22/08/2020", "Thahani's place and Google Meet", "20"],
+
+["October", "1/10/2020",  "Thahani's place and Google Meet", "20"],
+["October", "6/10/2020",  "Avisha's place and Google Meet", "20"],
+["October", "13/10/2020", "Google Meet", "20"],
+["October", "20/10/2020", "Google Meet", "20"],
+["October", "27/10/2020", "Google Meet", "20"],
+
+["November", "03/11/2020", "Google Meet", "20"],
+["November", "10/11/2020", "Google Meet", "20"],
+["November", "17/11/2020", "Google Meet", "20"],
+["November", "23/11/2020", "Google Meet", "20"],
+
+["December", "01/12/2020", "Google Meet", "20"],
+["December", "08/12/2020", "Google Meet", "20"],
+["December", "14/12/2020", "Google Meet and Thahani's place", "20"],
+["December", "29/12/2020", "Google Meet and Umeshaa's place", "20"],
+
+["January", "06/01/2021", "Google Meet and Malkine's place", "20"],
+["January", "12/01/2021", "Thahani's place and Google Meet", "20"],
+["January", "19/01/2021", "Malkine's and Google Meet", "20"],
+["January", "26/01/2021", "Ishfaaq's place and Google Meet", "20"],
+
+["February", "02/02/2021", "Umeshaa's place", "20"],
+["February", "10/02/2021", "Malkine's place", "20"],
+["February", "16/02/2021", "Thahani's place", "20"],
+["February", "23/02/2021", "Umeshaa's place", "20"],
+
+["March", "02/03/2021", "Thahani's place", "20"],
+["March", "09/03/2021", "Dinuri's place", "20"],
+["March", "12/03/2021", "Thahani's place", "20"],
+["March", "15/03/2021", "Wishva's place", "20"],
+["March", "30/03/2021", "Thahani's place", "20"],
+
+["April", "06/04/2021", "Thahani's place", "20"],
+["April", "15/04/2021", "Thahani's place", "20"],
+["April", "20/04/2021", "Umeshaa's place", "20"],
+["April", "27/04/2021", "Thahani's place", "20"],
+
+["May", "04/05/2021", "Thahani's place", "20"],
+["May", "11/05/2021", "Thahani's place", "20"],
+["May", "18/05/2021", "Google Meet", "20"],
+["May", "25/05/2021", "Google Meet", "20"]
+
+
+
+      ],
+        style: {
+        table: {
+        //   border: '3px solid #ccc'
+        'box-shadow': '0px 0px 10px rgba(0, 1, 0, 0.5)',
+          'background-color': 'rgba(187,187,187,0.5)',
+          border: 'none'
+        },
+        th: {
+        //   'background-color': 'rgba(0, 0, 0, 0.1)',
+        //   color: '#000',
+        //   'border-bottom': '3px solid #ccc',
+        //   'text-align': 'center',
+        'font-size': '25px',
+        'color': 'rgb(0, 0, 0)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+          'font-family': 'Poppins, sans-serif'
+        },
+        td: {
+        //   'text-align': 'center',
+        'font-size': '16px',
+        'color': 'rgb(75, 75, 75)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+        'font-family': 'Poppins, sans-serif'
+        }
+      },
+    }).render(document.getElementById("wrapper"));
+    </script>
+
+<script>
+  new gridjs.Grid({
+    columns: ["Month", "Date", "Venue", "No of Participants"],
+    pagination: true,
+    data: [
+
+
+
+["July", "31/07/2020", "Google Meet", "65"],
+
+["August", "21/08/2020", "Google Meet", "65"],
+
+["September", "30/09/2020", "Google Meet", "81"],
+
+["October", "15/10/2020", "Google Meet", "81"],
+
+["October", "30/10/2020", "Google Meet", "80"],
+
+["November", "20/11/2020", "Google Meet", "82"],
+
+["December", "11/12/2020", "Google Meet", "80"],
+
+["January", "28/01/2021", "YMCA and Google Meet", "81"],
+
+["January", "15/01/2021", "Google Meet", "82"],
+
+["February", "27/02/2021", "YMCA and Google Meet", "74"],
+
+["February", "12/02/2021", "Google Meet", "70"],
+
+["March", "18/03/2021", "Google Meet", "74"],
+
+["April", "29/04/2021", "Google Meet", "82"],
+
+["May", "21/05/2021", "Google Meet", "70"],
+["May", "07/05/2021", "Google Meet", "100"]
+
+
+
+
+
+
+
+
+    ],
+      style: {
+      table: {
+      //   border: '3px solid #ccc'
+      'box-shadow': '0px 0px 10px rgba(0, 1, 0, 0.5)',
+        'background-color': 'rgba(187,187,187,0.5)',
+        border: 'none'
+      },
+      th: {
+      //   'background-color': 'rgba(0, 0, 0, 0.1)',
+      //   color: '#000',
+      //   'border-bottom': '3px solid #ccc',
+      //   'text-align': 'center',
+      'font-size': '25px',
+      'color': 'rgb(0, 0, 0)',
+      'background-color': 'rgba(255,255,254, 0.8)',
+        'font-family': 'Poppins, sans-serif'
+      },
+      td: {
+      //   'text-align': 'center',
+      'font-size': '16px',
+      'color': 'rgb(75, 75, 75)',
+      'background-color': 'rgba(255,255,254, 0.8)',
+      'font-family': 'Poppins, sans-serif'
+      }
+    },
+  }).render(document.getElementById("wrapper1"));
+  </script>
+
+
+
 
 
 <script>
