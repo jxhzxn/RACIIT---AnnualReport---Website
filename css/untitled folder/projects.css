@@ -27,14 +27,30 @@
   }
   
   .head-desc{
-      font-size: 120px;
-      font-weight: 600;
+      font-size: 80px;
+      font-weight: 700;
       letter-spacing: -4px;
       font-family: 'Poppins', sans-serif;
       line-height: 50px;
-     
+      background-color: rgba(0, 0, 0, 0.596);
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 100px;
+      padding-right: 100px;
+     border-radius: 10px;
+     color: white;
       
   }
+
+  .big{
+      font-weight: 700;
+      font-size: 30px;
+  }
+
+  .second-big{
+    font-weight: 700;
+    /* font-size: 30px; */
+}
   
   .vision-box{
       background-color: white;
