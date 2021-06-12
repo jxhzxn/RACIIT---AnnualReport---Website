@@ -347,6 +347,12 @@
     </div>
     <div class='wrapper' id='wrapper3'></div>
 
+    <div class="section-head-container upper">
+      <p>Interact Meetings</p>
+      <div class="underline"></div>
+    </div>
+    <div class='wrapper' id='wrapper5'></div>
+
 
     <div class="section-head-container upper">
       <p>Projects / Meetings outside District 3220</p>
@@ -1093,18 +1099,15 @@
 
 <script>
   new gridjs.Grid({
-    columns: ["Project Name", "Date"],
+    columns: ["Project Name", "Date", "Attendee Count", "Organizing Club"],
     pagination: true,
     data: [
 
-["Break the chain", "29/05/2021"],
-["Rotary meeting (online )", "20/05/2021"],
-["Rotary meeting (physical)", "11/02/2021"]
-
-
-
-
-
+["Break the chain","29/05/2021","30","Rotary PanColombo,Rotaract PanColombo"],
+["Rotary meeting (Online )","20/05/2021","20","Rotary PanColombo"],
+["Rotary meeting (Physical)","11/02/2021","7","Rotary PanColombo"],
+["Rotary PanColombo Induction day","26/062020","3","Rotary PanColombo"],
+["Rotary Governors Visit ","24/09/2020","2","Rotary PanColombo"]
 
 
     ],
@@ -1139,14 +1142,19 @@
 
 <script>
   new gridjs.Grid({
-    columns: ["Project Name", "Date", "No of Participants"],
+    columns: ["Project Name", "Date", "Attendee Count", "Organizing Club"],
     pagination: true,
     data: [
 
-["Interota 2020, Hong kong (Conference)","05/06/2020","2"],
-["Twinning Day - RAC Pune Mid East","15/04/2021","21"],
-["Twinning Day - Rotaract Club of GSS Jain College for Women, India","12/05/2021","20"],
-["Twinning Day - Bhaktapur","08/05/2021","21"]
+["Interota 2020, Hong kong(conference)","05/06/2020","2","Board Of Rotary International"],
+["Twinning Day - RAC Pune Mid East","15/04/2021","21","Rotaract club of IIT, RAC Pune Mid East"],
+["Twinning Day - Rotaract Club of GSS Jain College for Women,India","12/05/2021","20","Rotaract club of IIT, Rotaract Club of GSS Jain College for Women,India"],    
+["Twinning Day - Rotaract club of Bhaktapur","08/05/2021","21","Rotaract club of IIT, Rotaract club of Bhaktapur"]
+
+
+
+
+
 
     ],
       style: {
@@ -1175,6 +1183,59 @@
       }
     },
   }).render(document.getElementById("wrapper4"));
+  </script>
+
+
+<script>
+  new gridjs.Grid({
+    columns: ["Meeting", "Date", "Interact Clubs", "Participant Count"],
+    pagination: true,
+    data: [
+    ["", "", "", ""],
+  ["Trailblazers Meeting 1","6th of March 2021","Interact club of Ananda College , Interact club of St. Peters College , Interact Club of Visakha Vidyalaya , Interact Club of Wesley College , Interact Club of Wycherly International , Interact Club of Thurstan College , Interact Club of Mahamaya Girls College Kandy , Interact Club of Pushpadana Girls College , Interact Club of Kandy High School , Interact Club of Sylvisters College , Interact Club of Dharamaraja College","12"],
+  ["Trailblazers Meeting 2", "13th of March 2021", "Interact club of Ananda College,Interact club of St Peters College,Interact Club of Visakha Vidyalaya,Interact Club of Wesley College,Interact Club of Wycherly International,Interact Club of Thurstan College, Interact Club of Mahamaya Girls College Kandy,Interact Club of Pushpadana Girls College,Interact Club of Kandy High School,Interact Club of Sylvisters College ,Interact Club of Dharamaraja College", "12"],
+  ["Trailblazers Meeting 3", "7th April 2021", "Interact club of Ananda College,Interact club of St Peters College,Interact Club of Visakha Vidyalaya,Interact Club of Wesley College,Interact Club of Wycherly International,Interact Club of Thurstan College, Interact Club of Mahamaya Girls College Kandy,Interact Club of Pushpadana Girls College,Interact Club of Kandy High School,Interact Club of Sylvisters College ,Interact Club of Dharamaraja College", "10"],
+  ["Trailblazers Meeting 4", "17th of April 2021", "Interact club of Ananda College,Interact club of St Peters College,Interact Club of Visakha Vidyalaya,Interact Club of Wesley College,Interact Club of Wycherly International,Interact Club of Thurstan College, Interact Club of Mahamaya Girls College Kandy,Interact Club of Pushpadana Girls College,Interact Club of Kandy High School,Interact Club of Sylvisters College ,Interact Club of Dharamaraja College", "08"],
+  ["Trailblazers Meeting 5", "26th of April 2021", "Interact club of Ananda College,Interact club of St Peters College,Interact Club of Visakha Vidyalaya,Interact Club of Wesley College,Interact Club of Wycherly International,Interact Club of Thurstan College, Interact Club of Mahamaya Girls College Kandy,Interact Club of Pushpadana Girls College,Interact Club of Kandy High School,Interact Club of Sylvisters College ,Interact Club of Dharamaraja College", "14"],
+  ["Trailblazers Meeting 6", "2nd June 2021", "Interact club of Ananda College,Interact club of St Peters College,Interact Club of Visakha Vidyalaya,Interact Club of Wesley College,Interact Club of Wycherly International,Interact Club of Thurstan College, Interact Club of Mahamaya Girls College Kandy,Interact Club of Pushpadana Girls College,Interact Club of Kandy High School,Interact Club of Sylvisters College ,Interact Club of Dharamaraja College", "12"],
+  
+  
+  
+  ["30th Interact District Assembly", "26/07/2020", "Interact District 3220", "3"]
+
+
+
+
+
+
+
+    ],
+      style: {
+      table: {
+      //   border: '3px solid #ccc'
+      'box-shadow': '0px 0px 10px rgba(0, 1, 0, 0.5)',
+        'background-color': 'rgba(187,187,187,0.5)',
+        border: 'none'
+      },
+      th: {
+      //   'background-color': 'rgba(0, 0, 0, 0.1)',
+      //   color: '#000',
+      //   'border-bottom': '3px solid #ccc',
+      //   'text-align': 'center',
+      'font-size': '25px',
+      'color': 'rgb(0, 0, 0)',
+      'background-color': 'rgba(255,255,254, 0.8)',
+        'font-family': 'Poppins, sans-serif'
+      },
+      td: {
+      //   'text-align': 'center',
+      'font-size': '16px',
+      'color': 'rgb(75, 75, 75)',
+      'background-color': 'rgba(255,255,254, 0.8)',
+      'font-family': 'Poppins, sans-serif'
+      }
+    },
+  }).render(document.getElementById("wrapper5"));
   </script>
 
 

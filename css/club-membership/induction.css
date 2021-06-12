@@ -700,8 +700,9 @@
 .club-intro-box{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    padding-left: 100px;
-    padding-right: 100px;
+    /* padding-left: 100px;
+    padding-right: 100px; */
+
 }
 
 .club-intro-container{
@@ -711,9 +712,16 @@
 }
 
 .club-intro-box{
-    width: 1000px;
+    /* border-color: black;
+    border-style: solid; */
+    
+    width: 1200px;
     text-align: justify;
     line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .top-people-card{
