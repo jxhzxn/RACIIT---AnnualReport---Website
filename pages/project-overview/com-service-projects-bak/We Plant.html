@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords"
+    content="htmlcss bootstrap menu, scroll detect, show on scrolling page, navbar, menu CSS examples" />
+  <meta name="description" content="Auto hide navbar or header on scroll down. Page examples, Bootstrap 5" />
+
+  <title>Annual Report - RACIIT</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+
+
+
+  <link href="../../../css/untitled folder/projects.css" rel="stylesheet">
+  <link href="../../../css/club-service-projects.css" rel="stylesheet">
+  <link href="../../../css/navbar.css" rel="stylesheet">
+  <link href="../../../css/footer.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+
+  <style type="text/css">
+
+  </style>
+  </style>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+
+      el_autohide = document.querySelector('.autohide');
+
+      // add padding-top to bady (if necessary)
+      navbar_height = document.querySelector('.navbar').offsetHeight;
+      document.body.style.paddingTop = navbar_height + 'px';
+
+      if (el_autohide) {
+
+        var last_scroll_top = 0;
+        window.addEventListener('scroll', function () {
+          let scroll_top = window.scrollY;
+          if (scroll_top < last_scroll_top) {
+            el_autohide.classList.remove('scrolled-down');
+            el_autohide.classList.add('scrolled-up');
+          }
+          else {
+            el_autohide.classList.remove('scrolled-up');
+            el_autohide.classList.add('scrolled-down');
+          }
+          last_scroll_top = scroll_top;
+
+        });
+        // window.addEventListener
+
+      }
+      // if
+
+    });
+	// DOMContentLoaded  end
+
+
+  </script>
+
+</head>
+
+<body>
+
+  <!-- ============= COMPONENT ============== -->
+  <nav class="autohide navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">
+
+        <div class="logo-container">
+          <a href="../index.html"><img class="logo" src="../../../assets/logo-white.png"></a>
+        </div>
+
+        <ul class="navbar-nav">
+          <!-- <li class="nav-item"><a class="nav-link" href="#"> About </a></li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> CLUB ADMIN </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#"> Introduction to the Club </a></li>
+              <li><a class="dropdown-item" href="#"> Club overview </a></li>
+              <li><a class="dropdown-item" href="#"> History </a></li>
+              <li><a class="dropdown-item" href="#"> List of past Presidents </a>
+
+              <li><a class="dropdown-item" href="#"> Details of the Executive Committee and Board of Directors </a></li>
+              <li><a class="dropdown-item" href="#"> Details of the Club membership </a></li>
+              <li><a class="dropdown-item" href="#"> Details of Management Officials </a></li>
+              <li><a class="dropdown-item" href="#"> Meetings </a>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle test" href="#" data-bs-toggle="dropdown"> STRATEGIC PLAN AND <br />
+              PROGRESSIVE DEVELOPMENT </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
+              <li><a class="dropdown-item" href="#"> Year plan </a></li>
+              <li><a class="dropdown-item" href="#"> Amended year plan </a></li>
+            </ul>
+          </li>
+
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> CLUB MEMBERSHIP </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#"> Membership strategy for the year </a></li>
+              <li><a class="dropdown-item" href="#"> Inductions &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Induction process</a></li>
+                  <li><a class="dropdown-item" href="#">List of new inductions within the year</a></li>
+                  <li><a class="dropdown-item" href="#">Interactors who joined within the year</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#"> Terminations &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Termination process</a></li>
+                  <li><a class="dropdown-item" href="#">List of terminations within the year</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">Inbound transfers</a></li>
+              <li><a class="dropdown-item" href="#"> Outbound transfers </a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> PROJECT OVERVIEW </a>
+            <ul class="dropdown-menu">
+
+              <li><a class="dropdown-item" href="#"> Club Service &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 2</a></li>
+                  <li><a class="dropdown-item" href="#">Project 3</a></li>
+                </ul>
+              </li>
+
+              <li><a class="dropdown-item" href="#"> Community Service &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 2</a></li>
+                  <li><a class="dropdown-item" href="#">Project 3</a></li>
+                </ul>
+              </li>
+
+              <li><a class="dropdown-item" href="#"> International Service &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 2</a></li>
+                  <li><a class="dropdown-item" href="#">Project 3</a></li>
+                </ul>
+              </li>
+
+              <li><a class="dropdown-item" href="#"> Professional Development &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 2</a></li>
+                  <li><a class="dropdown-item" href="#">Project 3</a></li>
+                </ul>
+              </li>
+
+              <li><a class="dropdown-item" href="#"> Public Relations &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 2</a></li>
+                  <li><a class="dropdown-item" href="#">Project 3</a></li>
+                </ul>
+              </li>
+
+              <li><a class="dropdown-item" href="#"> Sports &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 2</a></li>
+                  <li><a class="dropdown-item" href="#">Project 3</a></li>
+                </ul>
+              </li>
+
+              <li><a class="dropdown-item" href="#"> Information Technology &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 2</a></li>
+                  <li><a class="dropdown-item" href="#">Project 3</a></li>
+                </ul>
+              </li>
+
+              <li><a class="dropdown-item" href="#"> Finance &raquo; </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 2</a></li>
+                  <li><a class="dropdown-item" href="#">Project 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> FINANCE </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
+              <li><a class="dropdown-item" href="#"> Year plan </a></li>
+              <li><a class="dropdown-item" href="#"> Amended year plan </a></li>
+            </ul>
+          </li>
+
+
+
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> ROTARY FAMILY COORDINATION </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#"> Long term strategic plan</a></li>
+              <li><a class="dropdown-item" href="#"> Year plan </a></li>
+              <li><a class="dropdown-item" href="#"> Amended year plan </a></li>
+            </ul>
+          </li>
+
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#"> PR EFFORTS </a>
+          </li>
+
+
+
+
+        </ul>
+
+
+
+
+      </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+  </nav>
+  <!-- ============= COMPONENT END// ============== -->
+
+
+
+  <div class="below-container" style="background-image: url('../../../assets/images/club-projects/WePlant.jpg') ;">
+
+    <div class="head-container">
+      <p class="head-desc">We Plant</p>
+    </div>
+
+
+
+
+
+
+  </div>
+
+  <div class="third-container">
+
+    <div class="project-info-container">
+      <!-- <div class="project-head-container">
+      <p class="project-head"></p>
+   </div> -->
+      <div class="project-desc-container">
+        <p class="project-desc-para">
+          It is known that trees provide 80% of the world’s terrestrial biodiversity, trees help clean the very air we
+          breathe, filter the water we drink, absorb harmful chemicals, supply medicine for our bodies and even provide
+          over 1.6 billion jobs to people like you and me. Devoting to the sentimental value these treasures bring, the
+          Rotaract Club of IIT initiated ‘We plant’ to restore the damage caused to trees due to our very own inhuman
+          carelessness and take a bigger step towards protecting the future of the planet. <br>
+          Phase 01 was fixated on home gardening and domestic plants, starting from our very own members taking the
+          first step. To promote this very idea, we requested people to plant a minimum of one plant and submit proof of
+          them doing so. This phase which began on the 27th of October was completed by the 10th of November. <br>
+          The second phase took place in Chilaw at Anawilundawa wetland sanctuary on the 26th of January, 4th February
+          and on the 28th of February, respectively. Given the situation of the country, we had to carry this phase with
+          the cooperation and support from the government authorities such as the department of Forestry and planted
+          over 1500 mangroves within the wetlands in Chillaw. Despite the convenience of attaining land under a
+          government body with only the inconvenience of receiving a guaranteed approval, we had to start the planting
+          process from scratch.<br>
+          In phase 3, we decided to cultivate such lands with economically beneficial plants such as coconut, banana,
+          manioc and a few other medicinal plant species. In order to look after the plantations, we decided to find a
+          few low-income families. Therefore, through this we were able to provide them with a mode of income (by
+          selling the harvest) for a specific period.<br>
+          Seagrass meadows are also known as one of the most important ecosystems on the planet as it aids in the
+          overall health of the ocean. Therefore, as phase 4 we initiated the plantation of seagrass in Seenigama, and
+          Kapparathota areas, hoping they provide food and shelter to marine species ranging from large dugongs, turtles
+          and sharks to small sea horses and shrimps.
+
+          Project impact
+          ● As Rotaractors, learning to make the best of every opportunity to help another, to contribute to saving our
+          planet and standing up for what we believe in, we implemented this initiative, making a positive impact to the
+          environment.
+          ● What more, we were also able to give job opportunities for those suffering to feed their homes and
+          themselves with just only having to maintain the land, making it highly sustainable.
+          ● Because of the initiation of mangrove and seagrass plantation we were able to provide a platform from which
+          we can improve marine’s and land’s, flora and fauna .It will help in the existence of millions of known
+          species in both land and water by the provision of food, air and shelter.
+
+          ● Promoting home gardening helps urban development and trees can actively remove air pollutants which
+          negatively impact human health and are abundant in city landscapes. It also plays a big role in reducing heat,
+          giving an overall cooling effect.
+          ● Because of the few lands in which we cultivated , we were able to provide a mode of income to a few families
+          to cope with the Covid-19 outbreak in earning an income.
+          ● Engaging in planting mangroves not only allowed us to spend a quality time with the environment but also it
+          allowed us to know the benefits in planting mangroves which we were not aware of .
+          ● Seagrass is one of the important marine plants we knew least about .By initiating this as a phase of the
+          project “We Plant”, it helped us to identify and understand how much of an impact we could create through
+          this.
+
+          Secondary avenue- Environment and Sustainability
+          Chairperson- Prathlosh Paramasivam
+          Start Date -2020-08-28
+          End Date -2020-05-29
+
+          SDG goals- 01. No poverty, 02. Zero hunger, 03. Good health and Well being, 07. Clean water and sanitation,
+          08. Decent work and economic growth, 11. Sustainable cities and communities, 12. Responsible consumption and
+          production, 13. Climate action, 14. Life below water, 15. Life on land
+          Rotary focus area- Supporting environment
+
+
+
+        </p>
+      </div>
+
+      <div class="img-container">
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="footer">
+
+    <div class="footer-left">
+      <div class="footer-img-box">
+        <img class="footer-img" src="../../../assets/logo-white.png">
+      </div>
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-middle-container">
+        <!-- <div class="footer-links-box">
+                <p>ADMIN | STRATEGIC PLAN | MEMBERSHIP | PROJECT OVERVIEW | FINANCE | ROTARACT FAMILY COORDINATION | PR EFFORTS</p>
+            </div> -->
+        <div class="footer-copyright-box">
+          <p class="footer-copyright">2020 © Copyrights Rotaract Club of IIT</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-social-box social-link">
+        <a href="https://www.facebook.com/iitrotaract/"><i class="fab fa-facebook-f social-link"></i></a>
+        <a href="https://twitter.com/IITRotaract"><i class="fab fa-twitter social-link"></i></a>
+        <a href="https://www.instagram.com/rotaract_iit/"><i class="fab fa-instagram social-link"></i></a>
+        <a href="https://rciit.org/"><i class="fas fa-wifi social-link"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+
+    $('#myBtn').click(function () {
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal 
+      btn.onclick = function () {
+        modal.style.display = "block";
+        // var output = "hiii";
+        document.getElementById("text").innerHTML = output;
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    });
+
+    $('#myBtn1').click(function () {
+      var modal = document.getElementById("myModal1");
+      var btn = document.getElementById("myBtn1");
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal 
+      btn.onclick = function () {
+        modal.style.display = "block";
+        // var output = "hiii";
+        document.getElementById("text").innerHTML = output;
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    })
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
