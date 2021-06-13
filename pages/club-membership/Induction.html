@@ -1,0 +1,680 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="htmlcss bootstrap menu, scroll detect, show on scrolling page, navbar, menu CSS examples" />
+<meta name="description" content="Auto hide navbar or header on scroll down. Page examples, Bootstrap 5" />  
+
+<title>Inductions</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+
+
+
+<link href="../../css/club-membership/induction.css" rel="stylesheet">
+<link href="../../css/navbar.css" rel="stylesheet">
+<link href="../../css/footer.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+
+<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+<link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+
+<style type="text/css">
+
+</style>
+</style>
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(){
+		
+		el_autohide = document.querySelector('.autohide');
+		
+		// add padding-top to bady (if necessary)
+		navbar_height = document.querySelector('.navbar').offsetHeight;
+		document.body.style.paddingTop = navbar_height + 'px';
+
+		if(el_autohide){
+			
+			var last_scroll_top = 0;
+			window.addEventListener('scroll', function() {
+	       		let scroll_top = window.scrollY;
+		       if(scroll_top < last_scroll_top) {
+		            el_autohide.classList.remove('scrolled-down');
+		            el_autohide.classList.add('scrolled-up');
+		        }
+		        else {
+		            el_autohide.classList.remove('scrolled-up');
+		            el_autohide.classList.add('scrolled-down');
+		        }
+		        last_scroll_top = scroll_top;
+
+			}); 
+			// window.addEventListener
+
+		}
+		// if
+		
+	}); 
+	// DOMContentLoaded  end
+
+
+</script>
+
+<script>
+  const tilt = $('.js-tilt').tilt();
+</script>
+
+</head>
+<body>
+
+<!-- ============= COMPONENT ============== -->
+<nav class="autohide navbar navbar-expand-lg">
+  <div class="container-fluid">
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+   <div class="collapse navbar-collapse" id="main_nav">
+ 
+    <a href="../../landing.html">
+     <div class="logo-container">
+         <img class="logo" src="../../assets/logo-white.png">
+     </div>
+    </a>
+ 
+   <ul class="navbar-nav">
+     <!-- <li class="nav-item"><a class="nav-link" href="#"> About </a></li> -->
+     <li class="nav-item dropdown">
+       <a class="dropdown-toggle" style="color: white;" href="#" data-bs-toggle="dropdown">  CLUB ADMIN </a>
+         <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="../club-admin/club-overview.html"> Club Overview </a></li>
+         <li><a class="dropdown-item" href="../club-admin/club-history.html"> Club History </a></li>
+               <li><a class="dropdown-item" href="../club-admin/meet-the-team.html"> Meet the Team </a></li>
+         <li><a class="dropdown-item" href="../club-admin/membership-details.html"> Details of the Club membership </a></li>
+         <li><a class="dropdown-item" href="../club-admin/meetings.html"> Meetings </a>
+         </ul>
+     </li>
+ 
+         <li class="nav-item dropdown">
+       <a class="dropdown-toggle test" style="color: white;" href="#" data-bs-toggle="dropdown">  STRATEGIC PLAN AND <br/> PROGRESSIVE DEVELOPMENT </a>
+         <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="../../pages/strategic-plan-and-progressive-dev/long-term-strategic-plan.html"> Long term strategic plan</a></li>
+         <li><a class="dropdown-item" href="../../pages/strategic-plan-and-progressive-dev/year-plan.html"> Year plan </a></li>
+         <li><a class="dropdown-item" href="../../pages/strategic-plan-and-progressive-dev/amended-year-plan.html"> Amended year plan </a></li>
+         </ul>
+     </li>
+ 
+ 
+ 
+     <li class="nav-item dropdown">
+       <a class="dropdown-toggle" style="color: white;" href="#" data-bs-toggle="dropdown">  CLUB MEMBERSHIP  </a>
+         <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="../../pages/club-membership/membership-strategy.html"> Membership strategy for the year </a></li>
+         <li><a class="dropdown-item" href="../../pages/club-membership/Induction.html"> Inductions</a></li>
+         <li><a class="dropdown-item" href="../../pages/club-membership/termination.html"> Terminations </a>
+         <li><a class="dropdown-item" href="../../pages/club-membership/dual-membership.html"> Rotary Memberships </a></li>
+         <li><a class="dropdown-item" href="../../pages/club-membership/transfer-letters.html">Transfers</a></li>
+         </ul>
+     </li>
+ 
+ 
+         <li class="nav-item dropdown">
+       <a class="dropdown-toggle" style="color: white;" href="#" data-bs-toggle="dropdown">  PROJECT OVERVIEW  </a>
+         <ul class="dropdown-menu">
+ 
+         <li><a class="dropdown-item" href="../../pages/avenues/club-service-projects.html"> Club Service &raquo; </a>
+            <ul class="submenu dropdown-menu">
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/turfline.html">Turfline </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/mindfizz.html">Mindfizz</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/truth-or-dare.html">Truth or Dare </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/truth-or-dare-2.html">Truth or Dare 2.0 </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/installation.html">Installation of RACIIT </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/hot-pockets.html">Hot Pockets</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/scribble.html">Skribble.io</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/the-pledge.html">The pledge</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/valentines.html">Valentines</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/igf.html">IGF</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/pfl.html">PFL</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/hari-bn-ela.html">Hari Bn Ela</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/challenge-connect.html">Challenge:Connect</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/e-buddy.html">E-buddy </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/pubg.html">Pubg Mobile 2020</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/s-quiz.html">S-Quiz</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/mistletoe-win.html">Mistletoe & Win</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/dcm.html">DCM - May</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/ludo.html">Ludo Champs 2.0</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/krunker.html">Krunker</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/so-you-can-rotaract.html">So think you can Rotaract?</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/board-outing.html">Board Outing</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/christman-party.html">Board Christmas Party</a> </li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/newbie-introduction.html">The newbies introduction</a> </li>
+                     <!-- <li><a class="dropdown-item" href="./pages/project-overview/club-service-projects/fut">Interboard Futsal</a> </li> -->
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/midyear-review.html">Mid Year Review</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/movie-night.html">Movie Night</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/ifthaar.html">Ifthaar</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/interboard-pool.html">Interboard pool tournament</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/friendly-cricket-match.html">Friendly Cricket Match - RAC ICBT& RACIIT</a> </li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/raciit-of-month.html">RACIITIAN's of the month</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/intro-to-raciit.html">Introduction to RACIIT </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/survive.html">Survive</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/cod.html">Call of Duty MP League</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/dodge-ball-month.html">RACIITIAN's Dodge ball Match </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/friendlt-futsal.html">Friendly futsal encounter with Midtown</a> </li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/cricket-kelaniya.html">Friendly Cricket match - RAC Kelaniya& RACIIT</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/futsal-wellawathe.html">Friendly Futsal Match - RAC Wellawatte & RACIIT</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/futsal-pearl.html">Friendly Futsal Match - RAC Pearl Island &RACIIT</a></li>
+                     
+          </ul>
+         </li>
+ 
+               <li><a class="dropdown-item" href="../../pages/avenues/pd-projects.html"> Professional Development &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Wevolve.html">Wevolve</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Podcast.html">Podcast</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Hare and Hound.html">Hare and Hound</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Vroom Vroom.html">Vroom Vroom</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Board IQ and EQ.html">Board IQ and EQ</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Fierce 3.0.html">Fierce 3.0</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Point of Order.html">Point of Order</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Re-imagine.html">Re-imagine</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/World Play.html">World Play</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Esperenza.html">Esperenza</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Creatik.html">Creatik</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Forage.html">Forage</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Change and Evolve.html">Change and Evolve</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Resuminar.html">Resuminar</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Animateur.html">Animateur</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Ignite.html">Ignite</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Lit.html">Lit</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/React Native Tips and Tricks.html">React Native Tips and Tricks</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/S.O.S.html">S.O.S</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Startup Ace.html">Startup Ace</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Do It Right.html">Do It Right</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/AI &Neural Networks Webinar.html">AI & Neural Networks Webinar</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Trailbazers.html">Trailbazers</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Haxmas 2021.html">HaXmas 2021</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Avenue Ranking.html">Avenue Ranking</a></li>
+               </ul>
+            </li>
+ 
+ 
+               <li><a class="dropdown-item" href="../../pages/avenues/com-service-projects.html"> Community Service &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/E-mithudama.html">E-mithudama</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/I Cancervive.html">I Cancervive</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Athurumithuru.html">Athurumithuru</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/We Plant.html">We Plant </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Miracle.html">Miracle </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/We can.html">We can </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Employ Me.html">Employ Me </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Stop Social Stigma.html">Stop Social Stigma </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Defend the Ocean.html">Defend the Ocean</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Break the Chain.html">Break the Chain </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Namakaga Naam.html">Namakaga Naam</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Clean Up Challenge.html">Clean Up Challenge </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Engal Sri Lank.html">Engal Sri Lanka</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Aftermath.html">Aftermath </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Epitome of Covid-19.html">Epitome of Covid-19</a></li>
+               </ul>
+            </li>
+ 
+    
+ 
+            <li><a class="dropdown-item" href="../../pages/avenues/pr-projects.html"> Public Image &raquo; </a>
+             <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/RACIIT V-logs.html">RACIIT V-logs</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Memory Lane.html">Memory Lane</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Katahanda.html">Katahanda</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Talentangle.html">Talentangle</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/This is RACIIT.html">This is RACIIT</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/People of Action.html">People of Action</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Shutter Up_SL.html">Shutter Up_SL</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Never Have I Ever.html">Never Have I Ever</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Callix.html">Callix </a></li>
+           </ul>
+         </li>
+ 
+            <li><a class="dropdown-item" href="../../pages/avenues/is-projects.html"> International Service &raquo; </a>
+             <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/pandemic 2020.html">pandemic 2020</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Voice for the Voiceless.html">Voice for the Voiceless</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Euphony.html">Euphony</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Dansala.html">Dansala</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Safe And Sober.html">Safe And Sober</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Medicap.html">Medicap</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Vastra.html">Vastra</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Women WIth wings.html">Women WIth wings</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/The Reign of Blue inks.html">The Reign of Blue inks</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Oovooru Oril Oru Nal- A Day in Town.html">Oovooru Oril Oru Nal- A Day in Town</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/World in a Plate.html">World in a Plate</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Gracious Givers.html">Gracious Givers</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Festive Together.html">Festive Together</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Twinning Day - Bhaktapur.html">Twinning Day - Bhaktapur</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Twinning Day - RAC Pune Mid East.html">Twinning Day - RAC Pune Mid East</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Twinning Day - Rotaract Club of GSSJain College of women, India.html">Twinning Day - Rotaract Club of GSS Jain College of Women</a></li>
+           </ul>
+        </li>
+ 
+   
+ 
+ 
+ 
+    <!-- <li><a class="dropdown-item" href="../../pages/avenues/all-projects.html"> Together SL</a></li> -->
+ 
+         </ul>
+     </li>
+ 
+         <li class="nav-item dropdown">
+       <a class="" href="../../pages/finance/finance.html" style="color: white;">  FINANCE </a>
+     </li>
+ 
+         <li class="nav-item dropdown">
+       <a class="" href="../../pages/rotary-family-coordination/rotary-family-coordination.html" style="color: white;">  ROTARY FAMILY COORDINATION </a>
+     </li>
+         
+         <li class="nav-item dropdown">
+       <a class="" href="../../pages/pr-efforts/pr-efforts.html" style="color: white;">  PR EFFORTS </a>
+     </li>
+ 
+ 
+ 
+ 
+   </ul>
+ 
+ 
+ 
+ 
+   </div> <!-- navbar-collapse.// -->
+  </div> <!-- container-fluid.// -->
+ </nav>
+<!-- ============= COMPONENT END// ============== -->
+
+
+
+<!-- <div class="below-container" id="particle">
+
+<div class="head-container">
+    <p class="head-desc">CLUB HISTORY</p> 
+</div>  -->
+
+
+
+
+
+
+</div>
+
+<div class="third-container">
+
+    <div class="head-container year-review">
+        <p class="head-text" style="font-size: 100px; margin-top: 130px;">Induction</p> 
+    </div>
+
+  <div class="cards-container">
+
+  
+
+    <div class="head-container">
+      <p class="head-text people-heading">Induction Process</p> 
+      <div class="underline"></div>
+  </div>
+
+    <!-- <div class="middle-poeple"> -->
+
+      <div class="club-intro-container">
+        <div class="club-intro-box">
+            <p>
+              A newcomer will be kept as a probationary/Prospective member until the completion of three General meetings and a micro project.
+<br/><br/>
+The Club should approve or reject a candidate’s membership within 3 months and notify the candidate of its decision.
+
+            </p>
+        </div>
+    </div>
+
+    
+
+    <!-- </div> -->
+
+    <div class="head-container">
+      <p class="head-text people-heading">List of New Inductions</p> 
+  </div>
+  
+  <div class="below-poeple">
+
+
+
+    <div class='wrapper' id='wrapper'></div>
+
+  </div>
+
+  <div class="head-container">
+    <p class="head-text people-heading">Interactors who joined</p> 
+    <div class="underline"></div>
+</div>
+
+  <!-- <div class="middle-poeple"> -->
+
+    <div class="club-intro-container">
+      <div class="club-intro-box">
+          <p>
+            <ul>
+              <li>Chindumi Chindumi Minsandhi Karunaarachchi Karunaarachchi (2020-12-1) -Interact Club of Horizon College</li>
+              <li>Thakesha Jayaratne (2020-12-15) - Interact Club of Asian International School</li>
+              <li>Sandesh De Mel (2020-12-16) - Interact Club of St.Peter’s College</li>
+              <li>Devin Fernando (2020-12-09) -Interact Club of St.Sebastian’s College</li>
+            </ul>
+          </p>
+      </div>
+  </div>
+
+
+
+  </div>
+
+ 
+
+
+</div>
+
+
+
+
+
+
+
+    
+    
+    
+    
+</div>
+
+
+
+<div class="footer">
+
+  <div class="footer-left">
+      <div class="footer-img-box">
+          <img class="footer-img" src="../../assets/logo-white.png">
+      </div>
+  </div>
+
+  <div class="footer-middle">
+      <div class="footer-middle-container">
+          <!-- <div class="footer-links-box">
+              <p>ADMIN | STRATEGIC PLAN | MEMBERSHIP | PROJECT OVERVIEW | FINANCE | ROTARACT FAMILY COORDINATION | PR EFFORTS</p>
+          </div> -->
+          <div class="footer-copyright-box">
+              <p class="footer-copyright">2020 © Copyrights Rotaract Club of IIT</p>
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-right">
+      <div class="footer-social-box social-link">
+          <a href="https://www.facebook.com/iitrotaract/"><i class="fab fa-facebook-f social-link"></i></a>
+          <a href="https://twitter.com/IITRotaract"><i class="fab fa-twitter social-link"></i></a>
+          <a href="https://www.instagram.com/rotaract_iit/"><i class="fab fa-instagram social-link"></i></a>
+          <a href="https://rciit.org/"><i class="fas fa-wifi social-link"></i></a>
+      </div>
+  </div>
+
+</div>
+
+
+<script>
+  new gridjs.Grid({
+    columns: ["Full Name", "Email", "NIC/PP", "Date of Birth"],
+    pagination: true,
+    data: [
+
+["Sandesh  De Mel", "Sandesh.20200230@iit.ac.lk", "200005201723", "2000-02-21"],
+["Rusini   Gunarathne", "rusini.gunarathne@gmail.com", "200080100590", "2000-10-27"],
+["Koushika   Umesh", "Koushika.20191156@iit.ac.lk", "200078302678", "2000-10-09"],
+["Jeeona Jeeona Heltica Andrew Bran Christie Andrew", "Jeeona7@gmail.com", "200078102219", "2000-07-10"],
+["Nandun   Perera", "Anujan.20200047@iit.ac.lk", "983520324V", "1998-12-17"],
+["Maleesha   Perera", "maleesha.20191269@iit.ac.lk", "200362812051", "1990-07-05"],
+["Samithu  Hettiarachchi", "samithuaz@gmail.com", "200301302519", "2003-01-13"],
+["Eshini Nabadawa Vithanage Eshini Imasha Vithanage  Vithanage", "eshini.20200180@iit.ac.lk", "985641846V", "1998-04-03"],
+["Senuri  Nandasiri", "rehananandasiri@gmail.com", "200151103613", "2001-11-01"],
+["Ifaza  Fasy", "sithy.20201239@iit.ac.lk", "199985010489", "1999-12-16"],
+["Haraendralal  Maharajah", "haraend@gmail.com", "200117600096", "0000-00-00"],
+["Jaiyramanan Jaiyramanan Vijayaalayan Vijayaalayan", "vijayaalayan.20200276@iit.ac.lk", "200334013907", "2003-05-12"],
+["Shamana  Nadesapillai", "jordan.nadesapillai@gmail.com", "200169803735", "2001-07-16"],
+["Ahmed  Hazmi", "hazmi.20200424@iit.ac.lk", "200223510216", "2002-08-22"],
+["Thakesha  Jayaratne", "thakesha345@gmail.com", "982893100V", "1998-10-15"],
+["Nithila  Ariyapperuma", "nithila.20200286@iit.ac.lk", "200300310395", "2003-03-01"],
+["Lashaan  Lashaan Rajendran  Rajendran", "lashaan.20200126@iit.ac.lk", "200309511423", "2003-04-05"],
+["Viveka  Balanadaraj Iyer", "viveka.bala10@gmail.com", "200084501864", "2000-12-10"],
+["Gimhan  Seneviratne", "sankalpa.20201229@iit.ac.lk", "200113604697", "2001-05-15"],
+["Bojith  Baduge Bojith Sanjiwa Sanjiwa", "bojith.20200271@iit.ac.lk", "200305912840", "2003-02-28"],
+["Nisal  Kothalawala", "nisal.20200112@iit.ac.lk", "992252863v", "2000-12-11"],
+["Devin  Fernando", "devin.20200219@iit.ac.lk", "200134901203", "2001-12-15"],
+["Viraji Viraji Kavitha Ratubabarandage  Ratubabarandage", "viraji.20200249@iit.ac.lk", "200285410173", "2002-12-20"],
+["Shakeel  Rizvi", "shakeel.20200298@iit.ac.lk", "200216303076", "2002-06-12"],
+["Ravindu  Perera", "m.ravindu.perera@gmail.com", "200101104310", "2001-01-11"],
+["Kirthika Kirthika Senathiraja Senathiraja", "kirthika.20200300@iit.ac.lk", "200180004602", "2001-10-27"],
+["Ratheshan  Sathiyamoorthy", "lionratheshan@gmail.com", "200035401792", "2000-12-19"],
+["Al Arfith  Ahamed", "arfithahamed@gmail.com", "972593206V", "1997-09-15"],
+["Claudia  Claudia Amalshi Warnakulaarachchi  Warnakulaarachchi", "claudia.20200120@iit.ac.lk", "200070102522", "2000-07-19"],
+["Malitha  Randeniya", "randeniyamalitha08@gmail.com", "200303900801", "2003-08-02"],
+["Neluka  Fernando", "neluka.20200331@iit.ac.lk", "200210500224", "2002-04-14"],
+["Chamika   Wijeratne", "Chamikawijeratne000@gmail.com", "200008902268", "2000-03-29"],
+["Nisal Nisal Dulwin Heenatigala Heenatigala", "nisal.20200386@iit.ac.lk", "200410010650", "2004-04-09"],
+["Mohammed   Amjad", "amjad.20200202@iit.ac.lk", "200120004210", "0000-00-00"],
+["Shuaib  Salman", "Skillcrud99@gmail.com", "200209103784", "2002-03-31"],
+["Fahad   Zaman", "zaman.20200242@iit.ac.lk", "200214404346", "0000-00-00"],
+["Gihan  Athulathmudali", "gihanathulathmudali@gmail.com", "981982401v", "1998-07-16"],
+["Chindumi  Chindumi Minsandhi Karunaarachchi  Karunaarachchi", "chindumi.20200070@iit.ac.lk", "200263100186", "2002-05-11"],
+["Pasath  Bandara", "pasathbandara99@gmail.com", "199901610948", "1999-01-16"],
+["Immam  Ashfaq", "mohommed.20200192@iit.ac.lk", "200201403334", "2002-01-14"],
+["Franz Franz Leo Leo", "franz.20200191@iit.ac.lk", "200100101634", "2001-01-01"],
+["Devin  Rajapakse", "devin.20200109@iit.ac.lk", "200333910481", "2003-12-05"],
+["Imandi  Karunaratne", "imandi.20200306@iit.ac.lk", "200277204707", "2002-09-29"],
+["Evin   Rajapakse", "evin.20200110@iit.ac.lk", "200333910490", "2003-12-04"],
+["Irushi   Perera", "irushi.20200216@iit.ac.lk", "200374113559", "2003-08-29"],
+["Nirusan  Hariharan", "hariharan.20200094@iit.ac.lk", "200328310038", "2003-10-10"]
+
+
+
+    ],
+      style: {
+      table: {
+      //   border: '3px solid #ccc'
+      'box-shadow': '0px 0px 10px rgba(0, 1, 0, 0.5)',
+        'background-color': 'rgba(187,187,187,0.5)',
+        border: 'none'
+      },
+      th: {
+        //   'background-color': 'rgba(0, 0, 0, 0.1)',
+        //   color: '#000',
+          
+        //   'text-align': 'center',
+        // 'border-left-width': '0px',
+        border:'none',
+        'border-bottom': '0.5px solid #ddd',
+        'font-size': '20px',
+          'font-weight': '500',
+        'color': 'rgb(0, 0, 0)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+          'font-family': 'Poppins, sans-serif'
+        },
+        td: {
+        //   'text-align': 'center',
+        // 'border-left-width': '0px',
+        'font-size': '16px',
+        'color': 'rgb(75, 75, 75)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+        'font-family': 'Poppins, sans-serif',
+        border:'none',
+        'border-bottom': '0.5px solid #ddd',
+        }
+    },
+  }).render(document.getElementById("wrapper"));
+  </script>
+
+
+
+
+
+
+<script>
+
+    $('#myBtn').hover(function(){
+        var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+        // var output = "hiii";
+        document.getElementById("text").innerHTML = output;
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    });
+
+    $('#myBtn1').hover(function(){
+        var modal = document.getElementById("myModal1");
+    var btn = document.getElementById("myBtn1");
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+        // var output = "hiii";
+        document.getElementById("text").innerHTML = output;
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    })
+
+</script>
+
+<script>
+    AOS.init();
+  </script>
+
+<script>
+
+    $('#myBtn').click(function(){
+        var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+        // var output = "hiii";
+        document.getElementById("text").innerHTML = output;
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    });
+
+    $('#myBtn1').click(function(){
+        var modal = document.getElementById("myModal1");
+    var btn = document.getElementById("myBtn1");
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+        // var output = "hiii";
+        document.getElementById("text").innerHTML = output;
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    })
+
+
+
+
+    
+    
+
+
+    
+        </script>
+
+
+
+
+
+
+<script>
+    VANTA.TOPOLOGY({
+      el: "#particle",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x3F3D56,
+    backgroundColor: 0xf1f1f1
+    })
+    </script>
+
+</body>
+</html>

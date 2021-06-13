@@ -1,0 +1,1368 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="htmlcss bootstrap menu, scroll detect, show on scrolling page, navbar, menu CSS examples" />
+<meta name="description" content="Auto hide navbar or header on scroll down. Page examples, Bootstrap 5" />  
+
+<title>Long Term Strategic Plan</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+<link href="../../css/strategic-plan-progressiv-dev/strategic-plan.css" rel="stylesheet">
+<link href="../../css/navbar.css" rel="stylesheet">
+<link href="../../css/footer.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+
+<style type="text/css">
+
+</style>
+</style>
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(){
+		
+		el_autohide = document.querySelector('.autohide');
+		
+		// add padding-top to bady (if necessary)
+		navbar_height = document.querySelector('.navbar').offsetHeight;
+		document.body.style.paddingTop = navbar_height + 'px';
+
+		if(el_autohide){
+			
+			var last_scroll_top = 0;
+			window.addEventListener('scroll', function() {
+	       		let scroll_top = window.scrollY;
+		       if(scroll_top < last_scroll_top) {
+		            el_autohide.classList.remove('scrolled-down');
+		            el_autohide.classList.add('scrolled-up');
+		        }
+		        else {
+		            el_autohide.classList.remove('scrolled-up');
+		            el_autohide.classList.add('scrolled-down');
+		        }
+		        last_scroll_top = scroll_top;
+
+			}); 
+			// window.addEventListener
+
+		}
+		// if
+		
+	}); 
+	// DOMContentLoaded  end
+
+
+</script>
+
+</head>
+<body>
+
+<!-- ============= COMPONENT ============== -->
+<nav class="autohide navbar navbar-expand-lg">
+  <div class="container-fluid">
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+   <div class="collapse navbar-collapse" id="main_nav">
+ 
+    <a href="../../landing.html">
+     <div class="logo-container">
+         <img class="logo" src="../../assets/logo-white.png">
+     </div>
+    </a>
+ 
+   <ul class="navbar-nav">
+     <!-- <li class="nav-item"><a class="nav-link" href="#"> About </a></li> -->
+     <li class="nav-item dropdown">
+       <a class="dropdown-toggle" style="color: white;" href="#" data-bs-toggle="dropdown">  CLUB ADMIN </a>
+         <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="../club-admin/club-overview.html"> Club Overview </a></li>
+         <li><a class="dropdown-item" href="../club-admin/club-history.html"> Club History </a></li>
+               <li><a class="dropdown-item" href="../club-admin/meet-the-team.html"> Meet the Team </a></li>
+         <li><a class="dropdown-item" href="../club-admin/membership-details.html"> Details of the Club membership </a></li>
+         <li><a class="dropdown-item" href="../club-admin/meetings.html"> Meetings </a>
+         </ul>
+     </li>
+ 
+         <li class="nav-item dropdown">
+       <a class="dropdown-toggle test" style="color: white;" href="#" data-bs-toggle="dropdown">  STRATEGIC PLAN AND <br/> PROGRESSIVE DEVELOPMENT </a>
+         <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="../../pages/strategic-plan-and-progressive-dev/long-term-strategic-plan.html"> Long term strategic plan</a></li>
+         <li><a class="dropdown-item" href="../../pages/strategic-plan-and-progressive-dev/year-plan.html"> Year plan </a></li>
+         <li><a class="dropdown-item" href="../../pages/strategic-plan-and-progressive-dev/amended-year-plan.html"> Amended year plan </a></li>
+         </ul>
+     </li>
+ 
+ 
+ 
+     <li class="nav-item dropdown">
+       <a class="dropdown-toggle" style="color: white;" href="#" data-bs-toggle="dropdown">  CLUB MEMBERSHIP  </a>
+         <ul class="dropdown-menu">
+         <li><a class="dropdown-item" href="../../pages/club-membership/membership-strategy.html"> Membership strategy for the year </a></li>
+         <li><a class="dropdown-item" href="../../pages/club-membership/Induction.html"> Inductions</a></li>
+         <li><a class="dropdown-item" href="../../pages/club-membership/termination.html"> Terminations </a>
+         <li><a class="dropdown-item" href="../../pages/club-membership/dual-membership.html"> Rotary Memberships </a></li>
+         <li><a class="dropdown-item" href="../../pages/club-membership/transfer-letters.html">Transfers</a></li>
+         </ul>
+     </li>
+ 
+ 
+         <li class="nav-item dropdown">
+       <a class="dropdown-toggle" style="color: white;" href="#" data-bs-toggle="dropdown">  PROJECT OVERVIEW  </a>
+         <ul class="dropdown-menu">
+ 
+         <li><a class="dropdown-item" href="../../pages/avenues/club-service-projects.html"> Club Service &raquo; </a>
+            <ul class="submenu dropdown-menu">
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/turfline.html">Turfline </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/mindfizz.html">Mindfizz</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/truth-or-dare.html">Truth or Dare </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/truth-or-dare-2.html">Truth or Dare 2.0 </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/installation.html">Installation of RACIIT </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/hot-pockets.html">Hot Pockets</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/scribble.html">Skribble.io</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/the-pledge.html">The pledge</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/valentines.html">Valentines</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/igf.html">IGF</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/pfl.html">PFL</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/hari-bn-ela.html">Hari Bn Ela</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/challenge-connect.html">Challenge:Connect</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/e-buddy.html">E-buddy </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/pubg.html">Pubg Mobile 2020</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/s-quiz.html">S-Quiz</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/mistletoe-win.html">Mistletoe & Win</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/dcm.html">DCM - May</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/ludo.html">Ludo Champs 2.0</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/krunker.html">Krunker</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/so-you-can-rotaract.html">So think you can Rotaract?</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/board-outing.html">Board Outing</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/christman-party.html">Board Christmas Party</a> </li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/newbie-introduction.html">The newbies introduction</a> </li>
+                     <!-- <li><a class="dropdown-item" href="./pages/project-overview/club-service-projects/fut">Interboard Futsal</a> </li> -->
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/midyear-review.html">Mid Year Review</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/movie-night.html">Movie Night</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/ifthaar.html">Ifthaar</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/interboard-pool.html">Interboard pool tournament</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/friendly-cricket-match.html">Friendly Cricket Match - RAC ICBT& RACIIT</a> </li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/raciit-of-month.html">RACIITIAN's of the month</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/intro-to-raciit.html">Introduction to RACIIT </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/survive.html">Survive</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/cod.html">Call of Duty MP League</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/dodge-ball-month.html">RACIITIAN's Dodge ball Match </a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/friendlt-futsal.html">Friendly futsal encounter with Midtown</a> </li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/cricket-kelaniya.html">Friendly Cricket match - RAC Kelaniya& RACIIT</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/futsal-wellawathe.html">Friendly Futsal Match - RAC Wellawatte & RACIIT</a></li>
+                     <li><a class="dropdown-item" href="../../pages/project-overview/club-service-projects/futsal-pearl.html">Friendly Futsal Match - RAC Pearl Island &RACIIT</a></li>
+                     
+          </ul>
+         </li>
+ 
+               <li><a class="dropdown-item" href="../../pages/avenues/pd-projects.html"> Professional Development &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Wevolve.html">Wevolve</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Podcast.html">Podcast</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Hare and Hound.html">Hare and Hound</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Vroom Vroom.html">Vroom Vroom</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Board IQ and EQ.html">Board IQ and EQ</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Fierce 3.0.html">Fierce 3.0</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Point of Order.html">Point of Order</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Re-imagine.html">Re-imagine</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/World Play.html">World Play</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Esperenza.html">Esperenza</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Creatik.html">Creatik</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Forage.html">Forage</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Change and Evolve.html">Change and Evolve</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Resuminar.html">Resuminar</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Animateur.html">Animateur</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Ignite.html">Ignite</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Lit.html">Lit</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/React Native Tips and Tricks.html">React Native Tips and Tricks</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/S.O.S.html">S.O.S</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Startup Ace.html">Startup Ace</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Do It Right.html">Do It Right</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/AI &Neural Networks Webinar.html">AI & Neural Networks Webinar</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Trailbazers.html">Trailbazers</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Haxmas 2021.html">HaXmas 2021</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/pd-projects/Avenue Ranking.html">Avenue Ranking</a></li>
+               </ul>
+            </li>
+ 
+ 
+               <li><a class="dropdown-item" href="../../pages/avenues/com-service-projects.html"> Community Service &raquo; </a>
+                 <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/E-mithudama.html">E-mithudama</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/I Cancervive.html">I Cancervive</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Athurumithuru.html">Athurumithuru</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/We Plant.html">We Plant </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Miracle.html">Miracle </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/We can.html">We can </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Employ Me.html">Employ Me </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Stop Social Stigma.html">Stop Social Stigma </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Defend the Ocean.html">Defend the Ocean</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Break the Chain.html">Break the Chain </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Namakaga Naam.html">Namakaga Naam</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Clean Up Challenge.html">Clean Up Challenge </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Engal Sri Lank.html">Engal Sri Lanka</a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Aftermath.html">Aftermath </a></li>
+                  <li><a class="dropdown-item" href="../../pages/project-overview/com-service-projects/Epitome of Covid-19.html">Epitome of Covid-19</a></li>
+               </ul>
+            </li>
+ 
+    
+ 
+            <li><a class="dropdown-item" href="../../pages/avenues/pr-projects.html"> Public Image &raquo; </a>
+             <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/RACIIT V-logs.html">RACIIT V-logs</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Memory Lane.html">Memory Lane</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Katahanda.html">Katahanda</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Talentangle.html">Talentangle</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/This is RACIIT.html">This is RACIIT</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/People of Action.html">People of Action</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Shutter Up_SL.html">Shutter Up_SL</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Never Have I Ever.html">Never Have I Ever</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/public-image-projects/Callix.html">Callix </a></li>
+           </ul>
+         </li>
+ 
+            <li><a class="dropdown-item" href="../../pages/avenues/is-projects.html"> International Service &raquo; </a>
+             <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/pandemic 2020.html">pandemic 2020</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Voice for the Voiceless.html">Voice for the Voiceless</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Euphony.html">Euphony</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Dansala.html">Dansala</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Safe And Sober.html">Safe And Sober</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Medicap.html">Medicap</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Vastra.html">Vastra</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Women WIth wings.html">Women WIth wings</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/The Reign of Blue inks.html">The Reign of Blue inks</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Oovooru Oril Oru Nal- A Day in Town.html">Oovooru Oril Oru Nal- A Day in Town</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/World in a Plate.html">World in a Plate</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Gracious Givers.html">Gracious Givers</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Festive Together.html">Festive Together</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Twinning Day - Bhaktapur.html">Twinning Day - Bhaktapur</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Twinning Day - RAC Pune Mid East.html">Twinning Day - RAC Pune Mid East</a></li>
+              <li><a class="dropdown-item" href="../../pages/project-overview/is-projects/Twinning Day - Rotaract Club of GSSJain College of women, India.html">Twinning Day - Rotaract Club of GSS Jain College of Women</a></li>
+           </ul>
+        </li>
+ 
+   
+ 
+ 
+ 
+    <!-- <li><a class="dropdown-item" href="../../pages/avenues/all-projects.html"> Together SL</a></li> -->
+ 
+         </ul>
+     </li>
+ 
+         <li class="nav-item dropdown">
+       <a class="" href="../../pages/finance/finance.html" style="color: white;">  FINANCE </a>
+     </li>
+ 
+         <li class="nav-item dropdown">
+       <a class="" href="../../pages/rotary-family-coordination/rotary-family-coordination.html" style="color: white;">  ROTARY FAMILY COORDINATION </a>
+     </li>
+         
+         <li class="nav-item dropdown">
+       <a class="" href="../../pages/pr-efforts/pr-efforts.html" style="color: white;">  PR EFFORTS </a>
+     </li>
+ 
+ 
+ 
+ 
+   </ul>
+ 
+ 
+ 
+ 
+   </div> <!-- navbar-collapse.// -->
+  </div> <!-- container-fluid.// -->
+ </nav>
+<!-- ============= COMPONENT END// ============== -->
+
+
+<!-- 
+<div class="below-container" id="particle">
+
+<div class="head-container">
+    <p class="head-desc">CLUB OVERVIEW</p> 
+</div> -->
+
+
+
+
+
+
+</div>
+
+<div class="third-container">
+
+  <div class="head-container year-review">
+      <p class="head-text" style="font-size: 100px;">Strategic Plan</p> 
+  </div>
+
+<div class="cards-container">
+
+
+  <div class="club-intro-container">
+      <div class="club-intro-box">
+          <p>
+
+            <span class="question">How is your club perceived and recognized currently in public?</span>
+            <div class="underline" ></div>
+            <br/>
+
+            RACIIT has been chartered for 11 years to this day and has been giving many impactful projects
+to the society through community service projects. Apart from community services done by
+RACIIT we also initiate many other fun filled projects along with the aim of developing the youth
+in a professional perspective which attracts many younger generations to take part in our
+projects.
+<br/><br/>
+RACIIT has been and still is one of the top ten clubs in the district 3220. Projects like HDS,
+E-Mithudama, Sallys Manor are very popular among the public for a variety of different reasons.
+Such as the unique and vast impact each project delivers, the individuality between each project,
+the amount of participation and reach these projects get among the public are some of the
+reasons why RACIIT is popular among the public. These projects are one of the reasons that
+has helped to create and build a fine brand image and name that the club perceives now within
+the district 3220 as well as the public.
+<br/><br/>
+Projects like E-Mithudama, a community service project in which we build computer labs for
+school in the underprivileged areas in the country. E-Mithudama has been initiated for 3
+consecutive years and will be running for this year too. E-Mithudama has won the gold award for
+the most outstanding community service project for 2 consecutive years as well it has won
+many more awards for its sustainability.
+<br/><br/>
+Apart from the community services we initiated HDS, a hotdog eating competition which is one
+of the major signature projects of RACIIT and also a very popular project among the public.
+Every year HDS has a major upscale that would reach the potential a project like HDS has. 1000
+plus public takes part in the festival because it is one of the most awaited projects expected
+from our club and the whole package of fun, competitions, stalls, after party, celebrity guest
+appearances HDS without a fail delivers to the public. HDS won the most outstanding initiative
+under public relation silver award for the year 2018-2019 and a gold award under the same
+category for the year 2019-2020 and many more other awards under different categories. Every
+year HDS has a huge reach among the public and expectation for the brand image this project
+has created.
+<br/><br/>
+RACIIT has not only been popular for the qualitative and quantitative project we give to the
+community but also for the participation and all the crazy fun filled times we take as a whole
+club while we are initiating many projects. Along with these RACIIT has won the Most
+Outstanding Club for the past 3 Consecutive years.
+          </p>
+      </div>
+
+
+           <div class="club-intro-box">
+          <p>
+
+            <span class="question">What are your key noteworthy public projects that could sustain?</span>
+            <div class="underline" ></div>
+            <br/>
+
+            Hotdog showdown (HDS) is the most significant among the signature events of the Rotaract
+Club of Informatics Institute of Technology, an initiative under the Public Relations avenue
+aiming to help fund ‘E-Mithudama’. The project began in 2014, as a basic fund raiser in our very
+own common room within the IIT premises and has since evolved from being just a hotdog
+eating competition to one of the most awaited events on the calendar in both the Rotaract
+community and otherwise.
+<br/><br/>
+Each year HDS grows bigger and has now grown to mark its place as the largest Hotdog Eating
+Competition in South Asia. The event, which was only limited to a Hotdog eating competition,
+was able to pass beyond its limitations over the past few years and has now marked to be one
+of the largest food festivals in the country. Apart from this HDS consisted of a dashing motor
+show, a Massive and a dynamic musical afterparty including many celebrity appearances and
+performances, a stunt show and an assortment of appetizing food stalls making it an eventful
+night full of fun and laughter.
+<br/><br/>
+Over the last 6 years HDS has grown as a brand that brings a positive public relations effect on
+its sponsors and partners. The project has also captured a gold and silver award for the Most
+outstanding public relations initiative in the years 2019 and 2020 respectively, and is now a
+E-mithudama is a project based around the core objective of helping school children from rural,
+underprivileged areas of the country- to support and uplift their computer literacy, delivering to
+the younger generation of our country with the touch of advanced technology that the world is
+currently experiencing. The project was inspired by the opportunity that could be created by
+partnering up with Unilever Sri Lanka Limited, the basic ideology of the project being to use
+laptops and desktops that are left to be dumped, to build “X-Labs” in four underprivileged
+schools each year.
+<br/><br/>
+Once in every 4 years the schools will have their labs renewed with new devices, adding value to
+the project due to its focus on sustainability. Once the lab is set up, and it is open to be used,
+sessions on basic computing are conducted- how to use a computer, Microsoft Office etc. so
+the students are given an introductory path for guidance in their computer literacy. Apart from
+which a separate session is conducted to the mentors and teachers of these students to get
+ahead with their teaching and tutoring.
+Born in the 9
+<br/><br/>
+th charter year of the Rotaract Club of IIT, the initiative, has grown to be one of
+RACIIT’s ground-breaking signature community service projects, a promising project that brings
+light to different communities all around the nation. The project has added up value to itself by
+capturing a number of awards starting from when the project was awarded the Runners-up
+under the category “Winning in Sustainability Development'' at ‘Unilever Sri Lanka Chairman’s
+Awards 2018’. Shortly after which it was recognized at the 2018-19 Rotaract South Asia multi
+District Information Organization’s Outstanding Awards, winning a gold award.
+The project was also awarded the gold award for the most outstanding community service
+project based on basic education and literacy for two consecutive years 2018-19 and 2019-20.
+In addition to which it brought home the, “INSPIRE THE FUTURE” service excellence 2018-19 -
+Gold award, most outstanding project focusing on sustainability for the year 2018-19 - Silver
+award, most outstanding project focusing on sustainability for the year 2019-20 - Bronze award.
+<br/><br/>
+Sallys Manor The halloween season would not be complete without a fantastic Halloween party
+to cap it off. RACIIT as the veterans of this tradition hosts Sally’s Manor, an annual halloween
+party, in which all the members are involved in carrying out the tasks of the project. Starting o
+with the initial planning to the actors of the horror house, decoration and stall in charges are all
+our very own members.
+<br/><br/>
+The event comprises the biggest horror house in the whole island and is followed by DJ party
+alongside stalls such as food and face painting. In 2019 Sally's Manor was held for the third
+consecutive year at IIT premises. Being one of the large-scale Halloween parties happening in
+the island, Sally’s Manor had a turnout of over 900 attendees during the last year and was
+awarded as one of the most Outstanding fundraisers for community service.
+Sally’s Manor not only holds the pride of being one of the ways to raise funds for our signature
+community service projects but is also a chance for everyone to mingle and meet new people
+along with our own newly joined members who had the chance to enjoy themselves.
+Trailblazers is one of the signature projects initiated by Rotaract Club of Informatics Institute of
+Technology under the Professional Development avenue. Trailblazers has been initiated in the
+year 2017 and has been conducted for 3 consecutive years and is one of the most expected
+projects under the PD avenue. Trailblazers has been partnered up with many Interact clubs for
+the past 3 years.
+<br/><br/>
+Trailblazers pursues the theme of leadership, teamwork, and entrepreneurship, which endures
+the goal of being a guiding light for the youth to reinforce their personalities and inspire
+themselves through interactions and experience they will value immensely in the long run, and
+together to be a vast community of dedicated learners, leaders and entrepreneurs who will be
+capable of reaching towards the climax in the trail to success.
+<br/><br/>
+Each year Trailblazers ups its scale in terms of impact and participation along with Interact
+clubs and covers a vast area of topics in terms of its theme.
+<br/><br/>
+In the year 2019-2020 trailblazers happened from the month of April to the month of May, but
+due to the pandemic the project had to be moved into the virtual platform, we went on
+Instagram live rather than be conducted physically as we initially planned.
+<br/><br/>
+Yasas Hewage, Fahad Farook, Peter D`Almeida, Bernandine Jayasinghe, Gaia Kodithuwakku,
+Manuranga Wijesekara, and Bathiya Jayakody discussing their life experience along with
+providing the participants immense knowledge about many different topics of Entrepreneurship,
+Leadership and Teamwork we were able to gather 5500 plus participants with the help of such
+phenomenal speakers. We would not be RACIIT if entertainment and fun is not included in our
+projects, so as usual we went on full blast with the team Rubber band with 4 multi talented
+individuals who made the participants wish they were there physically with the amount of
+entertainment and fun they provided through instagram live. We concluded the project with lots
+of discussion, immense amounts of knowledge, entertainment and laughter.
+<br/><br/>
+We proudly present Trailblazers which won the Silver Award for the Most Outstanding Project
+with Interact Clubs and many more awards.
+<br/><br/>
+IGF the current generation doesn’t see gaming as a hobby but more of a passion and the
+Rotaract Club of IIT wanted to showcase that to everyone else by our very own initiative IIT
+GameFest also known as “IGF”. As eSports is up and coming in Sri Lankathese days and is
+recognized as a sport by the government, IGF is another esports competition that paves the way
+for gamers around Sri Lanka along with others. RACIIT, being a club of an IT based institute,
+initiated "IGF'' back in 2016 in order to give a chance for youth to engage and experience this
+category of sports.
+<br/><br/>
+IIT GameFest took place for four consecutive years and was taken to its highest peak over the
+years. With the development of the technological areas of graphics the games keep getting
+more detailed and addictive, the game fest consisted of Dota 2, Call of Duty 4, FIFA 19, Mobile
+Legends, Fortnite and PUBG Mobile. The biggest and trendiest games are showcased with
+professional gamers as well as kids and adults from all over the island.
+<br/><br/>
+Last year IG was a ranked tournament making it one of the biggest projects of the club during
+the last year and proudly bears ranking as the 3rd best Gaming Tournament in Sri Lanka.
+HaXmas is the signature project of the Information Technology avenue, which is a small
+ideathon combined with a startup conference followed by an innovation festival , organized with
+the aim of bringing like-minded people with innovative ideas together. This was initiated with the
+sole purpose of creating a platform which would allow young minds to present their ideas for
+the numerous problems faced by the present day society. This has been receiving recognition
+from the latest emerging companies and has been taking place for three consecutive years.
+<br/><br/>
+The first phase of project HaXmas was a month-long project which consisted of an Initial pitch,
+mentor session and a final pitch.
+<br/><br/>
+Over 50+ teams from universities and institutes from all over the country, each containing up to
+4 members registered by submitting a Proof of Concept(PoC) which contained a document
+containing a brief explanation of their project along with its sustainability. These project
+proposals were presented to a panel of Judges consisting of qualified lecturers from IIT who
+choose the 20 teams qualifying for the Initial pitch. The Initial pitch which was held on the 19
+th of January 2020 at StartUpX Foundry started off without a hitch as the participants presented
+their ideas to the judges.
+<br/><br/>
+This took place as a closed pitch where only the judges would be present during the pitch. Once
+the pitching was over, we moved onto the mentor session in which we provided each team with
+individual attention from the judges. Further on, the innovation festival choosed 3 teams who
+will receive support from our partners to go forward with their products, this included cash
+prizes as well as resources to provide the young innovators with the invigoration they need. This
+project was a massive success and provided a greater understanding on entrepreneurship and
+created a platform which will bring forth a new generation of successful and innovative youth.
+Seva “Service Across Borders” , is the signature international services project, done by the
+Rotaract Club of IIT to host and collaborate with foreign rotaractors to conduct community
+services projects that will uplift the community. For this purpose, the Rotaract Club of IIT
+hosted a group of Hong Kong and Australian rotaractors for a week to conduct community
+service projects while going on tours with them in Sri Lanka.
+<br/><br/>
+The first activity was a project named Game of Life which took place at the Independence
+Square, Colombo.The purpose of this project was to let each team complete community service
+projects as they possibly could within a specified time period. The next Project was a sports
+project where the rotaractors from both clubs got the opportunity to showcase their athleticism
+by playing Futsal on the same day. The next day we all participated in a beach clean-up project
+in Wellawatta area to show our gratitude to the environment and keep our surroundings clean.
+We organized this as an awareness project to educate young citizens, who are gradually
+maturing into dominant adults and to demonstrate them the importance of respecting the
+environment as well as how a simple act today is capable of contributing to a better world
+tomorrow.
+<br/><br/>
+We had another community service project in Kandy where the two clubs joined hands with
+each other to conduct an interactive session for the students at Naranvita Kanishta Vidyalaya in
+Kandy. Moreover, stationeries were donated to the students at the end of the session. Upon
+completing this project we took our fellow rotaractors from Hong Kong and Australia on a hike
+to Hanthana mountain range which is one of the famous and most scenic hiking trails in Sri
+Lanka.As a part of the animal protection program, we visited Ahungalla Turtle Hatchery Centre
+to provide a contribution in saving the endangered turtle species. There, we helped in numerous
+activities of this center, such as feeding, cleaning and giving medicine to sick turtles.SEVA 2.0
+was successfully completed and we will be doing SEVA 3.O definitely this time as well , if the
+covid 19 situation in the country settles down .
+<br/><br/>
+
+          </p>
+      </div>
+
+
+
+      <div class="club-intro-box">
+        <p>
+
+          <span class="question">By July 2023, what do you wish to change the perception of your club to?</span>
+          <div class="underline" ></div>
+          <br/>
+
+          Working on the club’s signature projects, in a much more bigger scale in a sustainable way so
+that the public image of the club is maintained in a progressive way , for the years to come.
+Further, with respect to the rotaract movement we would like to further extend all our projects ,
+such that through our projects , the needed and rural communities are benefited.
+Looking into it in a more deeper perspective, we would look into ways of emphasizing respect
+for the rights of others, and to reflect ethical standards , integrity and dignity in all of our
+projects while building up professional and leadership skills within our generation in order to
+create a much better and respected society. As always we would like to be of service to others,
+while providing an opportunity and platform for young men and women to enhance the
+knowledge and skills which will help them build up their personalities in a professional way.
+<br/><br/>
+
+We would continuously thrive as much as we can in order to address and find solutions to
+burning physical, mental and social needs in our communities and societies, while promoting
+better relationships between people across the world reaching beyond our boundaries, through
+a framework of great service and friendship. As the youth currently engaged in Rotaract we
+wish to solve real problems with commitment and passion . From projects focused on literacy
+development, peace and harmony, community services to health and sanitation , we always
+work towards achieving a better place, a better world , and to say committed till the end.
+<br/><br/>
+
+For all of these years we have been doing impactful projects , which has been benefiting society
+in numerous ways. As in respect to the upcoming years we hope to focus mainly on the below
+said criteria. We hope to carry out work which can help promote peace and harmony around the
+world . It is clear that due to many reasons ranging from social, environmental to political , that
+the world peace has somewhat been lost , thereby we will continue to build up peace around us ,
+starting from our individual selves first. Moving on as we all know , right now at the moment the
+world is facing a global pandemic while fighting many other diseases as well. Therefore it is
+important that we as rotaractors, should actively participate in helping creating awareness
+
+about such diseases and how to fight and win over such problems as well. Because the whole
+topic of “fighting diseases “ is a global persistent issue.
+<br/><br/>
+
+Further moving on, Srilanka being a developing country after suffering from a 30+ year long war,
+has been focusing on developing the economy by uplifting local businesses , within the
+countries diverse communities, thereby in order to facilitate community development we hope
+to carry out projects in such a way that the rural communities and their lives are uplifted in a
+much more better standard. Moving ahead , with respect to the developing technologies and the
+constant demand for literate , and educated people , it is a must that we focus on uplifting the
+education systems and standards within today's society. Thereby we as rotaractors hope to
+carry out our community services work which focuses on developing the education standards
+and we hope to be actively engaged in providing tools and services needed for uplifting the
+education standards in our country as well as globally. Further on , we hope to extend our
+projects to the focus areas of saving mothers and children by providing them with necessary
+items and goods and providing them with necessary consultation . Further we will be extending
+our community services projects to provide clean water, sanitation and hygiene requirements as
+well.
+
+         
+
+        </p>
+    </div>
+
+
+
+
+    <div class="club-intro-box">
+      <p>
+
+        <span class="question">How do you intend to improve on the impact and public visibility of your key projects?</span>
+        <div class="underline" ></div>
+        <br/>
+
+        Moving ahead in improving the impact of projects , we will be further extending our ongoing
+annual projects in a much more progressive way so that, a clear improvement in the projects
+can be seen , when comparing the impact of the project, over the years .
+In order to uplift the standard of our projects we will work on thoroughly understanding the
+framework and focus areas of all individual projects, while evaluating the impact and
+performance. The purpose of evaluation is to come to an assessment of impact and form a joint
+opinion , that these are the actions that would make a difference to the project and to the
+relevant beneficiaries. We will also be tracking the constant need changes over time and thereby
+changing the project accordingly. Even when considering the overall progression of a project,
+we need to have a clear idea on the impact we have made, and the changes we have to do to the
+project in order to increase the impact of the project. We will be constantly reviewing the
+progress of our projects , in order to come up with more impactful ways of improving our
+projects such that we could reach our project goals and aims at a satisfactory note.
+Further on , we hope to always extend the community development side of all projects that we
+do so that the communities in need are benefited and their social statuses are uplifted.
+<br/><br/>
+Moving ahead in improving the public visibility, we have to mainly focus on the PR aspects of
+our projects, and how we can make a difference in our PR Work so that our project visibility is
+increased and diversified. In order to do this, we need to make our PR material standout and
+should be posted on trending social media platforms such as facebook, instagram, youtube and
+linkedin. As in terms of PR material we need to focus on getting a good reach for all of our
+projects posters and video content so that the general public is aware of the projects.
+<br/><br/>
+Further , we will be partnering up with suitable reputed organizations and will be maintaining a
+proper and transparent communication plan . PR plays the main role in maintaining public
+visibility of the project , thereby we will be taking relevant measures in order to improve the PR
+Planning of the projects
+
+
+
+      </p>
+  </div>
+
+
+
+  <div class="club-intro-box">
+    <p>
+
+      <span class="question">What goals do you intend to achieve as a club by 2023?</span>
+      <div class="underline" ></div>
+      <br/>
+
+      We started off this year with many goals for the club in terms of improving and taking the club
+to greater heights and length. “Alone we can do so little and together we can do so much more”
+and we intend to do so much more together as a team in improving the club and achieving all
+the goals that we put for ourselves as well as all the Citations and District goals that are given to
+us. RACIIT has always been eager to try and achieve all the goals that were given to us.
+<br/><br/>
+As for this year there are 6 District Goals that we are aiming to fulfill.
+<br/><br/>
+
+<ol>
+  <li style="margin-top: 20px;">
+    <span class="question">Covid - 19 Prevention.</span>
+Project Epitome was an initiative under the Community Service Avenue taken to achieve
+the goal of Covid - 19 prevention, due to the pandemic situation in the country. Epitome
+is an ongoing project to this day. The first phase of the project was a “Food Drive”, where
+our board and members donated and collected those food to give to homeless people
+and low income workers working in the street as they were impacted mostly due to the
+pandemic and the whole lockdown situation. The Second phase of the project was
+“Rakawaranaya” in which we partnered up with Office.lk and donated Facility cleaners
+and hand wash for more than 50 underprivileged schools. Third phase of the project
+was a blood donation campaign conducted to donate blood to the blood banks as they
+were running out of blood and were in need of it due to corona. We successfully
+concluded all the three phases of the project Epitome and are still working towards in
+the movement of preventing Covid-19 and creating awareness about the pandemic in the
+society.
+  </li>
+
+  <li style="margin-top: 20px;">
+    <span class="question">Mental - well being.</span>
+    Project Wevolve initiated under Professional Development Avenue was mainly focused
+    on the topic mental health and well being. Project Wevolve was carried throughout the
+    month of August, where we covered topics such as, “Mental well being, Suicidal
+    thoughts, Child Abuse, and Domestic Abuse” with 4 diffrent phenomenal speakers
+    conducted 4 sessions in educating the participants the and giving them the full insight
+    about these topics and how important it is to come forward and speak if anyone is going
+    through any of these problems. We completed the project by delivering the desired goal.
+  </li>
+
+  <li style="margin-top: 20px;">
+    <span class="question">Peace and Communal Harmony.</span>
+    Project Engal Sri Lanka was initiated and conducted for the past 2 years. And we are
+    planning to continue and conduct the project this year too. Engal Sri Lanka was an
+    initiative under the Community Service Avenue to spread peace and educate cultural
+    awareness among the public. We implemented this project by visiting the cultural places
+    of different religions and educating the participants the importance of that culture and
+    said religion. The main goal of this project was and is to spread peace and have a
+    communal harmony between the races and religions in our country by providing an
+    insight to everyone the importance and the value of each religion is to that community.
+    By carrying out this project we were able to observe many younger generations kept an
+    open mind about other religions and cultures as well as they started respecting other
+    religions and cultures among their peers.
+  </li>
+
+  <li style="margin-top: 20px;">
+    <span class="question">Educational and Sustainable Livelihoods.</span>
+    Project E-Mithudama is an initiative under the Community Service Avenue and has been
+conducted for the past 2 consecutive years, and we plan to carry out the legacy of
+e-mithudama in the upcoming years without a doubt. This project is about in which we
+build computer labs for school in the underprivileged areas in the country. Our main
+objective is of helping school children from rural, underprivileged areas of the country- to
+support and uplift their computer literacy, delivering to the younger generation of our
+country with the touch of advanced technology that the world is currently experiencing.
+Upto this day we have built and provided 7 labs to the underprivileged schools in the
+rural area of our country, and we have planned to provide more computers and provide a
+sustainable education to the students through this project.
+<br/><br/>
+Project Back to school was an initiative under Community Service Avenue for this year.
+This is a project where we focus on the sustainability of making all the students learn.
+There are a huge number of people who do not attend school due to certain reasons, and
+there are also students who have missed their lessons due to the pandemic and the
+lockdown situations. We initiated this project with the aim of educating and teaching the
+important subjects from grade 6 onwards. We are planning to achieve this goal through
+implementing this project by making recordings of all the chapter and term papers with
+the attachment of soft copies. Project Back to School is right now an ongoing project.
+  </li>
+
+  <li style="margin-top: 20px;">
+    <span class="question">Environmental and Green Life.</span>
+    Project We-Plant is an initiative under the Community Service Avenue happening for the
+    2nd consecutive year. Our main objective of this project is to create an awareness about
+    the importance of Environmental and Green life and also to take the step to try and
+    protect green life as our world is moving towards destroying green life due to the
+    amount of carbon emitted and global warming. Phase I of this project was carried out by
+    collecting a large number of videos of people planting trees and plants in the home
+    garden. The motive behind collecting videos was to create an awareness about green
+    life and provide an opportunity for the younger generations to take the first step and
+    plant a tree to protect green life. As the Phase II we are planning to plant 200 mangroves
+    which is a habitat for certain types of reef fishes, birds and some herbivore animals. It
+    also helps to prevent soil erosion. We Plant is right now an ongoing project.
+
+  </li>
+
+  <li style="margin-top: 20px;">
+    <span class="question">Fellowship and Membership Development.</span>
+    Project Truth or dare 2.0 was an initiative under the club service avenue solely based on
+fellowship and membership development as it was open not only to RACIITians but
+members of other clubs as well. The very first edition of truth or dare held in July which
+was open to only our club members motivated us to extend it to other clubs due to the
+impactful outcome we received. Truth or dare 2.0 which was a Halloween based
+competition, was held in the month of November, and had a turnout of 30+ teams and as
+a result had to be extended to another day. It was a highly interactive session as the
+project committee who gave the tasks to be done and to be said had to interact
+throughout the round. We received tons of good feedback from the teams that
+participated and were overjoyed to know that they are eagerly waiting until next time.
+Project Introduction to RACIIT was an initiative under Club service Avenue. As for the
+constitution of our club it is mandatory for a prospective member to carry out a micro
+project and attend 3 general meetings in order to be a general member. However, this
+<br/><br/>
+year we were unable to carry out meetings and micro projects physically and as a result
+came up with a new initiative of a workshop displaying as to how we function as a club
+and what our vision and mission is to the members of the new intake. Introduction to
+RACIIT was held in the month of November and all the prospective members who took
+part left with all their doubts been met. Individually, all the avenues gave a presentation
+on what they do and encouraged our newbies. This project also bought in more new
+members who were retested. In addition, we carried out a survey to be filled by our
+general members on what should be improved in our projects.
+<br/><br/>
+We are planning to carry out more impactful projects to fulfill and achieve the District
+goals while focussing on the sustainability of our projects to leave a major impact in the
+society and help the society out.
+
+  </li>
+
+
+</ol>
+
+
+
+    </p>
+</div>
+
+
+
+<div class="club-intro-box">
+  <p>
+
+    <span class="question">What goals do you intend to achieve for your club projects by 2023?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    For any club or movement to rise to a better place, it is mandatory that the club sees a vision
+    and creates goals to raise the bar high. The Rotaract Club of IIT has come a long way from
+    where it started and has a promising future in the years to come. Therefore, with that intention
+    we are currently working towards a few goals we set this year.
+    <br/><br/>
+    One such goal is elevating less popular projects to the level of popular ones. This goal can be
+    applied to almost every avenue and for an instance, if you consider the project I Can-cervive
+    under the avenue of community service, is a small project that is mostly focused on breast
+    cancer awareness and followed by a donation. A donation no matter the worth, might mean the
+    world to someone else. Therefore, we could bring this project to a level that is more impactful
+    by handing out larger donations. In terms of this project, medicine which most patients are
+    unfortunate to receive could be handed out, creating more impact and recognition.
+
+    <br/><br/>
+    Maintaining our membership base is a vital aspect of the club. We believe in giving all our
+    members a chance to be seen. Whether it may be Sports, IT, signing, photography, making
+    videos, writing, singing and so on, we ensure that Rotaract is a place they can discover their
+    hidden skills by participating in our projects and carrying on responsibility. Almost all our
+    projects lie solely in the hands of our members and our club would cease to exist without them.
+    Members also get the opportunity of participating in other projects that give them exposure and
+    people skills. A project showcasing membership involvement is Sally’s Manor – a project where
+    every batch gets a different part to play for example, first years carry out the decorations,
+    second years oversee costumes, third years in charge of the horror house, etc. Through this
+    project they get to develop their skills and are rewarded by gaining exposure to members of
+    other clubs, resulting in the goal of membership involvement.
+    <br/><br/>
+    There is always room for improvement in a project. likewise, we also wish to improve the impact
+    of our projects not only in terms of recognition but also in terms of sustainable impact. The
+    project Fierce which has been a project that was started small with the purpose of teaching
+    self-defense, became a massive hit this year. This project has the potential of creating a larger
+    impact to so many people, no matter the age if we keep increasing the project sustainability
+    yearly.
+
+  </p>
+</div>
+
+
+
+
+<div class="club-intro-box">
+  <p>
+
+    <span class="question">What is your way forward in achieving the said goals?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    Brand image of the project can be increased further by increasing the number of business
+    partners , sponsors ,Strategic partners and dedicated partners contributing to the project.
+    Brand image is very important as it helps in getting a better reach into the public eye. The
+    impact of the project can be increased by reviewing the progress of the project over the years,
+    and thereby taking the necessary steps in altering the project in a much more impactful
+    way.Further on we will always make sure that the Rotary focus areas are covered in all the
+    projects. The impact of a project is escalated, if the project focus areas such as, community
+    development, peace and harmony, water , sanitization, education etc are covered well
+    throughout as the project goals.
+
+  </p>
+</div>
+
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question" style="font-size: 30px; font-weight: 900;">Finances</span>
+    <br/><br/>
+    <span class="question">How is your current financial stability as a club?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    The clubs’ financial position has always remained in a balanced state due to the carefully and
+efficiently managed assets by the board members. This implies the profits generated by the
+various organized events throughout this time period have not been misused or wasted. The
+liquidity in the club has always been at a level where the assets would be able to pay off the
+liabilities by at least more than one time indicating a healthy level. Furthermore, with the current
+persisting achievements that has been gained followed by the number of successful events the
+club would likely be functioning well for at least another five years without a major problem
+despite the unforgiving pandemic.
+
+  </p>
+</div>
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">What are your main financing sources for projects?</span>
+    <div class="underline" ></div>
+    <br/><br/>
+
+    Hotdog showdown (HDS) is the most significant among the signature events of the Rotaract
+    Club of Informatics Institute of Technology, an initiative under the Public Relations avenue
+    aiming to help fund ‘E-Mithudama’.
+    <br/><br/>
+    Sallys Manor is an annual halloween party, in which all the members are involved in carrying out
+    the tasks of the project. Being one of the ways to raise funds for our signature community
+    service projects. It was also awarded as one of the most Outstanding fundraisers for
+    community service.
+
+  </p>
+</div>
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">What is the level of club membership due collection you wish to achieve?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    We as a club do not allocate a membership fee for the new intakes, instead we set aside certain
+tasks to be accomplished by them.
+<br/>
+<ul>
+  <li>attend a minimum of two general meetings</li>
+  <li>complete a micro project in a team of 5</li>
+</ul>
+By setting such tasks not only does the new intake have an exposure to how the club works on
+various projects but it also provides the club with an income through the micro projects that are
+taken place. We as a club don’t look forward to requesting a membership fee but instead would
+
+consider providing certain criterias such as setting a bare minimum amount to how much of a
+profit each micro project should hold.
+
+  </p>
+</div>
+
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">What partnerships and sponsorships would benefit your club’s project finances?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    Organizations who are willing to engage in a partnership generally don’t handle things according
+to trial and error, they look for a bearable risk that will ensure long term growth which benefits
+their company or organization. Which is why targeting bigger organizations to partner up
+requires a very good reputation which our club is able to offer at first glance. Our strategy is to
+attract popular firms that have a guaranteed opportunity to market their products that ensure
+faster growth due to our clubs’ reputation. And on the other hand, because our club receives a
+fair amount of investment the caliber of the project can be large enough to gain the popularity it
+deserves. This in turn helps the club to generate profits enough to alleviate all costs.
+
+
+
+  </p>
+</div>
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">What are the financial goals you wish to achieve as a club by 2023?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    Some of our financial goals are as follows:
+
+    <ul>
+      <li>Increasing the current ratio or the liquidity position of the club so that the club can run
+        smoothly for another quarter without any sort of disturbances</li>
+      <li>Alleviating trade payables and trade receivables to avoid debt problems such as bad debts
+        and minimizing level of cost</li>
+      <li>Focus of the club will be purely on not for profit meaning all profits shall be allocated for
+        community service projects only</li>
+      <li>Contingency planning to allocate a separate budget in case of unpredictable circumstances
+        or emergencies</li>
+    </ul>
+  </p>
+</div>
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">What partnerships do you wish to achieve for your projects by 2023?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    <ul>
+      <li>Maintaining the current major partnerships to ensure more consistent projects in the future.</li>
+      <li>Building new corporate partnerships for more exciting as well as attractive new projects.</li>
+      <li>Maintain dedicated partners who will stick with the club in the long term.</li>
+    </ul>
+  </p>
+</div>
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">What is your way forward in achieving the said financial goals and partnerships?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    <ul>
+      <li>Making sure that the clubs may bring a net gain for the perpetual succession.</li>
+      <li>Assessments should be carried out to achieve the said financial goals especially in
+        unpredictable situations such as the global pandemic.</li>
+      <li>Although popular businesses are the major targeting area the current pandemic has resulted
+        in the bankruptcy of many businesses this leaves us with the opportunity to target more
+        smaller businesses due to unfair stipulations by major players.</li>
+        <li>Not all partnerships have to be conducted based on monetary terms few businesses will
+          benefit on the basis of marketing their products to gain more reach in the community by way
+          of free samples.</li>
+          <li>As for the emergency fund an allocation of lkr 100,000 has been deposited in a bank
+            account belonging to the club in case of emergency this fund will be maintained
+            continuously and won't be utilized unless absolutely needed to.</li>
+    </ul>
+  </p>
+</div>
+
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question" style="font-size: 30px; font-weight: 900;">Membership</span>
+    <br/><br/>
+    <span class="question">What are your current membership statistics?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    Current Membership status
+
+    <ul>
+      <li>Total - 379</li>
+      <li>Prospective Members - 48</li>
+      <li>Active Members - 331</li>
+
+    </ul>
+
+  </p>
+</div>
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">What is the level of club membership you wish to achieve in terms of growth and retention?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    Currently we have 331 active members contributing towards the rotaract movement. Since each
+and every year there is a growth in the intakes at IIT and with the expansion of the IIT
+infrastructure we could expect a constant growth of club members as well in the future.
+
+  </p>
+</div>
+
+
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">What are your membership goals in terms of growth, retention, and level of participation?</span>
+    <div class="underline" ></div>
+    <br/><br/>
+
+    Main goal is to increase and have an active membership.
+
+  </p>
+</div>
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">How do you plan to implement your membership retention & development strategy?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    We as a Club have taken many steps towards the development of our club members. Be a
+Rotaractor, Truth or Dare, Club Trip, Survive, Sports Quiz etc. are some of the projects which we
+conduct in order to improve their knowledge and the bond among the rest of our club members.
+Right after the probationary period we get our club members involved in each and every project
+while giving them more responsibilities on the project which helps them to improve their skills.
+Rotaractor of the Month is a project we conduct where we select the best rotaractors of the
+month and will be awarding them with a certificate inorder to appreciate their commitment and
+hard work done towards the rotaract movement.
+
+  </p>
+</div>
+
+
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question" style="font-size: 30px; font-weight: 900;">Adaptation to Elevate Rotaract Policy Changes</span>
+    <br/><br/>
+    <span class="question">How ready are you as a club in absorbing the changes due to Elevate Rotaract?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    <ul>
+      <li>The policy changes regarding the age category in Elevate Rotaract doesn’t affect the club as
+        most of our members are in the age category of 18-26</li>
+      <li>The $5 Membership due could affect new member recruitment as most of our members are
+        still studying and not making a living of their own.</li>
+      <li>Instead of collecting a membership subscription from our club members we RACIIT has a
+        tradition of doing micro projects, we are planning to set a minimum amount of how much of
+        profit these projects should make and this amount will be used to cover up the future
+        Elevate rotaract policy change regarding the membership fee.</li>
+
+    </ul>
+
+  </p>
+</div>
+
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">What changes do you wish to do in your club in preparing and implementing Elevate Rotaract
+      Policy Changes?</span>
+      <div class="underline" ></div>
+    <br/>
+
+    Identify and terminate all inactive members within the year to maintain 100 % active
+membership within the club.
+
+  </p>
+</div>
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">Upon Elevate Rotaract Policy Changes, what goals do you wish to achieve?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    Our main goal is to filter out the most passionate and hardworking members who will give their
+    100% towards the growth and development in the club as well as in the movement.
+
+  </p>
+</div>
+
+
+<div class="club-intro-box">
+  <p>
+    <span class="question">What is your implementation strategy to achieve the said goals?</span>
+    <div class="underline" ></div>
+    <br/>
+
+    As the RACIIT our general members are the foundation and it is our responsibility to present a
+    clear idea of what the Rotaract movement is about and what we do as RACIITians. It is a
+    responsibility carried to explain and clarify any doubts the member may have and to build strong
+    bonds beyond our differences.
+    <br/><br/>
+    As a university based club it is important to guide our members to have a strong balance
+    between university work and rotaract. We also take it upon ourselves to identify each member's
+    area of expertise and assign them to the relevant projects and positions and to do so we
+    conduct micro projects. This allows the members to get to know each other and experience
+    what it is like to organise projects and not only benefits the club but also the members and their
+    skill development.
+
+  </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+</div>
+
+<!-- <div class="third-container">
+
+    <div class="head-container year-review">
+        <p class="head-text">Introduction</p> 
+    </div>
+
+  <div class="cards-container">
+
+
+    <div class="club-intro-container">
+        <div class="club-intro-box">
+            <p>Under the guidance of the Rotary PanColombo, Rotaract Club of IIT started its road to success in 2010 under the president of Rtr. Tanya Senaratne where we won the best Charter Club of the year. Being a part of the prestigious youth movement for the past ten years, the Rotaract Club of Informatics Institute of Technology (RACIIT) has strived to uplift our community and to provide an opportunity for all students at IIT to engage in volunteerism where students learn how to develop themselves as better citizens in the society. </p>
+        </div>
+    </div>
+
+
+
+  </div>
+</div> -->
+
+<div class="footer">
+
+    <div class="footer-left">
+        <div class="footer-img-box">
+            <img class="footer-img" src="../../assets/logo-white.png">
+        </div>
+    </div>
+
+    <div class="footer-middle">
+        <div class="footer-middle-container">
+            <!-- <div class="footer-links-box">
+                <p>ADMIN | STRATEGIC PLAN | MEMBERSHIP | PROJECT OVERVIEW | FINANCE | ROTARACT FAMILY COORDINATION | PR EFFORTS</p>
+            </div> -->
+            <div class="footer-copyright-box">
+                <p class="footer-copyright">2020 © Copyrights Rotaract Club of IIT</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <div class="footer-social-box social-link">
+            <a href="https://www.facebook.com/iitrotaract/"><i class="fab fa-facebook-f social-link"></i></a>
+            <a href="https://twitter.com/IITRotaract"><i class="fab fa-twitter social-link"></i></a>
+            <a href="https://www.instagram.com/rotaract_iit/"><i class="fab fa-instagram social-link"></i></a>
+            <a href="https://rciit.org/"><i class="fas fa-wifi social-link"></i></a>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    $('#myBtn').hover(function(){
+        var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+        // var output = "hiii";
+        document.getElementById("text").innerHTML = output;
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    });
+
+    $('#myBtn1').hover(function(){
+        var modal = document.getElementById("myModal1");
+    var btn = document.getElementById("myBtn1");
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+        // var output = "hiii";
+        document.getElementById("text").innerHTML = output;
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    })
+
+</script>
+
+<script>
+    AOS.init();
+  </script>
+
+<script>
+
+    $('#myBtn').click(function(){
+        var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+        // var output = "hiii";
+        document.getElementById("text").innerHTML = output;
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    });
+
+    $('#myBtn1').click(function(){
+        var modal = document.getElementById("myModal1");
+    var btn = document.getElementById("myBtn1");
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+        // var output = "hiii";
+        document.getElementById("text").innerHTML = output;
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    })
+
+
+
+
+    
+    
+
+
+    
+        </script>
+
+
+
+
+
+
+<script>
+    VANTA.TOPOLOGY({
+      el: "#particle",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x3F3D56,
+    backgroundColor: 0xf1f1f1
+    })
+    </script>
+
+</body>
+</html>
