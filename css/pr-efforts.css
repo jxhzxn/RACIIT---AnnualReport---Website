@@ -283,7 +283,7 @@
 }
 
 .chart{
-    height: 100px;
+    height: 80px;
 }
 
 .avenue:hover{
@@ -294,8 +294,17 @@
     background-color: #f1f1f1;
 }
 
+.social-box-chart:hover{
+    background-color: #f1f1f1;
+}
+
 .proj-count{
     font-size: 50px;
+    font-weight: 900;
+}
+
+.proj-count-up{
+    font-size: 60px;
     font-weight: 900;
 }
 
@@ -336,13 +345,23 @@
 
   }
 
+  .chart-head{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
   .social-box-chart{
+    
     width: 548px;
-    height: 250px;
+    height: 270px;
     /* border-style: solid;
     border-color: black; */
+    flex-direction: column;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   background-color: rgba(0, 0, 0, 0.644);
   background-color: white;
@@ -366,8 +385,16 @@
     flex-direction: column;
 }
 
+.tiktok{
+    color: #FE054F;
+}
+
+.tweet{
+    color: #009DEC;
+}
+
 .social-text{
-    margin-top: -20px;
+    margin-top: -10px;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 600;
