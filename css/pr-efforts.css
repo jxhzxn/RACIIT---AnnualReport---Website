@@ -17,6 +17,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 200px;
+
 }
 
 
@@ -230,6 +232,13 @@
 
 .stat-box{
     /* border-style: solid; */
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.stat-box:hover{
+    /* border-style: solid; */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .projects-stats-head{
@@ -276,6 +285,7 @@
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
+    cursor: pointer;
 
      /* border-color: black;
     border-style: solid; */
@@ -306,6 +316,7 @@
 .proj-count-up{
     font-size: 60px;
     font-weight: 900;
+    color: #00A3B6;
 }
 
 .social{
@@ -341,6 +352,7 @@
     background-color: white;
     color: black;
     margin: 1px;
+    cursor: pointer;
     padding: 10px;
 
   }
