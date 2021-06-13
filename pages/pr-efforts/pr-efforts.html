@@ -15,7 +15,7 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
-<link href="../../css/club-admin/club-overview.css" rel="stylesheet">
+<link href="../../css/pr-efforts.css" rel="stylesheet">
 <link href="../../css/navbar.css" rel="stylesheet">
 <link href="../../css/footer.css" rel="stylesheet">
 
@@ -26,6 +26,8 @@
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
 
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -312,47 +314,134 @@
 
 </div>
 
-<div class="third-container">
+<!-- <div class="third-container">
 
   <div class="head-container year-review">
       <p class="head-text" style="font-size: 100px;">PR Efforts</p> 
   </div>
 
-<div class="cards-container">
 
 
-  <!-- <div class="club-intro-container">
-      <div class="club-intro-box">
-          <p>Our energetic Rotaractors focus their strength in numerous areas where they strive to uplift our society through various community-based projects, build better friendships within the club and the Rotaract Community, provide service at an international level and to develop one’s professionalism. All effort put towards this movement is to sustain humanity and cultivate relationships within one another which in return makes a huge impact in our lives. Over the years RACIIT has set its mark by making an impact in the Rotaract Community. RACIIT has achieved multiple awards and recognition over the years since it was chartered. </p>
+
+</div> -->
+
+<div class="fourth-container">
+  <div class="head-container year-review">
+      <p class="head-text">Facebook</p> 
+  </div>
+
+  <div class="projects-stat-section">
+      <div class="projects-stats-head">
+        <i class="fab fa-facebook-f social fb"></i>&nbsp;&nbsp;Facebook Statistics Overview
+          <!-- <span class="counter-up" data-target="104">0</span> &nbsp;PROJECTS COMPLETED -->
       </div>
-  </div> -->
-
-
-
-</div>
-
-
-
-</div>
-
-<div class="third-container">
-
-    <!-- <div class="head-container year-review">
-        <p class="head-text" style="font-size: 100px;">Introduction</p> 
-    </div>
-
-  <div class="cards-container">
-
-
-    <div class="club-intro-container">
-        <div class="club-intro-box">
-            <p>Under the guidance of the Rotary PanColombo, Rotaract Club of IIT started its road to success in 2010 under the president of Rtr. Tanya Senaratne where we won the best Charter Club of the year. Being a part of the prestigious youth movement for the past ten years, the Rotaract Club of Informatics Institute of Technology (RACIIT) has strived to uplift our community and to provide an opportunity for all students at IIT to engage in volunteerism where students learn how to develop themselves as better citizens in the society. </p>
+      <div class="avenue-container">
+  
+        <div class="avenue">
+    
+            <div class="social-text">Total Facebook Reach for the Year</div>
+       
+            <div class="proj-count"><span class="counter-up-proj" data-target="9">0</span></div>
         </div>
-    </div> -->
+
+              <div class="avenue">
+             
+                  <div class="social-text">Total Facebook<br/> Likes</div>
+         
+                  <div class="proj-count"><span class="counter-up-proj" data-target="9">0</span></div>
+              </div>
 
 
+              <div class="avenue">
+               
+                  <div class="social-text">Total Facebook<br/> Followers</div>
+             
+                  <div class="proj-count"><span class="counter-up-proj" data-target="9">0</span></div>
+              </div>
+    
+        
+          <div class="avenue">
+         
+              <div class="social-text">Total Facebook <br/>Likes</div>
+        
+              <div class="proj-count"><span class="counter-up-proj" data-target="9">0</span></div>
+          </div>
+    
+      </div>
 
   </div>
+
+      <!-- <div class="solid"></div> -->
+
+      <div class="social-container">
+          <a href="https://www.facebook.com/iitrotaract/">
+      
+              <div class="social-box">
+                <i class="fas fa-thumbs-up social fb"></i>
+                  <div class="social-count">
+                      <div class="plus">
+                          <div class="socio-count" data-target="7052">0</div>
+                          <!-- <p class="socio-plus">+</p> -->
+                      </div>
+                      <div class="social-text">New Likes</div>
+                  </div>
+              </div>
+          </a>
+
+          <a href="https://www.instagram.com/rotaract_iit/">
+              <div class="social-box">
+                <i class="fas fa-users social fb"></i>
+                  <div class="social-count">
+                      <div class="plus">
+                          <div class="socio-count" data-target="3553">0</div>
+                          <!-- <p class="socio-plus">+</p> -->
+                      </div>
+                      <div class="social-text">Followers</div>
+                  </div>
+              </div>
+          </a>
+
+          <a href="https://www.youtube.com/user/iitrotaract">
+              <div class="social-box">
+                <i class="fas fa-globe-asia social fb"></i>
+                  <div class="social-count">
+                      <div class="plus">
+                          <div class="socio-count" data-target="719">0</div>
+                          <!-- <p class="socio-plus">+</p> -->
+                      </div>
+                      <div class="social-text">New Reach</div>
+                  </div>
+              </div>
+          </a>
+      </div>
+
+      <div class="social-container">
+    
+            <div class="social-box-chart">
+                <!-- <i class="fab fa-facebook-f social fb"></i>
+                <div class="social-count">
+                    <div class="plus">
+                        <div class="socio-count" data-target="7052">0</div>
+                        <p class="socio-plus">+</p>
+                    </div>
+                    <div class="social-text">Page Likes</div>
+                </div> -->
+
+                <canvas id="myChart" class="chart"></canvas>
+            </div>
+   
+
+
+            <div class="social-box-chart">
+              <canvas id="myChart1" class="chart" style="height: 200px;"></canvas>
+            </div>
+    
+
+    </div>
+
+     
+  
+</div>
 
 
 
@@ -397,6 +486,59 @@
     </div>
 
 </div>
+
+
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+          labels: ['Male','Female'],
+          datasets: [{
+              label: '# of Votes',
+              data: [68.3,31.7],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 3
+          }]
+      },
+      options: {
+                responsive: false
+            }
+  });
+  </script>
+
+<script>
+  var ctx = document.getElementById('myChart1').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['2015','2016','2017','2018','2019','2020'],
+          datasets: [{
+              label: 'Growth',
+              data: [15,27,36,47,64,78,94],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 3
+          }]
+      },
+      options: {
+                responsive: false
+            }
+  });
+  </script>
 
 
 <script>
