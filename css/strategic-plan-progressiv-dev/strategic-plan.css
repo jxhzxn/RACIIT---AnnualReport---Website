@@ -663,10 +663,13 @@
 }
 
 .underline{
-    height: 4px;
-    width: 350px;
-    background-color: rgba(181, 181, 181, 0.56);
-    margin-top: 10px;
+    height: 5px;
+    width: 450px;
+    /* background-color: rgba(181, 181, 181, 0.56); */
+    background-color: #05A3B5;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 5px;
 }
 
 .timeline-desc-text{
@@ -691,7 +694,7 @@
     font-size: 18px;
     padding-left: 0px;
     padding-right: 0px;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .club-intro-container{

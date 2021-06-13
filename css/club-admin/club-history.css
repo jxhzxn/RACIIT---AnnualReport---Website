@@ -23,11 +23,13 @@
       
       /* border-color: black;
       border-style: solid; */
-      width: 100%;
-      margin-top: 20px;
+      width: 50%;
+      margin-top: 150px;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
+      /* overflow-x: hidden; */
   }
 
   .modal-inside-container{
@@ -37,7 +39,7 @@
       flex-direction: column;
       font-family: 'Poppins', sans-serif;
       width: 100%;
-      margin-top: 30px;
+      margin-top: 50px;
   }
 
   .modal-in-left{
@@ -63,7 +65,7 @@
 .highlights-in{
     /* border-color: red;
     border-style: solid; */
-    width: 80%;
+    width: 60%;
     /* height: 300px; */
     /* padding: 40px; */
 }
@@ -172,7 +174,10 @@
       background-color: white;
       color: white;
       color: black;
-
+      /* background-image: url("../../assets/geo-trans.png"); */
+      /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
       padding-bottom: 200px;
       padding-top: 50px;
       /* height: 500px; */
@@ -351,7 +356,11 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
   }
+
+
+
   
   /* Modal Content */
   .modal-content {
@@ -378,6 +387,22 @@
 
     /* border-style: solid;
     border-color: red; */
+  }
+
+  .modal-content::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  .modal-content::-webkit-scrollbar-track {
+    background: white;        /* color of the tracking area */
+    border-top-right-radius: 5px;
+    border-end-end-radius: 5px;
+  }
+  
+  .modal-content::-webkit-scrollbar-thumb {
+    background-color: rgb(148, 148, 148);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid white;  /* creates padding around scroll thumb */
   }
   
   /* The Close Button */
@@ -419,8 +444,10 @@
 
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+    align-items:flex-start;
+    flex-direction: row;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(66, 47, 47, 0.4); */
+    
 
         /* border-style: solid;
     border-color: black; */
@@ -442,9 +469,20 @@
 }
 
 .info-head{
+    font-size: 28px;
+    font-weight: 600;
+   color: rgb(77, 77, 77);
+}
+.info-head-name{
     font-size: 33px;
     font-weight: 700;
-   
+   padding-right: 20px;
+   border-style: solid;
+   border-width: 0px;
+   border-bottom-width: 5px;
+   /* border-radius: 5px; */
+   border-color: #05A3B5;
+   /* text-align: right; */
 }
 
 .desc-text{
@@ -465,7 +503,8 @@
     width: 350px;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    color: white;
+    /* color: white; */
+    color: rgb(112, 112, 112);
     font-weight: 600;
     text-align: center;
     /* height: 100vh; */
@@ -482,7 +521,8 @@
     align-items: center;
     /* margin-top: 10px; */
     color: #0D6EFD;
-    color: white;
+    /* color: white; */
+    color: rgb(112, 112, 112);
     font-weight: 900;
     letter-spacing: 4px;
     font-size: 26px;
@@ -492,7 +532,8 @@
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    color: white;
+    color: rgb(112, 112, 112);
+    /* color: white; */
     width: 350px;
     /* border-style: solid;
     border-color: black; */
@@ -533,17 +574,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(112, 112, 112);
+    /* background-color: rgb(112, 112, 112); */
     /* background-color: rgb(161, 161, 161); */
-    border-radius: 30px;
-    box-shadow: 0px 0px 10px rgba(0, 1, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 10px rgba(0, 1, 0, 0.1); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: default;
     padding: 60px;
 
 }
 
 .text-wrap:hover{
-    background-color: rgb(85, 85, 85);
+    background-color: rgb(219, 219, 219);
 }
 
 .text-of-tooltip{
@@ -685,7 +728,7 @@
     /* letter-spacing: 1px; */
 }
 
-.president-info{
+.president-info-right{
     /* border-color: red;
     border-style: solid; */
     width: 300px;
@@ -695,6 +738,21 @@
     align-items: center;
     flex-direction: column;
     padding-top: 10px;
+    border-right: 8px solid #05A3B5;
+    border-radius: 5px;
+}
+.president-info-left{
+    /* border-color: red;
+    border-style: solid; */
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    border-left: 8px solid #05A3B5;
+    border-radius: 5px;
 }
 
 

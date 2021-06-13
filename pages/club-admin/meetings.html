@@ -75,7 +75,7 @@
 </script>
 
 </head>
-<body>
+<body style="padding-top: 200px;">
 
 <!-- ============= COMPONENT ============== -->
 <nav class="autohide navbar navbar-expand-lg">
@@ -333,6 +333,7 @@
     <div class="table-desc">
       <div class="head-container">
         <p class="head-text people-heading">Procedure of the Board Meeting</p> 
+        <div class="underline" style="margin-bottom: 25px; width: 500px;"></div>
     </div>
   
       <!-- <div class="middle-poeple"> -->
@@ -364,6 +365,7 @@
     <div class="table-desc">
       <div class="head-container">
         <p class="head-text people-heading">Procedure of the General Meeting</p> 
+        <div class="underline" style="margin-bottom: 25px; width: 500px;"></div>
     </div>
   
       <!-- <div class="middle-poeple"> -->
@@ -576,19 +578,26 @@
         th: {
         //   'background-color': 'rgba(0, 0, 0, 0.1)',
         //   color: '#000',
-        //   'border-bottom': '3px solid #ccc',
+          
         //   'text-align': 'center',
-        'font-size': '25px',
+        // 'border-left-width': '0px',
+        border:'none',
+        'border-bottom': '0.5px solid #ddd',
+        'font-size': '20px',
+          'font-weight': '500',
         'color': 'rgb(0, 0, 0)',
         'background-color': 'rgba(255,255,254, 0.8)',
           'font-family': 'Poppins, sans-serif'
         },
         td: {
         //   'text-align': 'center',
+        // 'border-left-width': '0px',
         'font-size': '16px',
         'color': 'rgb(75, 75, 75)',
         'background-color': 'rgba(255,255,254, 0.8)',
-        'font-family': 'Poppins, sans-serif'
+        'font-family': 'Poppins, sans-serif',
+        border:'none',
+        'border-bottom': '0.5px solid #ddd',
         }
       },
     }).render(document.getElementById("wrapper"));
@@ -672,22 +681,29 @@
         border: 'none'
       },
       th: {
-      //   'background-color': 'rgba(0, 0, 0, 0.1)',
-      //   color: '#000',
-      //   'border-bottom': '3px solid #ccc',
-      //   'text-align': 'center',
-      'font-size': '25px',
-      'color': 'rgb(0, 0, 0)',
-      'background-color': 'rgba(255,255,254, 0.8)',
-        'font-family': 'Poppins, sans-serif'
-      },
-      td: {
-      //   'text-align': 'center',
-      'font-size': '16px',
-      'color': 'rgb(75, 75, 75)',
-      'background-color': 'rgba(255,255,254, 0.8)',
-      'font-family': 'Poppins, sans-serif'
-      }
+        //   'background-color': 'rgba(0, 0, 0, 0.1)',
+        //   color: '#000',
+          
+        //   'text-align': 'center',
+        // 'border-left-width': '0px',
+        border:'none',
+        'border-bottom': '0.5px solid #ddd',
+        'font-size': '20px',
+          'font-weight': '500',
+        'color': 'rgb(0, 0, 0)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+          'font-family': 'Poppins, sans-serif'
+        },
+        td: {
+        //   'text-align': 'center',
+        // 'border-left-width': '0px',
+        'font-size': '16px',
+        'color': 'rgb(75, 75, 75)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+        'font-family': 'Poppins, sans-serif',
+        border:'none',
+        'border-bottom': '0.5px solid #ddd',
+        }
     },
   }).render(document.getElementById("wrapper1"));
   </script>

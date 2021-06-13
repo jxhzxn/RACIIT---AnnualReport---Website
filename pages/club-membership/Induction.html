@@ -325,7 +325,7 @@
 <div class="third-container">
 
     <div class="head-container year-review">
-        <p class="head-text" style="font-size: 100px;">Induction</p> 
+        <p class="head-text" style="font-size: 100px; margin-top: 130px;">Induction</p> 
     </div>
 
   <div class="cards-container">
@@ -334,6 +334,7 @@
 
     <div class="head-container">
       <p class="head-text people-heading">Induction Process</p> 
+      <div class="underline"></div>
   </div>
 
     <!-- <div class="middle-poeple"> -->
@@ -367,12 +368,13 @@ The Club should approve or reject a candidate’s membership within 3 months and
 
   <div class="head-container">
     <p class="head-text people-heading">Interactors who joined</p> 
+    <div class="underline"></div>
 </div>
 
   <!-- <div class="middle-poeple"> -->
 
     <div class="club-intro-container">
-      <div class="club-intro-box">
+      <div class="club-intro-box-copy">
 
         <div class="top-people-card">
         
@@ -534,22 +536,29 @@ The Club should approve or reject a candidate’s membership within 3 months and
         border: 'none'
       },
       th: {
-      //   'background-color': 'rgba(0, 0, 0, 0.1)',
-      //   color: '#000',
-      //   'border-bottom': '3px solid #ccc',
-      //   'text-align': 'center',
-      'font-size': '25px',
-      'color': 'rgb(0, 0, 0)',
-      'background-color': 'rgba(255,255,254, 0.8)',
-        'font-family': 'Poppins, sans-serif'
-      },
-      td: {
-      //   'text-align': 'center',
-      'font-size': '16px',
-      'color': 'rgb(75, 75, 75)',
-      'background-color': 'rgba(255,255,254, 0.8)',
-      'font-family': 'Poppins, sans-serif'
-      }
+        //   'background-color': 'rgba(0, 0, 0, 0.1)',
+        //   color: '#000',
+          
+        //   'text-align': 'center',
+        // 'border-left-width': '0px',
+        border:'none',
+        'border-bottom': '0.5px solid #ddd',
+        'font-size': '20px',
+          'font-weight': '500',
+        'color': 'rgb(0, 0, 0)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+          'font-family': 'Poppins, sans-serif'
+        },
+        td: {
+        //   'text-align': 'center',
+        // 'border-left-width': '0px',
+        'font-size': '16px',
+        'color': 'rgb(75, 75, 75)',
+        'background-color': 'rgba(255,255,254, 0.8)',
+        'font-family': 'Poppins, sans-serif',
+        border:'none',
+        'border-bottom': '0.5px solid #ddd',
+        }
     },
   }).render(document.getElementById("wrapper"));
   </script>

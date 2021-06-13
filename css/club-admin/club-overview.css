@@ -95,7 +95,7 @@
   }
   
   .head-text{
-      font-size: 120px;
+      font-size: 100px;
       font-weight: 700;
       font-family: 'Poppins', sans-serif;
       letter-spacing: 0px;
@@ -165,8 +165,7 @@
       background-color: white;
       color: white;
       color: black;
-
-      padding-bottom: 200px;
+      padding-bottom: 100px;
       padding-top: 50px;
       /* height: 500px; */
       /* width: 100%; */
@@ -665,7 +664,9 @@
 .underline{
     height: 4px;
     width: 350px;
-    background-color: rgba(181, 181, 181, 0.56);
+    /* background-color: rgba(181, 181, 181, 0.56); */
+    background-color: #05A3B5;
+    border-radius: 5px;
     margin-top: 10px;
 }
 
@@ -691,6 +692,8 @@
     font-size: 18px;
     padding-left: 100px;
     padding-right: 100px;
+    padding-top: 50px;
+    color: rgb(39, 39, 39);
 }
 
 .club-intro-container{

@@ -162,7 +162,9 @@
   }
   
   .third-container{
-      background-color: #E1E2E2;
+      /* background-color: #E1E2E2; */
+      background-color: #ffffff;
+      
       color: white;
       color: black;
 
@@ -317,7 +319,7 @@
       align-items: center;
       /* flex-wrap: wrap; */
       /* width: 100%; */
-      /* padding-top: 100px; */
+      padding-top: 100px;
      /* border-style: solid;
     border-color: black; */
   }
@@ -667,11 +669,19 @@
     /* background-color: #0095df; */
 }
 
-.underline{
+/* .underline{
     height: 4px;
     width: 350px;
     background-color: rgba(181, 181, 181, 0.56);
     margin-top: 10px;
+} */
+.underline{
+    width: 300px;
+    height: 5px;
+    /* background-color: rgb(61, 61, 61); */
+    background-color: #05A3B5;
+    margin-top: -10px;
+    border-radius: 5px;
 }
 
 .timeline-desc-text{

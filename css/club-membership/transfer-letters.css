@@ -167,7 +167,12 @@
   }
   
   .third-container{
+<<<<<<< HEAD
       background-color: #E1E2E2;
+=======
+      /* background-color: #E1E2E2; */
+      background-color: #ffffff;
+>>>>>>> f35bbb8084a2a4019768acbdac1e650364090a1d
       color: white;
       color: black;
 
@@ -672,13 +677,30 @@
     /* background-color: #0095df; */
 }
 
+<<<<<<< HEAD
 .underline{
+=======
+/* .underline{
+>>>>>>> f35bbb8084a2a4019768acbdac1e650364090a1d
     height: 4px;
     width: 350px;
     background-color: rgba(181, 181, 181, 0.56);
     margin-top: 10px;
+<<<<<<< HEAD
 }
 
+=======
+} */
+.underline{
+    height: 5px;
+    width: 350px;
+    /* background-color: rgba(181, 181, 181, 0.56); */
+    background-color: #05A3B5;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+>>>>>>> f35bbb8084a2a4019768acbdac1e650364090a1d
 .timeline-desc-text{
     font-size: 18px;
     margin-top: -10px;
@@ -776,8 +798,15 @@
 }
 
 .people-heading{
+<<<<<<< HEAD
     font-size: 68px;
     letter-spacing: 0px;
+=======
+    font-size: 55px;
+    letter-spacing: 0px;
+    color: rgb(70, 70, 70);
+    margin-bottom: 0x;
+>>>>>>> f35bbb8084a2a4019768acbdac1e650364090a1d
 }
 
 .middle-people-name{
