@@ -690,10 +690,11 @@
 .club-intro-box{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    padding-left: 100px;
-    padding-right: 100px;
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
     padding-top: 50px;
     color: rgb(39, 39, 39);
+    margin-bottom: 100px;
 }
 
 .club-intro-container{
